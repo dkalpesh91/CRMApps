@@ -1,3 +1,66 @@
 <resources>
-    <string name="app_name">SFAMobile</string>
+    <string name="app_name">DemoTheme</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!--*******************************Reset Password Activity**********************************-->
+
+    <string name="reset_pwd_tv_str">Reset Password</string>
+    <string name="reset_pwd_btn_str">Reset</string>
+    <string name="email_atv_hint_str">Enter emaild</string>
+    <string name="verification_atv_hint_str">Enter emaild</string>
+
+    <!--*******************************Change Password Activity**********************************-->
+
+    <string name="change_pwd_tv_str">Change Password</string>
+    <string name="change_pwd_btn_str">Change Password</string>
+    <string name="old_pwd_atv_hint_str">Old Password</string>
+    <string name="one_time_pwd_atv_hint_str">One Time Password</string>
+    <string name="new_pwd_atv_hint_str">New Password</string>
+    <string name="confirm_pwd_atv_hint_str">Re-Enter Password</string>
+
+    <!--*******************************New Lead Activity**********************************-->
+
+    <string name="create_new_lead_tv_str">Create New Lead</string>
+    <string name="add_contact_btn_str">Add contact</string>
+    <string name="description_details_str">Description(Max 300 character)</string>
+    <string name="max_200_char_et_hint_str">Max 200 char</string>
+    <string name="lead_status_tv_str">Lead status</string>
+    <string name="hot_chkbox_str">Hot</string>
+    <string name="warm_chkbox_str">Warm</string>
+    <string name="Coold_chkbox_str">Cold</string>
+    <string name="save_btn_str">Save</string>
+    <string name="convert_to_opportunity_btn_str">Convert to Opportunity</string>
+    <string name="lead_size_et_hint_str">Lead size</string>
+
+
+    <!--*******************************Add New Company Activity**********************************-->
+
+    <string name="add_new_company_contact_tv_str">Add Contact</string>
+    <string name="add_primary_contact_tv_str">Add Primary Contact</string>
+    <string name="company_name_atv_hint_str">Company Name </string>
+    <string name="company_email_et_hint_str">Email ID</string>
+    <string name="company_phoneno_et_hint_str">Phone Number</string>
+    <string name="company_address_et_hint_str">Address </string>
+    <string name="contact_name_atv_hint_str">Contact Name </string>
+    <string name="contact_number_et_hint_str">Phone Number</string>
+    <string name="contact_email_et_hint_str">Email ID</string>
+    <string name="contact_role_atv_hint_str">Role</string>
+    <string name="contact_address_atv_hint_str">Address </string>
+
+
+    <!--*******************************Manage Edit Company Activity**********************************-->
+
+    <string name="mange_company_contact_tv_str">Manage Contact</string>
+    <string name="edit_btn_str">Edit</string>
+    <string name="show_btn_str">Show</string>
+    <string name="primary_contact_person_str">Contact Name(Primary Contact) </string>
+
+    <!--*******************************Daily Sales Visit Report Activity**********************************-->
+    <string name="daily_visit_report_tv_str">Daily Visit Report</string>
+    <string name="client_name_tv_str">Client Name</string>
+
 </resources>

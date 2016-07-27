@@ -9,11 +9,36 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN"/>-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity android:name=".Activity.ResetPasswordActivity">
+        </activity>
+        <activity android:name=".Activity.ChangePasswordActivity">
+        </activity>
+        <activity android:name=".Activity.NewLeadActivity">
+        </activity>
+        <activity android:name=".Activity.AddNewCompanyContactActivity">
+        </activity>
+        <activity android:name=".Activity.ManageCompanyContactActivity">
+        </activity>
+        <activity android:name=".Activity.ConvertLeadToOpportunityActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".Activity.DailySalesVisitReportActivity">
+        </activity>
+        <activity android:name=".Activity.LeadDetalisShowActivity">
+        </activity>
+        <activity android:name=".Activity.ManageEditContactActivity">
+        </activity>
+        <activity android:name=".Activity.ManageLeadActivity">
         </activity>
     </application>
 

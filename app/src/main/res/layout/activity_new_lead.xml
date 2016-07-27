@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:padding="20dp">
+
+    <ScrollView
+        android:id="@+id/lead_sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/save_ll">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/new_lead_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="@string/create_new_lead_tv_str"
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="25dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/company_name_til"
+                    style="@style/TextLabel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/add_new_contact_btn"
+                    android:layout_marginLeft="15dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/company_name_atv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="@string/company_name_atv_hint_str"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18dp"
+                        android:singleLine="true"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:id="@+id/add_new_contact_btn"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="3dp"
+                    android:background="@drawable/button_selector"
+                    android:text="Add"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="17dp"/>
+
+            </RelativeLayout>
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/lead_size_of_company_til"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                style="@style/TextLabel">
+
+                <EditText
+                    android:id="@+id/lead_size_of_company_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/lead_size_et_hint_str"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18dp"
+                    android:singleLine="true"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/contact_name_til"
+                    style="@style/TextLabel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/add_new_person_contact_btn"
+                    android:layout_marginLeft="15dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/contact_name_atv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="@string/contact_name_atv_hint_str"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18dp"
+                        android:singleLine="true"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:id="@+id/add_new_person_contact_btn"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="3dp"
+                    android:background="@drawable/button_selector"
+                    android:text="Add"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="17dp"/>
+
+            </RelativeLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/what_you_need_til"
+                style="@style/TextLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/detail_descriptipn_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|left"
+                    android:hint="@string/description_details_str"
+                    android:imeOptions="actionNext"
+                    android:inputType="textMultiLine"
+                    android:lines="9"
+                    android:maxLines="10"
+                    android:minLines="7"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18dp"
+                    android:singleLine="true"
+                    android:maxLength="300"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/lead_status_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/lead_status_tv_str"
+                android:textColor="@color/colorWhite"
+                android:textSize="18dp"/>
+
+            <LinearLayout
+                android:id="@+id/lead_status_ckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/hot_chkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hot_chkbox_str"
+                    android:textColor="@color/colorWhite"
+                    android:theme="@style/MyCheckBox"/>
+
+                <CheckBox
+                    android:id="@+id/warm_chkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/warm_chkbox_str"
+                    android:textColor="@color/colorWhite"
+                    android:theme="@style/MyCheckBox"/>
+
+                <CheckBox
+                    android:id="@+id/cold_chkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/Coold_chkbox_str"
+                    android:textColor="@color/colorWhite"
+                    android:theme="@style/MyCheckBox"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/save_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/save_btn"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_selector"
+            android:text="@string/save_btn_str"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="21dp"/>
+
+        <Button
+            android:id="@+id/convert_to_oppertunity_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/save_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_selector"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="@string/convert_to_opportunity_btn_str"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="21dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
