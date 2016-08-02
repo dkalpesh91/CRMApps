@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:hint="Name"
+        android:layout_marginTop="40dp"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:layout_marginBottom="120dp"
+        android:layout_gravity="center_vertical" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText2"
+        android:hint="Role"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:layout_marginTop="75dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText3"
+        android:hint="Email"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:layout_below="@+id/editText2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText4"
+        android:hint="Contact Number"
+        android:inputType="number"
+        android:maxLength="10"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:layout_below="@+id/editText3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText4"
+        android:layout_marginTop="30dp"
+        android:id="@+id/linearLayout2">
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:id="@+id/save_button"
+            android:text="save"
+            android:textColor="#ffffff"
+            android:background="@drawable/buttonshape"
+            android:layout_marginLeft="70dp"
+            android:layout_below="@+id/editText3"
+            android:layout_alignParentLeft="true"/>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:id="@+id/cancel"
+            android:text="cancel"
+            android:layout_marginLeft="10dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/buttonshape"
+            android:layout_below="@+id/editText3"
+            android:layout_alignParentLeft="true"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:text="Edit contacts here"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>
