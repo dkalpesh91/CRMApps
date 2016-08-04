@@ -63,4 +63,104 @@
     <string name="daily_visit_report_tv_str">Daily Visit Report</string>
     <string name="client_name_tv_str">Client Name</string>
 
+    <!--*******************************Add Contacts**********************************-->
+    <string name="edit_Username">Name</string>
+    <string name="edit_Role">Role</string>
+    <string name="edit_Email">Email</string>
+    <string name="edit_Number">Contact Number</string>
+    // adding
+    <string name="edit_Username2">Name</string>
+    <string name="edit_Role2">Role</string>
+    <string name="edit_Email2">Email</string>
+    <string name="edit_Number2">Contact Number</string>
+
+    <string name="save">Save</string>
+    //hardcoded data - exiting contact
+    <string name="name_View">Name</string>
+    <string name="roll_View">Roll</string>
+    <string name="Email_View">Email</string>
+    <string name="Contact_View">Contact Number</string>
+
+    // label data
+
+    <string name="name_label">Rohit</string>
+    <string name="roll_label">Sales executive</string>
+    <string name="Email_label">rohit@gmail.com</string>
+    <string name="Contact_label">  9246789012</string>
+    //saved fields
+    <string name="name_saved"></string>
+    <string name="roll_saved"></string>
+    <string name="Email_saved"></string>
+    <string name="Contact_saved"></string>
+
+
+    //saving fields
+    <string name="name_saving">Name</string>
+    <string name="roll_saving">Roll</string>
+    <string name="Email_saving">Email</string>
+    <string name="Contact_saving">       Contact Number</string>
+
+    //country code
+    <string name="code">Country code</string>
+
+
+    //edit and delete
+
+    <string name="edit_button">Edit</string>
+    <string name="delete_button">Delete</string>
+
+    //
+    <string name="add_contacts">Add Contacts</string>
+
+    //header
+    <string name="header"></string>
+
+
+    <!--*******************************Add meetings**********************************-->
+
+    //title
+    <string name="headerText">Add Meeting</string>
+
+    //edit fields
+    <string name="enter_meeting">Meeting Title</string>
+    <string name="enter_client_name">Client Name</string>
+    <string name="enter_meeting_info">Meeting Info</string>
+    <string name="location"></string>
+    <string name="select_Date"></string>
+    <string name="Enter_Time"></string>
+    <string name="title_activity_main">MainActivity</string>
+
+    //image buttons
+
+    <string name="select_date"></string>
+    <string name="select_time"></string>
+    <string name="set_remainder"></string>
+
+
+    <!--*******************************login Activity**********************************-->
+
+    <string name="login_title">Login Here</string>
+    <string name="enter_username_hint">Enter Name</string>
+    <string name="enter_password_hint">Password</string>
+    <string name="forgotpassword_button">Forgot password ?</string>
+    <string name="login_button">login</string>
+    <string name="register_button">Create an account</string>
+
+    <!--*******************************register Activity**********************************-->
+
+
+    <string name="back_button">Back</string>
+    <string name="edit_Username_register">User Name</string>
+    <string name="edit_password">Password</string>
+    <string name="edit_ConformPassword">Conform Password</string>
+    <string name="edit_Email_register">Email</string>
+    <string name="Mobile_number">Mobile Number</string>
+    <string name="Company_Name">Company Name</string>
+    <string name="register_button2">Register</string>
+    <string name="register_label">Register</string>
+    <string name="country_code">Countrycode</string>
+
+
+
+
 </resources>
