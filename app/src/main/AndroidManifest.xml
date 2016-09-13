@@ -2,43 +2,275 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.sfamobile.dahlia.sfamobile">
 
+    <permission
+        android:name="com.expensemanagement.dahlia.expensemanagement.MAPS_RECEIVE"
+        android:protectionLevel="signature"/>
+
+    <uses-permission android:name="com.expensemanagement.dahlia.expensemanagement.permission.MAPS_RECEIVE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <uses-library android:name="com.google.android.maps"/>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCW5EutoG9cd6jQXC6EMdNWPMQlBunnyJM"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+
+        <activity
+            android:name=".Activity.SplashScreenActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+
+             <intent-filter>
+             <action android:name="android.intent.action.MAIN" />
+
+
+             <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+        </activity>
+        <activity android:name=".Activity.DashBoardActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".Activity.ResetPasswordActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".Activity.ChangePasswordActivity">
+        </activity>
+        <activity android:name=".Activity.NewLeadActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".Activity.ManageCompanyContactActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".Activity.AddNewCompanyContactActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".Activity.ManageEditContactActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".Activity.DailySalesVisitReportActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".Activity.ConvertLeadToOpportunityActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".Activity.ManageLeadActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".Activity.AddingContactsActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".Activity.LeadDetalisShowActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".Activity.ProductCatalogActivity"
+            android:windowSoftInputMode="adjustPan">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".Activity.CreateQuotationActivity"
+            android:windowSoftInputMode="adjustPan">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".Activity.ManagedOpportunityActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".Activity.ManagedQuotationActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".Activity.AddMeetingAndUpdateMeetingActivity">
+
+             <!--<intent-filter>-->
+             <!--<action android:name="android.intent.action.MAIN"/>-->
+
+
+             <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+             <!--</intent-filter>-->
+        </activity>
+        <activity android:name=".Activity.LoggedInActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".Activity.LoginActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".Activity.OpportunityEditActivity">
+        </activity>
+        <activity android:name=".Activity.RegisterActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".Activity.RegisteredSucessfullyActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".Activity.ShowMeetingActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".Activity.PlanTravalActivity">
             <!--<intent-filter>-->
                 <!--<action android:name="android.intent.action.MAIN"/>-->
 
                 <!--<category android:name="android.intent.category.LAUNCHER"/>-->
             <!--</intent-filter>-->
         </activity>
-        <activity android:name=".Activity.ResetPasswordActivity">
-        </activity>
-        <activity android:name=".Activity.ChangePasswordActivity">
-        </activity>
-        <activity android:name=".Activity.NewLeadActivity">
-        </activity>
-        <activity android:name=".Activity.AddNewCompanyContactActivity">
-        </activity>
-        <activity android:name=".Activity.ManageCompanyContactActivity">
-        </activity>
-        <activity android:name=".Activity.ConvertLeadToOpportunityActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+        <activity android:name=".Activity.ScanCardsActivity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN"/>-->
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
-        <activity android:name=".Activity.DailySalesVisitReportActivity">
-        </activity>
-        <activity android:name=".Activity.LeadDetalisShowActivity">
-        </activity>
-        <activity android:name=".Activity.ManageEditContactActivity">
-        </activity>
-        <activity android:name=".Activity.ManageLeadActivity">
+                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--</intent-filter>-->
         </activity>
     </application>
 

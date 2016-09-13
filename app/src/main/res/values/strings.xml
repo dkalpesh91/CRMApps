@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DemoTheme</string>
+    <string name="app_name">SFAMobi</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -146,6 +146,17 @@
     <string name="login_button">login</string>
     <string name="register_button">Create an account</string>
 
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Login</string>
+    <string name="invalid_email">This email address is invalid</string>
+    <string name="invalid_password">Password is too short</string>
+    <string name="incorrect_password">Password is incorrect</string>
+    <string name="field_required">This field is required</string>
+    <string name="powered_by_dahlia_technologies"><u>Powered by Dahlia Technologies</u>.</string>
+    <string name="uri_dahlia_technologies"><u>WWW.Dahlia-tech.com</u></string>
+    <string name="uri_sfamobi"><u>WWW.Sfamobi.com</u></string>
+
     <!--*******************************register Activity**********************************-->
 
 
@@ -159,8 +170,14 @@
     <string name="register_button2">Register</string>
     <string name="register_label">Register</string>
     <string name="country_code">Countrycode</string>
+    <string name="title_activity_dash_board">DashBoardActivity</string>
+
+    <string name="total_cost_with_rupee_symbol">Total Cost(\u20B9)</string>
 
 
+    <string name="estimated_amount">Estimated Amount(\u20B9)</string>
+    <string name="rupees">\u20B9</string>
+    <string name="rupess_symbol_with_amount">\u20B9 %1$s</string>
 
 
 </resources>

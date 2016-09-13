@@ -6,32 +6,32 @@
               android:background="@color/colorPrimary">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/dim_60"
         android:background="@color/colorPrimaryDark">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/colorWhite"
             android:layout_centerVertical="true"
-            android:textSize="22dp"
-            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/dim_28"
+            android:layout_marginLeft="@dimen/dim_12"
             android:text="View Contact"/>
 
         <Button
             android:id="@+id/dialog_close_btn"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/dim_45"
+            android:layout_height="@dimen/dim_45"
             android:textColor="@color/colorWhite"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:background="@drawable/button_selector"
-            android:textSize="25dp"
+            android:textSize="@dimen/dim_30"
             android:text="X"/>
     </RelativeLayout>
 
     <ListView
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="@dimen/dim_8"
+        android:layout_marginBottom="@dimen/dim_5"
         android:id="@+id/show_contact_lv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

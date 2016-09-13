@@ -4,18 +4,21 @@
               android:layout_height="fill_parent"
               android:orientation="vertical"
               android:background="@color/colorPrimary" >
-    <TextView
-        android:id="@+id/comapny_name_tv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorWhite"
-        android:text="Company Contact List"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:textSize="25dp"/>
 
-    <ExpandableListView
-        android:id="@+id/company_contact_elv"
+    <include android:id="@+id/dsvr_top_bar"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             layout="@layout/top_bar_layout"/>
+
+    <View
+        android:id="@+id/line_view"
+        android:background="@color/view_line"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/dsvr_top_bar"
+        android:layout_height="3dp"/>
+
+    <ListView
+        android:id="@+id/company_contact_lv"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:layout_marginTop="10dp"/>

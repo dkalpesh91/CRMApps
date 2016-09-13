@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="8dp"
+    android:padding="@dimen/dim_12"
     android:background="#36474f"
     android:weightSum="1">
 
@@ -11,7 +11,7 @@
         android:id="@+id/header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="17dp"
+        android:textSize="@dimen/dim_20"
         android:layout_centerVertical="true"
         android:text="hjhj"
         android:textColor="#ffffff" />
@@ -24,9 +24,9 @@
 
         <Button
             android:id="@+id/edit_button"
-            android:layout_width="50dp"
-            android:layout_height="20dp"
-            android:textSize="12dp"
+            android:layout_width="@dimen/dim_50"
+            android:layout_height="@dimen/dim_20"
+            android:textSize="@dimen/dim_16"
             android:textAllCaps="false"
             android:text="Edit"
             android:background="@drawable/buttonshape"
@@ -35,9 +35,9 @@
 
         <Button
             android:id="@+id/delete_button"
-            android:layout_width="50dp"
-            android:layout_height="20dp"
-            android:textSize="12dp"
+            android:layout_width="@dimen/dim_50"
+            android:layout_height="@dimen/dim_20"
+            android:textSize="@dimen/dim_16"
             android:textAllCaps="false"
             android:background="@drawable/buttonshape"
             android:text="Delete"

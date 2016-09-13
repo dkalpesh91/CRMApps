@@ -10,6 +10,7 @@ import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.sfamobile.dahlia.sfamobile.R;
@@ -22,6 +23,9 @@ public class ResetPasswordActivity extends AppCompatActivity implements View.OnC
     AutoCompleteTextView mNewPasswordET = null;
     AutoCompleteTextView mConfirmPasswordET = null;
 
+    TextView mActivityNameTV = null;
+    ImageView mActivityBackIMV = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +35,25 @@ public class ResetPasswordActivity extends AppCompatActivity implements View.OnC
     }
 
     void initView() {
+
+
+        mActivityNameTV = (TextView) findViewById(R.id.screen_label_tv);
+        mActivityNameTV.setText("Reset Password");
+        mActivityBackIMV = (ImageView) findViewById(R.id.back_arrow_img);
+        mActivityBackIMV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent intent = new Intent(ResetPasswordActivity.this,LoginActivity.class);
+                startActivity(intent);
+                finish();
+
+
+
+            }
+        });
+
         mResetButton = (Button) findViewById(R.id.reset_btn);
         mResetPasswordTV = (TextView) findViewById(R.id.reset_pwd_tv);
         mOldPasswordET = (AutoCompleteTextView) findViewById(R.id.old_pwd_et);

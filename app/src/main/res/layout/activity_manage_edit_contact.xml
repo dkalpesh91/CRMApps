@@ -5,32 +5,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    android:padding="10dp">
+    android:background="@color/colorPrimary">
+
+    <include android:id="@+id/dsvr_top_bar"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             layout="@layout/top_bar_with_edit"/>
+    <View
+        android:id="@+id/line_view"
+        android:background="@color/view_line"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/dsvr_top_bar"
+        android:layout_height="3dp"/>
 
     <ScrollView
         android:id="@+id/lead_sv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp"
+        android:layout_below="@+id/line_view"
         android:layout_above="@+id/save_btn">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-
-            <TextView
-                android:id="@+id/manage_contact_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:text="@string/mange_company_contact_tv_str"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="25dp"
-                android:textStyle="bold"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -72,21 +72,9 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/edit_btn"
-                        android:layout_width="65dp"
-                        android:layout_height="40dp"
-                        android:layout_alignParentBottom="true"
-                        android:layout_centerHorizontal="true"
-                        android:background="@drawable/button_selector"
-                        android:text="@string/edit_btn_str"
-                        android:textAllCaps="false"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="21dp"/>
-
-                    <Button
                         android:id="@+id/show_btn"
-                        android:layout_width="65dp"
-                        android:layout_height="40dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="33dp"
                         android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true"
                         android:layout_marginLeft="10dp"
@@ -95,7 +83,7 @@
                         android:text="@string/show_btn_str"
                         android:textAllCaps="false"
                         android:textColor="@color/colorWhite"
-                        android:textSize="21dp"/>
+                        android:textSize="18dp"/>
 
                 </LinearLayout>
             </RelativeLayout>

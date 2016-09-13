@@ -12,6 +12,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +31,8 @@ public class NewLeadActivity extends AppCompatActivity implements View.OnClickLi
 
     TextView mLeadStatusTV = null;
 
+    boolean isFromNewLead = false;
+
     AutoCompleteTextView mCompanyNameATV = null;
     AutoCompleteTextView mContactNameATV = null;
 
@@ -37,6 +40,9 @@ public class NewLeadActivity extends AppCompatActivity implements View.OnClickLi
     EditText mDetailDescriptipnET = null;
 
     TextInputLayout mLeadSizeOfCompanyTIL = null;
+
+    TextView mActivityNameTV = null;
+    ImageView mActivityBackIMV = null;
 
     CheckBox mHotChkBox = null;
     CheckBox mWarmChkBox = null;
@@ -54,6 +60,8 @@ public class NewLeadActivity extends AppCompatActivity implements View.OnClickLi
 
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +72,8 @@ public class NewLeadActivity extends AppCompatActivity implements View.OnClickLi
 
     void initView() {
 
+
+
         mSaveButton = (Button) findViewById(R.id.save_btn);
         mConvertOppButton = (Button) findViewById(R.id.convert_to_oppertunity_btn);
 
@@ -71,6 +81,11 @@ public class NewLeadActivity extends AppCompatActivity implements View.OnClickLi
         mAddNewPersonContactButton = (Button) findViewById(R.id.add_new_person_contact_btn);
 
         mLeadStatusTV = (TextView) findViewById(R.id.lead_status_tv);
+
+        mActivityNameTV = (TextView) findViewById(R.id.screen_label_tv);
+        mActivityNameTV.setText("Create New Lead");
+        mActivityBackIMV = (ImageView) findViewById(R.id.back_arrow_img);
+        mActivityBackIMV.setOnClickListener(this);
 
         mCompanyNameATV = (AutoCompleteTextView) findViewById(R.id.company_name_atv);
         ArrayAdapter companyName = new ArrayAdapter(this, android.R.layout.simple_list_item_1, company);
@@ -87,6 +102,19 @@ public class NewLeadActivity extends AppCompatActivity implements View.OnClickLi
         mDetailDescriptipnET = (EditText) findViewById(R.id.detail_descriptipn_et);
 
         mLeadSizeOfCompanyTIL = (TextInputLayout) findViewById(R.id.lead_size_of_company_til);
+
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null) {
+            mCompanyName = bundle.getString("clientName");
+            mContactName = bundle.getString("ContactName");;
+            mLeadSizeOfCompany = bundle.getString("leadSize");;
+            mWhatYouNeed = bundle.getString("desc");
+            mActivityNameTV.setText("Edit Lead");
+            mCompanyNameATV.setText(mCompanyName);
+            mContactNameATV.setText(mContactName);
+            mLeadSizeOfCompanyET.setText(mLeadSizeOfCompany);
+            mDetailDescriptipnET.setText(mWhatYouNeed);
+        }
 
 //        mCompanyNameATV.addTextChangedListener(new TextWatcher() {
 //
@@ -144,17 +172,30 @@ public class NewLeadActivity extends AppCompatActivity implements View.OnClickLi
 
             case R.id.add_new_contact_btn:
                 Intent intent = new Intent(NewLeadActivity.this,AddNewCompanyContactActivity.class);
-                startActivityForResult(intent, 2);
+                isFromNewLead = true;
+                intent.putExtra("isFromNewLead",isFromNewLead);
+                startActivity(intent);
+                finish();
                 break;
 
             case R.id.add_new_person_contact_btn:
-                Intent intent1 = new Intent(NewLeadActivity.this,AddNewCompanyContactActivity.class);
+                Intent intent1 = new Intent(NewLeadActivity.this,AddingContactsActivity.class);
                 startActivity(intent1);
+                finish();
+                break;
+
+            case R.id.back_arrow_img:
+                Intent intent2 = new Intent(NewLeadActivity.this,ManageLeadActivity.class);
+                startActivity(intent2);
+                finish();
                 break;
 
             case R.id.convert_to_oppertunity_btn:
-//                Intent intent2 = new Intent(NewLeadActivity.this,ConvertLeadToOpportunityActivity.class);
-//                startActivity(intent2);
+                Intent intent3 = new Intent(NewLeadActivity.this,ConvertLeadToOpportunityActivity.class);
+                isFromNewLead = true;
+                intent3.putExtra("isFromNewLead",isFromNewLead);
+                startActivity(intent3);
+                finish();
                 break;
 
             default:
@@ -182,6 +223,14 @@ public class NewLeadActivity extends AppCompatActivity implements View.OnClickLi
         mHotChkBox=(CheckBox)findViewById(R.id.hot_chkBox);
         mWarmChkBox=(CheckBox)findViewById(R.id.warm_chkBox);
         mColdChkBox=(CheckBox)findViewById(R.id.cold_chkBox);
+
+
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null) {
+            mWarmChkBox.setChecked(true);
+            mHotChkBox.setChecked(false);
+            mColdChkBox.setChecked(false);
+        }
 
 
 
@@ -272,6 +321,12 @@ public class NewLeadActivity extends AppCompatActivity implements View.OnClickLi
         Matcher matcher;
         matcher = pattern.matcher(email);
         return matcher.matches();
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity( new Intent(this, DashBoardActivity.class) );
+        finish();
     }
 
 }

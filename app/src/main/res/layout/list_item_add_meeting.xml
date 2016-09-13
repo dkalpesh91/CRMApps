@@ -7,30 +7,32 @@
          this is a comment
      -->
     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_40"
         android:id="@+id/meetingInfo"
         android:textColor="#ffffff"
+        android:textSize="@dimen/dim_20"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/clientName" />
 
     <TextView
         android:id="@+id/clientName"
-        android:layout_width="fill_parent"
-        android:layout_height="40dp"
-        android:textSize="17dip"
-        android:paddingTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_40"
+        android:textSize="@dimen/dim_20"
+        android:paddingTop="@dimen/dim_5"
         android:textColor="#ffffff"
-        android:paddingBottom="5dp"
+        android:paddingBottom="@dimen/dim_5"
         android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
         android:layout_alignLeft="@+id/remainder"
         android:layout_alignStart="@+id/remainder" />
 
     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_40"
         android:id="@+id/Location"
+        android:textSize="@dimen/dim_20"
         android:textColor="#ffffff"
         android:layout_below="@+id/meetingInfo"
         android:layout_alignParentLeft="true"
@@ -38,10 +40,11 @@
 
 
     <TextView
-        android:layout_width="190dp"
-        android:layout_height="35dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_40"
         android:textColor="#ffffff"
         android:id="@+id/remainder"
+        android:textSize="@dimen/dim_20"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/Location"
@@ -49,8 +52,8 @@
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:layout_width="70dp"
-        android:layout_height="35dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_40"
         android:text="Client Name"
         android:textColor="#ffffff"
         android:id="@+id/textView"

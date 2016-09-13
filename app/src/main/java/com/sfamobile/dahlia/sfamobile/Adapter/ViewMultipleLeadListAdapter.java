@@ -2,6 +2,7 @@ package com.sfamobile.dahlia.sfamobile.Adapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.sfamobile.dahlia.sfamobile.Activity.LeadDetalisShowActivity;
 import com.sfamobile.dahlia.sfamobile.R;
 
 /**
@@ -36,7 +38,6 @@ public class ViewMultipleLeadListAdapter extends BaseAdapter implements View.OnC
 
     /******** What is the size of Passed Arraylist Size ************/
     public int getCount() {
-
 
         return data.length;
     }
@@ -119,6 +120,10 @@ public class ViewMultipleLeadListAdapter extends BaseAdapter implements View.OnC
 
         @Override
         public void onClick(View arg0) {
+
+            Intent intent = new Intent(activity,LeadDetalisShowActivity.class);
+            activity.startActivity(intent);
+            ((Activity)activity).finish();
 
 
         }

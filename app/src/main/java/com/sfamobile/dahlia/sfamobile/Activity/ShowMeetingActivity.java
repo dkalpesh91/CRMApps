@@ -1,10 +1,13 @@
 package com.sfamobile.dahlia.sfamobile.Activity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.sfamobile.dahlia.sfamobile.Adapter.AdapterForExpandableListview;
@@ -15,7 +18,7 @@ import com.sfamobile.dahlia.sfamobile.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShowMeetingActivity extends AppCompatActivity {
+public class ShowMeetingActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView meetingTitle, client_name, meeting_info, location, date, time, set_remainder;
     // Button edit;
@@ -34,6 +37,10 @@ public class ShowMeetingActivity extends AppCompatActivity {
     ChildModelClassInAddMeetings child2 = null;
     ChildModelClassInAddMeetings child3 = null;
 
+    TextView mActivityNameTV = null;
+    ImageView mActivityBackIMV = null;
+    ImageView mActivityAddIMV = null;
+
     private List<ChildModelClassInAddMeetings> listData = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +56,13 @@ public class ShowMeetingActivity extends AppCompatActivity {
         // listDataChild = new ArrayList<ChildModelClass>();
         listAdapter = new AdapterForExpandableListview(this, listDataHeader, listDataChild);
         expListView.setAdapter(listAdapter);
+
+        mActivityNameTV = (TextView) findViewById(R.id.screen_label_tv);
+        mActivityNameTV.setText("My Meeting");
+        mActivityBackIMV = (ImageView) findViewById(R.id.back_arrow_img);
+        mActivityBackIMV.setOnClickListener(this);
+        mActivityAddIMV = (ImageView) findViewById(R.id.add_item_img);
+        mActivityAddIMV.setOnClickListener(this);
 
     }
 
@@ -105,5 +119,31 @@ public class ShowMeetingActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onClick(View v) {
+
+        switch (v.getId()) {
+
+            case R.id.back_arrow_img:
+
+                Intent intent = new Intent(ShowMeetingActivity.this,DashBoardActivity.class);
+                startActivity(intent);
+                finish();
+                break;
+
+            case R.id.add_item_img:
+                Intent intent1 = new Intent(ShowMeetingActivity.this,AddMeetingAndUpdateMeetingActivity.class);
+                startActivity(intent1);
+                finish();
+                break;
+
+
+
+            default:
+                break;
+        }
+
+
+    }
 }
 

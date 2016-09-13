@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+
+    <include android:id="@+id/dsvr_top_bar"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             layout="@layout/top_bar_layout"/>
+
+    <View
+        android:id="@+id/line_view"
+        android:background="@color/view_line"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/dsvr_top_bar"
+        android:layout_height="3dp"/>
+
+
+    <RelativeLayout
+        android:id="@+id/quotation_rl"
+        android:layout_below="@id/line_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/total_cost_ll">
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/cqa_client_name_til"
+            style="@style/TextLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:paddingLeft="20dp"
+            android:visibility="gone"
+            android:paddingRight="20dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/cqa_client_name_atv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/client_name_tv_str"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorsilver"
+                android:textSize="18dp"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+
+        <ListView
+            android:id="@+id/product_catalog_lv"
+            android:layout_below="@+id/cqa_client_name_til"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:dividerHeight="10dp"
+            android:visibility="gone"
+            android:layout_margin="10dp">
+
+        </ListView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/total_cost_ll"
+        android:layout_above="@+id/add_percentage_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:gravity="center">
+
+
+        <TextView
+            android:id="@+id/total_cost_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:text="@string/total_cost_with_rupee_symbol"
+            android:textSize="21dp"/>
+
+        <TextView
+            android:id="@+id/total_cost_value_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colordarksilver"
+            android:layout_marginLeft="10dp"
+            android:text="11,000"
+            android:textSize="21dp"/>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/add_percentage_ll"
+        android:layout_above="@+id/create_order_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:visibility="gone">
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/old_pwd_til"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reset_pwd_tv"
+            style="@style/TextLabel">
+
+            <AutoCompleteTextView
+                android:id="@+id/percentage_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="discount(%)"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textSize="18dp"
+                android:textColor="@color/colorWhite"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/send_approval_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:background="@drawable/button_selector"
+            android:text="Send for approval"
+            android:visibility="gone"
+            android:textColor="@color/colorWhite"
+            android:textAllCaps="false"
+            android:textSize="18dp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/create_order_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_selector"
+        android:text="Create Order"
+        android:textAllCaps="false"
+        android:textSize="18dp"/>
+
+
+</RelativeLayout>

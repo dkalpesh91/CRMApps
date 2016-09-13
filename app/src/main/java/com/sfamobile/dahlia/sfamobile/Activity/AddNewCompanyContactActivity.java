@@ -11,6 +11,8 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.sfamobile.dahlia.sfamobile.R;
@@ -47,13 +49,22 @@ public class AddNewCompanyContactActivity extends AppCompatActivity implements V
     String mContactNumber = null;
     String mContactRoll = null;
 
+    TextView mActivityNameTV = null;
+    ImageView mActivityBackIMV = null;
+
     String[] company = {"Dahlia", "Wipro", "IBM", "Microsoft"};
     String[] contact = {"Ravi", "Vishal", "Rahul", "Amit"};
+
+    boolean isFromNewLead = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new_company_contact);
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null) {
+            isFromNewLead = bundle.getBoolean("isFromNewLead");
+        }
         initView();
     }
 
@@ -86,6 +97,35 @@ public class AddNewCompanyContactActivity extends AppCompatActivity implements V
         mCompanyPhoneTIL = (TextInputLayout) findViewById(R.id.company_phoneno_til);
 
         mSaveButton.setOnClickListener(this);
+
+        mActivityNameTV = (TextView) findViewById(R.id.screen_label_tv);
+        mActivityNameTV.setText("Create Contact");
+        mActivityBackIMV = (ImageView) findViewById(R.id.back_arrow_img);
+        mActivityBackIMV.setOnClickListener(this);
+
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null) {
+            mActivityNameTV.setText("Edit Contact");
+            mCompanyName = bundle.getString("clientName");
+            mCompanyAddress = bundle.getString("clientAddress");;
+            mCompanyEmail = bundle.getString("clientEmail");;
+            mCompanyPhone = bundle.getString("clientPhone");
+            mContactName = bundle.getString("contactName");
+            mContactEmail = bundle.getString("contactemail");;
+            mContactNumber = bundle.getString("contactphone");
+            mContactRoll = bundle.getString("contactRole");
+
+            mCompanyNameATV.setText(mCompanyName);
+            mCompanyAddressET.setText(mContactAddress);
+            mCompanyEmailET.setText(mCompanyEmail);
+            mCompanyPhoneET.setText(mCompanyPhone);
+
+            mContactNameATV.setText(mContactName);
+            mContactPhoneNumberET.setText(mContactNumber);
+            mContactEmailET.setText(mContactEmail);
+            mContactRollET.setText(mContactRoll);
+        }
+
     }
 
 
@@ -142,7 +182,7 @@ public class AddNewCompanyContactActivity extends AppCompatActivity implements V
             setResult(2,intent);
             finish();
 
-//            Intent intent = new Intent(AddNewCompanyContactActivity.this, ManageCompanyContactActivity.class);
+//            Intent intent = new Intent(AddNewCompanyContact.this, ManageCompanyContactActivity.class);
 //            intent.putExtra("companyName", mCompanyNameATV.getText().toString());
 //            intent.putExtra("companyEmail",mCompanyEmailET.getText().toString() );
 //            intent.putExtra("companyPhone", mCompanyPhoneET.getText().toString());
@@ -179,6 +219,29 @@ public class AddNewCompanyContactActivity extends AppCompatActivity implements V
 
     @Override
     public void onClick(View v) {
-        validateData();
+
+        switch (v.getId()) {
+
+            case R.id.save_btn:
+                validateData();
+                break;
+
+            case R.id.back_arrow_img:
+                if (isFromNewLead) {
+                    Intent intent2 = new Intent(AddNewCompanyContactActivity.this, NewLeadActivity.class);
+                    startActivity(intent2);
+                    finish();
+                }else {
+                    Intent intent2 = new Intent(AddNewCompanyContactActivity.this, ManageCompanyContactActivity.class);
+                    startActivity(intent2);
+                    finish();
+                }
+                finish();
+                break;
+
+            default:
+                break;
+        }
+
     }
 }

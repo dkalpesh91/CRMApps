@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/card_lime_wallet_large_main_rel"
+                style="@style/large_card_layout_style"
+                android:background="@drawable/card_view_bg">
+
+
+    <ImageView
+        android:id="@+id/card_lime_wallet_large_category_name"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:background="@drawable/dahlia_logo_icon"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/card_lime_wallet_large_category_name"
+        android:baselineAligned="false"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:baselineAligned="false"
+            android:gravity="bottom|end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/card_view_name_value_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vikas Tripathi"
+                android:textColor="@color/colorWhite"
+                android:textSize="21dp"/>
+
+            <TextView
+                android:id="@+id/card_view_phoneno_value_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="98 2271 2147"
+                android:textColor="@color/colorWhite"
+                android:textSize="17dp"/>
+
+
+            <TextView
+                android:id="@+id/card_view_emailid_value_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="vikas.tripathi@dahlia-tech.com"
+                android:textColor="@color/colorWhite"
+                android:textSize="17dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

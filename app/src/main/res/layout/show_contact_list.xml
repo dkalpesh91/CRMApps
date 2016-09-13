@@ -13,7 +13,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginLeft="10dp">
+            android:layout_marginLeft="@dimen/dim_10">
 
             <TextView
                 android:id="@+id/dialog_contact_person_name_tv"
@@ -21,17 +21,17 @@
                 android:layout_height="wrap_content"
                 android:text="Contact Person"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="20dp"
+                android:textSize="@dimen/dim_20"
                 android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/dialog_contact_person_name_value_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="@dimen/dim_5"
                 android:text="Ravi V"
                 android:textColor="@color/colorsilver"
-                android:textSize="17dp"
+                android:textSize="@dimen/dim_19"
                 android:textStyle="bold"/>
 
         </LinearLayout>
@@ -47,8 +47,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginTop="@dimen/dim_10"
+        android:layout_marginLeft="@dimen/dim_10"
         android:orientation="vertical">
 
         <TextView
@@ -57,17 +57,17 @@
             android:layout_height="wrap_content"
             android:text="@string/contact_number_et_hint_str"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="20dp"
+            android:textSize="@dimen/dim_20"
             android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/dialog_contact_person_phone_number_value_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/dim_5"
             android:text="9880808080"
             android:textColor="@color/colorsilver"
-            android:textSize="17dp"
+            android:textSize="@dimen/dim_19"
             android:textStyle="bold"/>
 
     </LinearLayout>
@@ -75,8 +75,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginTop="@dimen/dim_10"
+        android:layout_marginLeft="@dimen/dim_10"
         android:orientation="vertical">
 
         <TextView
@@ -85,17 +85,17 @@
             android:layout_height="wrap_content"
             android:text="@string/contact_email_et_hint_str"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="20dp"
+            android:textSize="@dimen/dim_20"
             android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/dialog_contact_person_phone_email_id_value_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/dim_5"
             android:text="ravi@gmail.com"
             android:textColor="@color/colorsilver"
-            android:textSize="17dp"
+            android:textSize="@dimen/dim_19"
             android:textStyle="bold"/>
 
     </LinearLayout>
@@ -103,8 +103,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginTop="@dimen/dim_10"
+        android:layout_marginLeft="@dimen/dim_10"
         android:orientation="vertical">
 
         <TextView
@@ -113,17 +113,17 @@
             android:layout_height="wrap_content"
             android:text="@string/contact_role_atv_hint_str"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="20dp"
+            android:textSize="@dimen/dim_20"
             android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/dialog_contact_person_phone_roll_value_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/dim_5"
             android:text="Web Developer"
             android:textColor="@color/colorsilver"
-            android:textSize="17dp"
+            android:textSize="@dimen/dim_19"
             android:textStyle="bold"/>
 
     </LinearLayout>
@@ -131,8 +131,8 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="@dimen/dim_10"
+        android:layout_marginTop="@dimen/dim_10"
         android:background="@drawable/dotted"/>
 
 

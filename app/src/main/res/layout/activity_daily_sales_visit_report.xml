@@ -5,13 +5,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    android:padding="20dp">
+    android:background="@color/colorPrimary">
+
+    <include android:id="@+id/dsvr_top_bar"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             layout="@layout/top_bar_without_add"/>
+    <View
+        android:id="@+id/line_view"
+        android:background="@color/view_line"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/dsvr_top_bar"
+        android:layout_height="3dp"/>
 
     <ScrollView
         android:id="@+id/lead_sv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/line_view"
         android:layout_above="@+id/dsvrc_save_btn">
 
         <LinearLayout
@@ -20,41 +31,53 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/dsvrc_daily_visit_report_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:text="@string/daily_visit_report_tv_str"
-                android:textColor="@color/colorWhite"
-                android:textSize="22dp"
-                android:textStyle="bold"/>
 
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/dsvrc_select_date_til"
-                style="@style/TextLabel"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="25dp"
                 android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="25dp">
+                android:layout_marginRight="15dp">
 
-                <AutoCompleteTextView
-                    android:id="@+id/dsvrc_select_date_atv"
-                    android:layout_width="match_parent"
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/dsvrc_select_date_til"
+                    style="@style/TextLabel"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Choose date"
-                    android:imeOptions="actionNext"
-                    android:textColor="@color/colorWhite"
-                    android:focusable="false"
-                    android:textSize="18dp"
-                    android:inputType="text"
-                    android:drawableRight="@mipmap/ic_launcher"
-                    android:maxLines="1"
-                    android:singleLine="true"/>
-            </android.support.design.widget.TextInputLayout>
+                    android:layout_weight="1.8">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/dsvrc_select_date_atv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Choose date"
+                        android:imeOptions="actionNext"
+                        android:textColor="@color/colorWhite"
+                        android:focusable="false"
+                        android:textSize="18dp"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:singleLine="true"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/dsvrc_select_date_button"
+                    android:layout_width="0dp"
+                    android:layout_height="33dp"
+                    android:layout_above="@+id/spinner"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.2"
+                    android:background="@drawable/calendar2"/>
+
+
+            </LinearLayout>
+
+
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/dsvrc_client_name_til"
@@ -181,8 +204,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Purpose Type"
-                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="Activity Type"
+                android:textColor="@color/colorsilver"
                 android:textSize="18dp"
                 android:textStyle="bold"/>
 
@@ -200,15 +225,16 @@
     <Button
         android:id="@+id/dsvrc_save_btn"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="33dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/button_selector"
         android:text="@string/save_btn_str"
-        android:textAllCaps="false"
         android:textColor="@color/colorWhite"
-        android:textSize="21dp"/>
+        android:textAllCaps="false"
+        android:textSize="18dp"/>
 
 
 

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/dtp_choose_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dim_25"
+        android:text="Choose"/>
+
+
+    <RadioGroup
+        android:id="@+id/dtp_radio_button_group"
+        android:layout_below="@+id/dtp_choose_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_8"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/dim_10"
+        android:layout_marginRight="@dimen/dim_10">
+
+
+
+        <RadioButton
+            android:id="@+id/dtp_local_radiobtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="Local"
+            android:textColor="@drawable/radio_button_text_selector" />
+
+        <RadioButton
+            android:id="@+id/dtp_outstation_radiobtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_10"
+            android:singleLine="true"
+            android:text="Outstation"
+            android:textColor="@drawable/radio_button_text_selector" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/dtp_button_confirm"
+        android:layout_below="@+id/dtp_radio_button_group"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dim_40"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim_10"
+        android:layout_marginBottom="@dimen/dim_10"
+        android:background="@drawable/button_selector"
+        android:textAllCaps="false"
+        android:text="Confirm"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/dim_25"/>
+
+</RelativeLayout>

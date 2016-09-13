@@ -7,8 +7,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#36474f"
-
+    android:orientation="vertical"
     android:id="@+id/linear">
+    <include android:id="@+id/dsvr_top_bar"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             layout="@layout/top_bar_layout"/>
+    <View
+        android:id="@+id/line_view"
+        android:background="@color/view_line"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/dsvr_top_bar"
+        android:layout_height="3dp"/>
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -25,18 +35,6 @@
             android:background="#36474f"
             android:showAsAction="never"
             tools:context=".Activity.AddingContactsActivity" >
-
-
-            <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:id="@+id/imageButton"
-                android:src="@drawable/add2"
-                android:background="#36474f"
-                android:layout_centerVertical="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
 
             <EditText
                 android:layout_width="match_parent"
@@ -86,30 +84,19 @@
                 android:maxLength="10"
                 android:inputType="number"
                 android:id="@+id/edit_Number2"
-                android:layout_above="@+id/button_save"
-                android:layout_alignLeft="@+id/add_contacts"
-                android:layout_alignStart="@+id/add_contacts" />
+                android:layout_above="@+id/button_save" />
 
             <Button
                 android:layout_width="70dp"
-                android:layout_height="40dp"
+                android:layout_height="33dp"
                 android:text="@string/save"
                 android:id="@+id/button_save"
                 android:onClick="slideUpDown"
+                android:textAllCaps="false"
+                android:textSize="18dp"
                 android:background="@drawable/buttonshape"
                 android:textColor="#ffffff"
                 android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true" />
-
-
-            <TextView
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="@string/add_contacts"
-                android:id="@+id/add_contacts"
-                android:textSize="22dp"
-                android:textColor="#ffffff"
-                android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true" />
 
             <EditText
@@ -132,10 +119,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/expandablelist"
-                android:layout_alignRight="@+id/imageButton"
-                android:layout_alignEnd="@+id/imageButton"
-                android:layout_above="@+id/edit_Username2"
-                android:layout_below="@+id/imageButton" />
+                android:layout_above="@+id/edit_Username2" />
 
 
         </RelativeLayout>

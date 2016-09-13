@@ -20,7 +20,7 @@
 
     <style name="TextLabel" parent="TextAppearance.AppCompat">
         <!-- Hint color and label color in FALSE state -->
-        <item name="android:textColorHint">@color/colorPrimaryDark</item>
+        <item name="android:textColorHint">@color/colorsilver</item>
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:textSize">20sp</item>
         <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
@@ -38,6 +38,17 @@
 
     <style name="MarkerCustomTextStyle" parent="android:TextAppearance.Small">
         <item name="android:fontFamily">monospace</item>
+    </style>
+
+    <style name="large_card_layout_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">240dp</item>
+        <item name="android:background">@drawable/card_view_bg</item>
+        <item name="android:clickable">true</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:paddingTop">15dp</item>
     </style>
 
 </resources>

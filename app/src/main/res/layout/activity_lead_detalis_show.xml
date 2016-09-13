@@ -5,11 +5,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    android:padding="20dp">
+    android:background="@color/colorPrimary">
+
+    <include android:id="@+id/alds_top_bar"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             layout="@layout/top_bar_with_edit"/>
+
+    <View
+        android:id="@+id/line_view"
+        android:background="@color/view_line"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/alds_top_bar"
+        android:layout_height="3dp"/>
+
 
     <ScrollView
         android:id="@+id/lead_sv"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp"
+        android:layout_below="@+id/line_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -17,35 +32,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
-
-                <TextView
-                    android:id="@+id/new_lead_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:text="Lead Details"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="22dp"
-                    android:textStyle="bold"/>
-
-                <Button
-                    android:id="@+id/add_new_contact_btn"
-                    android:layout_width="60dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/button_selector"
-                    android:text="Edit"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerInParent="true"
-                    android:textAllCaps="false"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="17dp"/>
-
-            </RelativeLayout>
 
             <TextView
                 android:id="@+id/alds_client_name_tv"
@@ -197,7 +183,7 @@
                 android:id="@+id/alds_person_roll_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Roll"
+                android:text="Role"
                 android:textColor="@color/colorWhite"
                 android:textSize="18dp"
                 android:layout_marginTop="10dp"

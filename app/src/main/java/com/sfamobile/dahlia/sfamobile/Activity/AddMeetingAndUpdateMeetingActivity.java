@@ -1,19 +1,27 @@
 package com.sfamobile.dahlia.sfamobile.Activity;
 
 import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.NotificationCompat;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -25,8 +33,13 @@ import java.util.Calendar;
 import java.util.List;
 
 public class AddMeetingAndUpdateMeetingActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
-    private TextView pDisplayDate;
-    private ImageButton selectDate;
+
+
+    Notification noti = null;
+    NotificationManager nmgr = null;
+    public static final int NOTIFICATION_ID = 0;
+
+    private Button selectDate;
     private int pYear;
     private int pMonth;
     private int pDay;
@@ -47,7 +60,7 @@ public class AddMeetingAndUpdateMeetingActivity extends AppCompatActivity implem
     String mMeetingDate = null;
     String mMeetingTime = null;
 
-    private ImageButton select_time;
+    private Button select_time;
     // TimePicker timePicker = null;
     // TextView displayTime = null;
     // Button ok_button = null;
@@ -58,25 +71,44 @@ public class AddMeetingAndUpdateMeetingActivity extends AppCompatActivity implem
     EditText mEditLocationET = null;
     EditText mEditDateET = null;
     EditText mEditTimeET = null;
-    Button cancel_Button;
     Button accept_Button;
     TextView mDropTitleTV;
-    TextView mMeetingTitleTV;
+
+    TextView mActivityNameTV = null;
+    ImageView mActivityBackIMV = null;
 
 
     TextView spinnerItem = null;
+    private RadioGroup mTravalPlanRadioGroup = null;
+    private int index = -1;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_meeting_and_update_meeting);
 
-        selectDate = (ImageButton) findViewById(R.id.select_date);
-        pDisplayDate = (TextView) findViewById(R.id.displayDate);
-        select_time = (ImageButton) findViewById(R.id.select_time);
+        selectDate = (Button) findViewById(R.id.select_date);
+        select_time = (Button) findViewById(R.id.select_time);
+        select_time.setOnClickListener(this);
         mDropTitleTV = (TextView) findViewById(R.id.text);
-        mMeetingTitleTV = (TextView) findViewById(R.id.headerText);
 //for edit text
-        pDisplayDate.setVisibility(View.INVISIBLE);
+
+        mActivityNameTV = (TextView) findViewById(R.id.screen_label_tv);
+        mActivityNameTV.setText("Add Meeting");
+        mActivityBackIMV = (ImageView) findViewById(R.id.back_arrow_img);
+        mActivityBackIMV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                        Intent intent = new Intent(AddMeetingAndUpdateMeetingActivity.this,ShowMeetingActivity.class);
+                        startActivity(intent);
+                        finish();
+
+
+
+            }
+        });
 
 
         final Spinner spinner = (Spinner) findViewById(R.id.spinner);
@@ -86,8 +118,6 @@ public class AddMeetingAndUpdateMeetingActivity extends AppCompatActivity implem
         mEditLocationET = (EditText) findViewById(R.id.location);
         mEditDateET = (EditText) findViewById(R.id.select_Date);
         mEditTimeET = (EditText) findViewById(R.id.Enter_time);
-        mEditTimeET.setOnClickListener(this);
-        cancel_Button = (Button) findViewById(R.id.button_cancel);
         accept_Button = (Button) findViewById(R.id.button_accept);
 
         spinnerItem = (TextView) findViewById(R.id.text);
@@ -196,9 +226,33 @@ public class AddMeetingAndUpdateMeetingActivity extends AppCompatActivity implem
 
                     Toast.makeText(AddMeetingAndUpdateMeetingActivity.this, "saved sucessfully", Toast.LENGTH_SHORT).show();
 
-                    Intent i = new Intent(getApplicationContext(), ShowMeetingActivity.class);
-                    startActivity(i);
-                    setContentView(R.layout.activity_show_meeting);
+//                    Intent i = new Intent(getApplicationContext(), ShowMeetingActivity.class);
+//                    startActivity(i);
+//                    setContentView(R.layout.activity_show_meeting);
+
+
+                    Intent intent = new Intent(AddMeetingAndUpdateMeetingActivity.this, PlanTravalActivity.class);
+                    PendingIntent contentIntent = PendingIntent.getActivity(AddMeetingAndUpdateMeetingActivity.this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+                    NotificationCompat.Builder b = new NotificationCompat.Builder(AddMeetingAndUpdateMeetingActivity.this);
+
+                    b.setAutoCancel(true)
+                            .setDefaults(Notification.DEFAULT_ALL)
+                            .setWhen(System.currentTimeMillis())
+                            .setSmallIcon(R.drawable.sfa_mobi_white_logo)
+                            .setTicker("SFAMobi")
+                            .setContentTitle(mEditMeetingET.getText().toString())
+                            .setContentText(mEditClientET.getText().toString())
+                            .setDefaults(Notification.DEFAULT_LIGHTS| Notification.DEFAULT_SOUND)
+                            .setContentIntent(contentIntent)
+                            .setContentInfo("Info");
+
+
+                    NotificationManager notificationManager = (NotificationManager) AddMeetingAndUpdateMeetingActivity.this.getSystemService(AddMeetingAndUpdateMeetingActivity.this.NOTIFICATION_SERVICE);
+                    notificationManager.notify(1, b.build());
+
+
+
 
                 }
 
@@ -208,21 +262,7 @@ public class AddMeetingAndUpdateMeetingActivity extends AppCompatActivity implem
 
         });
 
-        cancel_Button.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View arg0) {
-
-                mEditMeetingET.setText("");
-                mEditClientET.setText("");
-                mEditMeetingInfoET.setText("");
-                mEditLocationET.setText("");
-                mEditDateET.setText("");
-                mEditTimeET.setText("");
-                spinner.setSelection(0);
-
-            }
-        });
 
     }
 

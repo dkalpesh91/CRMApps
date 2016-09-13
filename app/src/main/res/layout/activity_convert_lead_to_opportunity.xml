@@ -5,15 +5,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    android:padding="20dp">
+    android:background="@color/colorPrimary">
+
+    <include android:id="@+id/dsvr_top_bar"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             layout="@layout/top_bar_without_add"/>
+    <View
+        android:id="@+id/line_view"
+        android:background="@color/view_line"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/dsvr_top_bar"
+        android:layout_height="3dp"/>
 
     <ScrollView
         android:id="@+id/lead_sv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/line_view"
         android:layout_above="@+id/clto_save_btn"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,118 +34,7 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/clto_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:text="Opportunity"
-                android:textColor="@color/colorWhite"
-                android:textSize="22dp"
-                android:textStyle="bold"/>
 
-            <!--<TextView-->
-            <!--android:id="@+id/clto_client_name_tv"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginTop="25dp"-->
-            <!--android:text="Client Name"-->
-            <!--android:textColor="@color/colorWhite"-->
-            <!--android:textSize="18dp"-->
-            <!--android:textStyle="bold"/>-->
-
-            <!--<TextView-->
-            <!--android:id="@+id/clto_client_name_value_tv"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginTop="10dp"-->
-            <!--android:text="Dahlia Tech"-->
-            <!--android:textColor="@color/colorPrimaryDark"-->
-            <!--android:textSize="18dp"-->
-            <!--android:textStyle="bold"/>-->
-
-
-            <!--<TextView-->
-            <!--android:id="@+id/clto_client_email_id_tv"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginTop="10dp"-->
-            <!--android:text="Email Id"-->
-            <!--android:textColor="@color/colorWhite"-->
-            <!--android:textSize="18dp"-->
-            <!--android:textStyle="bold"/>-->
-
-            <!--<TextView-->
-            <!--android:id="@+id/clto_client_email_id_value_tv"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginTop="10dp"-->
-            <!--android:text="sales@dahlia-tech.com"-->
-            <!--android:textColor="@color/colorPrimaryDark"-->
-            <!--android:textSize="18dp"-->
-            <!--android:textStyle="bold"/>-->
-
-            <!--<TextView-->
-            <!--android:id="@+id/clto_client_phone_no_tv"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginTop="10dp"-->
-            <!--android:text="Contact Number"-->
-            <!--android:textColor="@color/colorWhite"-->
-            <!--android:textSize="18dp"-->
-            <!--android:textStyle="bold"/>-->
-
-            <!--<TextView-->
-            <!--android:id="@+id/clto_client_phone_no_value_tv"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginTop="10dp"-->
-            <!--android:text="9503636108"-->
-            <!--android:textColor="@color/colorPrimaryDark"-->
-            <!--android:textSize="18dp"-->
-            <!--android:textStyle="bold"/>-->
-
-
-            <!--<TextView-->
-            <!--android:id="@+id/clto_client_address_tv"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginTop="10dp"-->
-            <!--android:text="Address"-->
-            <!--android:textColor="@color/colorWhite"-->
-            <!--android:textSize="18dp"-->
-            <!--android:textStyle="bold"/>-->
-
-            <!--<TextView-->
-            <!--android:id="@+id/clto_client_address_value_tv"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginTop="10dp"-->
-            <!--android:text="516(B),\nAmenora Chember,Pune"-->
-            <!--android:textColor="@color/colorPrimaryDark"-->
-            <!--android:textSize="18dp"-->
-            <!--android:textStyle="bold"/>-->
-
-            <!--<TextView-->
-            <!--android:id="@+id/clto_contact_person_tv"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginTop="10dp"-->
-            <!--android:text="Contact Person"-->
-            <!--android:textColor="@color/colorWhite"-->
-            <!--android:textSize="18dp"-->
-            <!--android:textStyle="bold"/>-->
-
-            <!--<TextView-->
-            <!--android:id="@+id/clto_contact_person_value_tv"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginTop="10dp"-->
-            <!--android:text="Ravi Verma"-->
-            <!--android:textColor="@color/colorPrimaryDark"-->
-            <!--android:textSize="18dp"-->
-            <!--android:textStyle="bold"/>-->
 
 
             <android.support.design.widget.TextInputLayout
@@ -146,6 +48,7 @@
                     android:id="@+id/clto_client_name_atv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorsilver"
                     android:hint="@string/client_name_tv_str"
                     android:imeOptions="actionNext"
                     android:inputType="text"
@@ -167,6 +70,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Email Id"
+                    android:textColorHint="@color/colorsilver"
                     android:imeOptions="actionNext"
                     android:inputType="text"
                     android:maxLines="1"
@@ -188,6 +92,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Phone Number"
+                    android:textColorHint="@color/colorsilver"
                     android:imeOptions="actionNext"
                     android:inputType="text"
                     android:maxLines="1"
@@ -209,6 +114,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Address"
                     android:imeOptions="actionNext"
+                    android:textColorHint="@color/colorsilver"
                     android:inputType="text"
                     android:maxLines="1"
                     android:textColor="@color/colorWhite"
@@ -232,6 +138,7 @@
                     android:hint="Contact Name"
                     android:imeOptions="actionNext"
                     android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorsilver"
                     android:textSize="18dp"
                     android:inputType="text"
                     android:maxLines="1"
@@ -251,6 +158,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="top|left"
+                    android:textColorHint="@color/colorsilver"
                     android:hint="Detailed Requirement(Max 200 character)"
                     android:imeOptions="actionNext"
                     android:inputType="textMultiLine"
@@ -264,26 +172,48 @@
                     android:maxLength="200"/>
             </android.support.design.widget.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/clto_amount_til"
-                style="@style/TextLabel"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                android:orientation="horizontal">
 
-                <AutoCompleteTextView
-                    android:id="@+id/clto_amount_atv"
-                    android:layout_width="match_parent"
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/clto_amount_til"
+                    style="@style/TextLabel"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Amount"
-                    android:imeOptions="actionNext"
-                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="10dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/clto_amount_atv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Amount"
+                        android:imeOptions="actionNext"
+                        android:textColorHint="@color/colorsilver"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18dp"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:singleLine="true"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:id="@+id/add_product_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dp"
+                    android:text="Add Product"
+                    android:layout_gravity="center"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
                     android:textSize="18dp"
-                    android:inputType="text"
-                    android:maxLines="1"
-                    android:singleLine="true"/>
-            </android.support.design.widget.TextInputLayout>
+                    android:background="@drawable/button_selector"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"/>
+
+
+            </LinearLayout>
 
 
             <RelativeLayout
@@ -319,6 +249,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/clto_seekbar"
                 android:layout_marginTop="10dp"
+                android:progress="50"
                 android:max="100"/>
             <!--android:progressDrawable="@drawable/seekbar_progress"-->
 
@@ -360,28 +291,51 @@
             <!--android:thumb="@drawable/ic_menu_send"-->
             <!--android:thumbOffset="12dp" />-->
 
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/clto_select_date_til"
-                style="@style/TextLabel"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2"
                 android:layout_marginTop="25dp">
 
-                <AutoCompleteTextView
-                    android:id="@+id/clto_select_date_atv"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Choose Closure Date"
-                    android:imeOptions="actionNext"
-                    android:textColor="@color/colorWhite"
-                    android:focusable="false"
-                    android:textSize="18dp"
-                    android:inputType="text"
-                    android:drawableRight="@mipmap/ic_launcher"
-                    android:maxLines="1"
-                    android:singleLine="true"/>
-            </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/clto_select_date_til"
+                    style="@style/TextLabel"
+                    android:layout_weight="1.8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/clto_select_date_atv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Choose Closure Date"
+                        android:imeOptions="actionNext"
+                        android:textColor="@color/colorWhite"
+                        android:focusable="false"
+                        android:textSize="18dp"
+                        android:inputType="text"
+                        android:textColorHint="@color/colorsilver"
+                        android:maxLines="1"
+                        android:singleLine="true"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/clto_select_date_button"
+                    android:layout_width="0dp"
+                    android:layout_height="33dp"
+                    android:layout_above="@+id/spinner"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.2"
+                    android:background="@drawable/calendar2"/>
+
+
+            </LinearLayout>
+
+
 
             <TextView
                 android:id="@+id/clto_status_tv"
@@ -396,7 +350,9 @@
             <Spinner
                 android:id="@+id/clto_status_spinner"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/lead_sv"
+                android:layout_alignParentStart="true"/>
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/clto_reason_til"
@@ -418,6 +374,7 @@
                     android:maxLines="6"
                     android:minLines="4"
                     android:scrollbars="vertical"
+                    android:textColorHint="@color/colorsilver"
                     android:textColor="@color/colorWhite"
                     android:textSize="18dp"
                     android:singleLine="true"
@@ -431,17 +388,16 @@
     <Button
         android:id="@+id/clto_save_btn"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="33dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/button_selector"
         android:text="@string/save_btn_str"
-        android:textAllCaps="false"
         android:textColor="@color/colorWhite"
-        android:textSize="21dp"/>
+        android:textAllCaps="false"
+        android:textSize="18dp"/>
 
 
 

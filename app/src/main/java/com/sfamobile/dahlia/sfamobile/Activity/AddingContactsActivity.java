@@ -1,5 +1,6 @@
 package com.sfamobile.dahlia.sfamobile.Activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.widget.EditText;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -38,8 +40,6 @@ public class AddingContactsActivity extends AppCompatActivity {
     EditText mEditEmail2 = null;
     EditText mEditNumber2 = null;
     EditText mCountryCode = null;
-
-    private ImageButton addButton;
     TextView mNameSaving = null;
     TextView mRollSaving = null;
     TextView mEmailSaving = null;
@@ -50,13 +50,33 @@ public class AddingContactsActivity extends AppCompatActivity {
     private  Button mEdit_button =null;
     ScrollView mScroll_button = null;
 
+    TextView mActivityNameTV = null;
+    ImageView mActivityBackIMV = null;
+    ImageView mActivityAddIMV = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        addButton  = (ImageButton) findViewById(R.id.imageButton);
+        setContentView(R.layout.activity_adding_contacts);
         mSave_button = (Button) findViewById(R.id.button_save);
+
+        mActivityNameTV = (TextView) findViewById(R.id.screen_label_tv);
+        mActivityNameTV.setText("Add Meeting");
+        mActivityBackIMV = (ImageView) findViewById(R.id.back_arrow_img);
+        mActivityBackIMV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent intent = new Intent(AddingContactsActivity.this,ShowMeetingActivity.class);
+                startActivity(intent);
+                finish();
+
+
+
+            }
+        });
+        mActivityAddIMV = (ImageView) findViewById(R.id.add_item_img);
 
         mEditName2 = (EditText) findViewById(R.id.edit_Username2);
         mEditRole2 = (EditText) findViewById(R.id.edit_Role2);
@@ -75,11 +95,9 @@ public class AddingContactsActivity extends AppCompatActivity {
 
         getPrepareListData();
 
-        addButton.setOnClickListener(new View.OnClickListener() {
-
+        mActivityAddIMV.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View arg0) {
-
+            public void onClick(View v) {
 
                 if(mEditName2.getVisibility()==View.VISIBLE && mEditName2.getVisibility()==View.VISIBLE && mEditEmail2.getVisibility()==View.VISIBLE && mEditNumber2.getVisibility()==View.VISIBLE  ){
 
@@ -109,8 +127,8 @@ public class AddingContactsActivity extends AppCompatActivity {
                 }
 
             }
-
         });
+
 
 
 

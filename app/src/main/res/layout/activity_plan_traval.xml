@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <include
+        android:id="@+id/dsvr_top_bar"
+        layout="@layout/top_bar_without_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:id="@+id/apt_sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dsvr_top_bar"
+        android:layout_above="@+id/apt_start_location_btn"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="25dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/apt_select_start_location_til"
+                    style="@style/TextLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.8">
+
+                    <EditText
+                        android:id="@+id/apt_select_start_location_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Start Location"
+                        android:imeOptions="actionDone"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18dp"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:singleLine="true"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/apt_select_start_location_button"
+                    android:layout_width="0dp"
+                    android:layout_height="33dp"
+                    android:layout_above="@+id/spinner"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.2"
+                    android:background="@drawable/gps_loc_ioc"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="15dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/apt_select_client_location_til"
+                    style="@style/TextLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.8">
+
+                    <EditText
+                        android:id="@+id/apt_select_client_location_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Client Location"
+                        android:imeOptions="actionDone"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18dp"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:singleLine="true"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/apt_select_client_location_button"
+                    android:layout_width="0dp"
+                    android:layout_height="33dp"
+                    android:layout_above="@+id/spinner"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.2"
+                    android:background="@drawable/gps_loc_ioc"/>
+
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/clto_phone_no_til"
+                style="@style/TextLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/clto_distance_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Distance"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorsilver"
+                    android:textSize="18dp"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+
+
+            <!--<FrameLayout-->
+            <!--android:id="@+id/mapview_fragment"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="160dp"-->
+            <!--android:layout_marginTop="6dp" />-->
+
+
+            <!--<fragment-->
+            <!--android:id="@+id/map"-->
+            <!--class ="com.google.android.gms.maps.MapFragment"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="160dp"/>-->
+
+            <fragment  android:id="@+id/fragment1"
+                       android:name="com.sfamobile.dahlia.sfamobile.Fragments.WorkaroundMapFragment"
+                       android:layout_width="match_parent"
+                       android:layout_height="350dp"
+                       android:layout_marginBottom="-42dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/distance1"/>
+
+                <TextView
+                    android:id="@+id/distance_value_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/colorPink"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/time"/>
+
+                <TextView
+                    android:id="@+id/duration_value_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="o min"
+                    android:textColor="@color/colorPink"/>
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/apt_plan_traval_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="How do you plan to travel?"
+                android:textColor="@color/colorsilver"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/dtp_radio_button_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+
+                <RadioButton
+                    android:id="@+id/dtp_two_wheeler_radiobtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="Two-Wheeler(Self-Owned)"
+                    android:buttonTint="@color/colorWhite"
+                    android:textColor="@drawable/radio_button_text_selector_default_white"/>
+
+                <RadioButton
+                    android:id="@+id/dtp_four_wheeler_radiobtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:text="Four-Wheeler(Self-Owned)"
+                    android:buttonTint="@color/colorWhite"
+                    android:textColor="@drawable/radio_button_text_selector_default_white"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/dtp_public_travel_radiobtn"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.9"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="Public Travel"
+                        android:buttonTint="@color/colorWhite"
+                        android:textColor="@drawable/radio_button_text_selector_default_white"/>
+
+                    <Spinner
+                        android:id="@+id/dtp_public_travel_radiobtn_spinner"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.9"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                    </Spinner>
+
+                    <Button
+                        android:id="@+id/apt_capture_ticket_img_button"
+                        android:layout_width="0dp"
+                        android:layout_height="33dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:visibility="gone"
+                        android:background="@drawable/camera"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="1"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/dtp_auto_rickshaw_radiobtn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:singleLine="true"
+                        android:layout_weight="0.9"
+                        android:buttonTint="@color/colorWhite"
+                        android:text="Auto Rickshaw"
+                        android:textColor="@drawable/radio_button_text_selector_default_white"/>
+
+
+
+                    <Button
+                        android:id="@+id/apt_auto_capture_ticket_img_button"
+                        android:layout_width="0dp"
+                        android:layout_height="33dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.1"
+                        android:visibility="gone"
+                        android:background="@drawable/camera"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/dtp_radio_cab_radiobtn"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="Radio Cab"
+                        android:buttonTint="@color/colorWhite"
+                        android:textColor="@drawable/radio_button_text_selector_default_white"/>
+
+                    <Spinner
+                        android:id="@+id/dtp_radio_cab_radiobtn_sppiner"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!--<android.support.design.widget.TextInputLayout-->
+            <!--android:id="@+id/clto_note_til"-->
+            <!--style="@style/TextLabel"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="6dp">-->
+
+            <!--<EditText-->
+            <!--android:id="@+id/clto_detailed_requirement_et"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="top|left"-->
+            <!--android:hint="Note(Max 200 character)"-->
+            <!--android:imeOptions="actionNext"-->
+            <!--android:inputType="textMultiLine"-->
+            <!--android:lines="2"-->
+            <!--android:maxLength="200"-->
+            <!--android:maxLines="4"-->
+            <!--android:minLines="3"-->
+            <!--android:scrollbars="vertical"-->
+            <!--android:singleLine="true"-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--android:textColorHint="@color/colorsilver"-->
+            <!--android:textSize="18dp"/>-->
+            <!--</android.support.design.widget.TextInputLayout>-->
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/clto_amount_til"
+                style="@style/TextLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/apt_amount_atv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/estimated_amount"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorsilver"
+                    android:textSize="18dp"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/apt_start_location_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:background="@drawable/button_selector"
+        android:text="Start Journey"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="18dp"/>
+
+    <Button
+        android:id="@+id/apt_end_location_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_below="@+id/apt_sv"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:background="@drawable/button_selector"
+        android:text="End Journey"
+        android:visibility="gone"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="21dp"/>
+
+
+</RelativeLayout>

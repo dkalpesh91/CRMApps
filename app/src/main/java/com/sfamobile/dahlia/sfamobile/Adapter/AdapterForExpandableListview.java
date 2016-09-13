@@ -5,6 +5,7 @@ package com.sfamobile.dahlia.sfamobile.Adapter;
  */
 import java.util.List;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -17,6 +18,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.sfamobile.dahlia.sfamobile.Activity.AddMeetingAndUpdateMeetingActivity;
+import com.sfamobile.dahlia.sfamobile.Activity.PlanTravalActivity;
 import com.sfamobile.dahlia.sfamobile.Model.ChildModelClassInAddMeetings;
 import com.sfamobile.dahlia.sfamobile.Model.ParentModelClassInAddMeetings;
 import com.sfamobile.dahlia.sfamobile.R;
@@ -25,6 +27,9 @@ import com.sfamobile.dahlia.sfamobile.Model.UpdateMeetingModelClass;
 
 public class AdapterForExpandableListview extends BaseExpandableListAdapter {
     Button edit;
+    Button mAddExpense = null;
+
+
     private Context _context;
     String childText = null;
     ChildModelClassInAddMeetings child = null;
@@ -130,8 +135,16 @@ public class AdapterForExpandableListview extends BaseExpandableListAdapter {
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = infalInflater.inflate(R.layout.list_header_add_meetings, null);
             edit = (Button)convertView.findViewById(R.id.button_edit);
+            mAddExpense = (Button)convertView.findViewById(R.id.add_expense);
         }
 
+        mAddExpense.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(_context, PlanTravalActivity.class);
+                _context.startActivity(i);
+            }
+        });
         edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -166,6 +179,7 @@ public class AdapterForExpandableListview extends BaseExpandableListAdapter {
                 i.putExtra("SpinnerHeader",updatingFields.getSetRemainder() );
 
                 _context.startActivity(i);
+                ((Activity)_context).finish();
                 Log.v("TAG", "CLICKED");
                 Log.v("TAG", item.toString());
 

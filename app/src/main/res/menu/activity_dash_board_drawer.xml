@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_daily_report"
+            android:icon="@drawable/dsr_icon"
+            android:title="Daily Activity"/>
+        <item
+            android:id="@+id/nav_lead"
+            android:icon="@drawable/lead_icon"
+            android:title="My Lead"/>
+        <item
+            android:id="@+id/nav_opportunity"
+            android:icon="@drawable/opportunity_icon"
+            android:title="My Opportunity"/>
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/contact_icon"
+            android:title="My Contact"/>
+
+        <item
+            android:id="@+id/nav_product_catalog"
+            android:icon="@drawable/product_catalog_icon"
+            android:title="Product Catalog"/>
+
+        <item
+            android:id="@+id/nav_quotation"
+            android:icon="@drawable/quote_icon"
+            android:title="My Quotation"/>
+
+        <item
+            android:id="@+id/nav_meeting"
+            android:icon="@drawable/meeting_icon_1"
+            android:title="My Meeting"/>
+
+        <!--<item-->
+            <!--android:id="@+id/nav_expense"-->
+            <!--android:icon="@drawable/expense"-->
+            <!--android:title="My Expense"/>-->
+
+    </group>
+
+    <!--<item android:title="Other">-->
+    <!--<menu>-->
+    <!--<item-->
+    <!--android:id="@+id/nav_help"-->
+    <!--android:icon="@drawable/ic_menu_send"-->
+    <!--android:title="Help"/>-->
+    <!--</menu>-->
+    <!--</item>-->
+
+</menu>

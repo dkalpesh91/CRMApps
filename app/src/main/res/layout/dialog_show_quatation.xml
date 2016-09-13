@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/history_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quotation History"
+        android:textSize="@dimen/dim_28"
+        android:gravity="center"
+        android:textColor="@color/black"/>
+    <ListView
+        android:id="@+id/dsq_product_list_lv"
+        android:layout_marginTop="@dimen/dim_10"
+        android:layout_below="@+id/history_tv"
+        android:layout_width="match_parent"
+        android:dividerHeight="@dimen/dim_10"
+        android:layout_margin="@dimen/dim_12"
+        android:layout_height="@dimen/dim_300">
+
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_10"
+        android:layout_marginBottom="@dimen/dim_10"
+        android:layout_below="@+id/dsq_product_list_lv"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="@dimen/dim_0"
+            android:layout_height="wrap_content"
+            android:text="@string/total_cost_with_rupee_symbol"
+            android:gravity="right"
+            android:layout_weight="1"
+            android:textSize="@dimen/dim_25"
+            android:layout_marginRight="@dimen/dim_8"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/total_cost_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="1,00,000"
+            android:layout_marginLeft="@dimen/dim_8"
+            android:layout_weight="1"
+            android:textSize="@dimen/dim_25"
+            android:gravity="left"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

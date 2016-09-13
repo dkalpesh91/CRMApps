@@ -4,13 +4,14 @@
               android:layout_height="wrap_content"
               android:background="@color/colorPrimary"
     >
+
     <TextView
         android:id="@+id/spinner_value_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18dp"
-        android:textColor="@color/colorPrimaryDark"
         android:layout_gravity="center_vertical"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/dim_20"
         >
     </TextView>
 </LinearLayout>
