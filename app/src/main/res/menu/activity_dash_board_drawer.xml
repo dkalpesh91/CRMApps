@@ -34,6 +34,11 @@
             android:icon="@drawable/meeting_icon_1"
             android:title="My Meeting"/>
 
+        <item
+            android:id="@+id/nav_expense"
+            android:icon="@drawable/expense_manager"
+            android:title="My Expense"/>
+
         <!--<item-->
             <!--android:id="@+id/nav_expense"-->
             <!--android:icon="@drawable/expense"-->

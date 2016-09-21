@@ -8,8 +8,8 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
     android:orientation="vertical"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp"
+    android:paddingLeft="@dimen/dim_8"
+    android:paddingRight="@dimen/dim_8"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.sfamobile.dahlia.sfamobile.Activity.DashBoardActivity"
     tools:showIn="@layout/app_bar_dash_board">
@@ -82,12 +82,12 @@
                 android:id="@+id/opportunity_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginLeft="@dimen/dim_12"
+                android:layout_marginTop="@dimen/dim_27"
                 android:gravity="center"
                 android:text="Opportunity"
                 android:textColor="@color/colorWhite"
-                android:textSize="22dp"/>
+                android:textSize="@dimen/dim_24"/>
 
             <!--<LinearLayout-->
             <!--android:layout_width="match_parent"-->
@@ -122,7 +122,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/opportunity_tv"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_12"
                 android:orientation="horizontal"
                 android:weightSum="2">
 
@@ -130,7 +130,7 @@
                     android:id="@+id/pieView"
                     android:layout_width="@dimen/dim_180"
                     android:layout_height="@dimen/dim_250"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="@dimen/dim_12"
                     android:layout_weight="1"
                     android:gravity="center"
                     plainpie:inner_pie_padding="25"
@@ -142,7 +142,7 @@
                     android:id="@+id/pieView2"
                     android:layout_width="@dimen/dim_180"
                     android:layout_height="@dimen/dim_250"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="@dimen/dim_12"
                     android:layout_weight="1"
                     android:gravity="center"
                     plainpie:inner_pie_padding="25"
@@ -174,7 +174,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/goal_ll"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_12"
                 android:weightSum="2">
 
 
@@ -190,14 +190,14 @@
                         android:layout_height="wrap_content"
                         android:text="My Leads"
                         android:gravity="center"
-                        android:padding="10dp"
+                        android:padding="@dimen/dim_12"
                         android:textColor="@color/colorWhite"
-                        android:textSize="21dp"/>
+                        android:textSize="@dimen/dim_23"/>
 
                     <View
                         android:id="@+id/my_leads_view"
                         android:layout_width="match_parent"
-                        android:layout_height="3dp"
+                        android:layout_height="@dimen/dim_5"
                         android:background="@color/blue"/>
 
                 </LinearLayout>
@@ -214,15 +214,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:padding="10dp"
+                        android:padding="@dimen/dim_12"
                         android:text="My Meetings"
                         android:textColor="@color/colorWhite"
-                        android:textSize="21dp"/>
+                        android:textSize="@dimen/dim_23"/>
 
                     <View
                         android:id="@+id/my_meetings_view"
                         android:layout_width="match_parent"
-                        android:layout_height="3dp"
+                        android:layout_height="@dimen/dim_5"
                         android:visibility="gone"
                         android:background="@color/blue"></View>
 
@@ -238,7 +238,7 @@
             <RelativeLayout
                 android:id="@+id/abfsr_container_relay"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="@dimen/dim_250"
                 android:layout_below="@+id/_ll">
 
 

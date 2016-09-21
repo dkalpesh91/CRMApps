@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity.ShowMeetingActivity"
-    android:background="#36474f">
+    android:background="@color/colorPrimary">
 
     <include android:id="@+id/dsvr_top_bar"
              android:layout_width="match_parent"
@@ -15,7 +15,7 @@
         android:background="@color/view_line"
         android:layout_width="match_parent"
         android:layout_below="@+id/dsvr_top_bar"
-        android:layout_height="3dp"/>
+        android:layout_height="@dimen/dim_5"/>
 
 
     <ExpandableListView

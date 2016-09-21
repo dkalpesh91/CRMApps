@@ -10,11 +10,14 @@ import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.sfamobile.dahlia.sfamobile.Adapter.ViewMultipleContactListAdapter;
 import com.sfamobile.dahlia.sfamobile.Model.Catalog;
 import com.sfamobile.dahlia.sfamobile.Model.ChildModel;
+import com.sfamobile.dahlia.sfamobile.Model.ContactPersonModel;
 import com.sfamobile.dahlia.sfamobile.Model.HeaderModel;
 import com.sfamobile.dahlia.sfamobile.R;
 
@@ -24,15 +27,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class AddingContactsActivity extends AppCompatActivity {
-    ExpandableListView list = null;
+    ListView list = null;
     ExpandableListAdapter listAdapter;
     Catalog product = null;
     Catalog  product1 = null;
 
-    Catalog mList = null;
-    List<Catalog> mTotalProducts = null;
-    private List<HeaderModel> listDataHeader = null;
-    List<ChildModel> listDataChild = null;
 
 
     EditText mEditName2 = null;
@@ -54,6 +53,8 @@ public class AddingContactsActivity extends AppCompatActivity {
     ImageView mActivityBackIMV = null;
     ImageView mActivityAddIMV = null;
 
+    private ArrayList<ContactPersonModel> contactlist = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,14 +62,14 @@ public class AddingContactsActivity extends AppCompatActivity {
         mSave_button = (Button) findViewById(R.id.button_save);
 
         mActivityNameTV = (TextView) findViewById(R.id.screen_label_tv);
-        mActivityNameTV.setText("Add Meeting");
+        mActivityNameTV.setText("Add Contact");
         mActivityBackIMV = (ImageView) findViewById(R.id.back_arrow_img);
         mActivityBackIMV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
 
-                Intent intent = new Intent(AddingContactsActivity.this,ShowMeetingActivity.class);
+                Intent intent = new Intent(AddingContactsActivity.this,NewLeadActivity.class);
                 startActivity(intent);
                 finish();
 
@@ -84,16 +85,18 @@ public class AddingContactsActivity extends AppCompatActivity {
         mEditNumber2 = (EditText) findViewById(R.id.edit_Number2);
         mCountryCode = (EditText) findViewById(R.id.code);
 
-        list = (ExpandableListView) findViewById(R.id.expandablelist);
+        list = (ListView) findViewById(R.id.expandablelist);
 
-        mEditName2.setVisibility(View.INVISIBLE);
-        mEditRole2.setVisibility(View.INVISIBLE);
-        mEditEmail2.setVisibility(View.INVISIBLE);
-        mEditNumber2.setVisibility(View.INVISIBLE);
-        mCountryCode.setVisibility(View.INVISIBLE);
-        mSave_button.setVisibility(View.INVISIBLE);
+//        mEditName2.setVisibility(View.INVISIBLE);
+//        mEditRole2.setVisibility(View.INVISIBLE);
+//        mEditEmail2.setVisibility(View.INVISIBLE);
+//        mEditNumber2.setVisibility(View.INVISIBLE);
+//        mCountryCode.setVisibility(View.INVISIBLE);
+//        mSave_button.setVisibility(View.INVISIBLE);
 
-        getPrepareListData();
+        getContactData();
+        final ViewMultipleContactListAdapter adapter =new ViewMultipleContactListAdapter(this, contactlist);
+        list.setAdapter(adapter);
 
         mActivityAddIMV.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,12 +104,12 @@ public class AddingContactsActivity extends AppCompatActivity {
 
                 if(mEditName2.getVisibility()==View.VISIBLE && mEditName2.getVisibility()==View.VISIBLE && mEditEmail2.getVisibility()==View.VISIBLE && mEditNumber2.getVisibility()==View.VISIBLE  ){
 
-                    mEditName2.setVisibility(View.INVISIBLE);
-                    mEditRole2.setVisibility(View.INVISIBLE);
-                    mEditEmail2.setVisibility(View.INVISIBLE);
-                    mEditNumber2.setVisibility(View.INVISIBLE);
-                    mCountryCode.setVisibility(View.INVISIBLE);
-                    mSave_button.setVisibility(View.INVISIBLE);
+                    mEditName2.setVisibility(View.GONE);
+                    mEditRole2.setVisibility(View.GONE);
+                    mEditEmail2.setVisibility(View.GONE);
+                    mEditNumber2.setVisibility(View.GONE);
+                    mCountryCode.setVisibility(View.GONE);
+                    mSave_button.setVisibility(View.GONE);
 
                 }else{
 
@@ -166,10 +169,10 @@ public class AddingContactsActivity extends AppCompatActivity {
                 {
                     mEditRole2.setError("company name should not be blank");
                 }
-                else if(!didValidateFields(sCountrycode))
-                {
-                    mCountryCode.setError("country code should not be blank");
-                }
+//                else if(!didValidateFields(sCountrycode))
+//                {
+//                    mCountryCode.setError("country code should not be blank");
+//                }
 
                 else
                 {
@@ -179,25 +182,22 @@ public class AddingContactsActivity extends AppCompatActivity {
                     mEditEmail2.setError(null);
                     mEditNumber2.setError(null);
 
-                    //  product  = new  Catalog();
-                    HeaderModel titlePosition = new HeaderModel();
-                    titlePosition.setHeaderName(mEditName2.getText().toString());
+                    ContactPersonModel childPosition = new ContactPersonModel();
+                    childPosition.setName(mEditName2.getText().toString());
+                    childPosition.setRole(mEditRole2.getText().toString());
+                    childPosition.setEmailId(mEditEmail2.getText().toString());
+                    childPosition.setPhoneNumber(mEditNumber2.getText().toString());
 
-                    ChildModel childPosition = new ChildModel();
+                    contactlist.add(childPosition);
 
-                    childPosition.setRollSaving(mEditRole2.getText().toString());
-                    childPosition.setEmailSaving(mEditEmail2.getText().toString());
-                    childPosition.setContactSaving(mEditNumber2.getText().toString());
+                    adapter.notifyDataSetChanged();
 
-                    listDataHeader.add(titlePosition);
-                    listDataChild.add(childPosition);
-
-                    mEditName2.setVisibility(View.INVISIBLE);
-                    mEditRole2.setVisibility(View.INVISIBLE);
-                    mEditEmail2.setVisibility(View.INVISIBLE);
-                    mEditNumber2.setVisibility(View.INVISIBLE);
-                    mCountryCode.setVisibility(View.INVISIBLE);
-                    mSave_button.setVisibility(View.INVISIBLE);
+                    mEditName2.setVisibility(View.GONE);
+                    mEditRole2.setVisibility(View.GONE);
+                    mEditEmail2.setVisibility(View.GONE);
+                    mEditNumber2.setVisibility(View.GONE);
+                    mCountryCode.setVisibility(View.GONE);
+                    mSave_button.setVisibility(View.GONE);
 
 
                     //  Toast.makeText(RegisterActivity.this, "Registered sucessfully", Toast.LENGTH_SHORT).show();
@@ -225,41 +225,41 @@ public class AddingContactsActivity extends AppCompatActivity {
     }
 
 
-    private void getPrepareListData() {
-        listDataHeader =  new ArrayList<HeaderModel>();
-        listDataChild =  new ArrayList<ChildModel>();
+    private void getContactData(){
+        contactlist = new ArrayList<ContactPersonModel>();
 
-        HeaderModel firstObject1 = new HeaderModel();
-        HeaderModel firstObject2 = new HeaderModel();
-        HeaderModel firstObject3 = new HeaderModel();
+        ContactPersonModel contactPersonModel = new ContactPersonModel();
 
-        firstObject1.setHeaderName("Ram");
-        firstObject2.setHeaderName("Ravi");
-        firstObject3.setHeaderName("kamala");
+        contactPersonModel.setName("Ravi V");
+        contactPersonModel.setEmailId("ravi@gmail.com");
+        contactPersonModel.setPhoneNumber("9292929292");
+        contactPersonModel.setRole("CEO");
+        contactlist.add(contactPersonModel);
 
-        listDataHeader.add(firstObject1);
-        listDataHeader.add(firstObject2);
-        listDataHeader.add(firstObject3);
+        contactPersonModel.setName("Naveen G");
+        contactPersonModel.setEmailId("Naveen@gmail.com");
+        contactPersonModel.setPhoneNumber("9696969696");
+        contactPersonModel.setRole("Area Manager");
+        contactlist.add(contactPersonModel);
 
+        contactPersonModel.setName("Rahul");
+        contactPersonModel.setEmailId("rahul@gmail.com");
+        contactPersonModel.setPhoneNumber("9898998989");
+        contactPersonModel.setRole("Field Executive");
+        contactlist.add(contactPersonModel);
 
-        ChildModel secondObject1 = new ChildModel();
-        secondObject1.setRollSaving("Team lead");
-        secondObject1.setContactSaving("8896689898");
-        secondObject1.setEmailSaving("janu@gmail.com");
-        listDataChild.add(secondObject1);
+        contactPersonModel.setName("Viraj");
+        contactPersonModel.setEmailId("viraj@yahoo.com");
+        contactPersonModel.setPhoneNumber("7878787878");
+        contactPersonModel.setRole("Sales Manager");
+        contactlist.add(contactPersonModel);
 
-        ChildModel secondObject2 = new ChildModel();
+        contactPersonModel.setName("Vishal");
+        contactPersonModel.setEmailId("vishal@gmail.com");
+        contactPersonModel.setPhoneNumber("7878787878");
+        contactPersonModel.setRole("Field Executive");
+        contactlist.add(contactPersonModel);
 
-        secondObject2.setRollSaving("supervisor");
-        secondObject2.setContactSaving("8896689898");
-        secondObject2.setEmailSaving("ravi@gmail.com");
-        listDataChild.add(secondObject2);
-
-        ChildModel secondObject3 = new ChildModel();
-        secondObject3.setRollSaving("supervisor");
-        secondObject3.setContactSaving("8896689898");
-        secondObject3.setEmailSaving("kamala@gmail.com");
-        listDataChild.add(secondObject3 );
 
 
     }

@@ -8,10 +8,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/dim_16"
+        android:paddingLeft="@dimen/dim_16"
+        android:paddingRight="@dimen/dim_16"
+        android:paddingTop="@dimen/dim_16"
         android:background="#36474f"
         android:showAsAction="never"
         tools:context=".MainActivity" >

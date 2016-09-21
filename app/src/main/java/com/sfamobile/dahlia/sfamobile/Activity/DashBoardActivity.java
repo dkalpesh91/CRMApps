@@ -276,6 +276,11 @@ public class DashBoardActivity extends AppCompatActivity
             startActivity(intent);
             finish();
 
+        }else if (id == R.id.nav_expense) {
+            Intent intent = new Intent(this,ManagedExpenseActivity.class);
+            startActivity(intent);
+            finish();
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

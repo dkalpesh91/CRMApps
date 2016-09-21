@@ -10,15 +10,15 @@
     <ImageView
         android:id="@+id/imgLogo"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="@dimen/dim_120"
         android:layout_centerInParent="true"
         android:src="@drawable/sfamobi_icon" />
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:textSize="14dp"
+        android:layout_marginBottom="@dimen/dim_12"
+        android:textSize="@dimen/dim_17"
         android:textColor="@color/colorPink"
         android:gravity="center_horizontal"
         android:layout_alignParentBottom="true"

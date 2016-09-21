@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+
+
+    <include android:id="@+id/dsvr_top_bar"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             layout="@layout/top_bar_without_add"/>
+
+    <FrameLayout
+        android:id="@+id/rl_expense_details_container_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dsvr_top_bar">
+
+        <RelativeLayout
+            android:id="@+id/rl_expense_details_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/expense_card_background_shop"
+            android:paddingBottom="@dimen/dim_13"
+            android:paddingLeft="@dimen/dim_26"
+            android:paddingRight="@dimen/dim_26"
+            android:paddingTop="@dimen/dim_13"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/ll_calendar_container"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dim_20"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/txt_start_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="17 Sept 2016"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/dim_15" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text=" - "
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/dim_15"  />
+
+                <TextView
+                    android:id="@+id/txt_end_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingRight="@dimen/dim_5"
+                    android:text="18 Sept 2016"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/dim_15"  />
+
+                <ImageView
+                    android:id="@+id/img_calendar_icon"
+                    android:layout_width="@dimen/dim_20"
+                    android:layout_height="@dimen/dim_20"
+                    android:contentDescription="@string/uri_sfamobi"
+                    android:src="@drawable/white_calendar" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_expense_label_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_calendar_container"
+                android:layout_marginTop="@dimen/dim_12"
+                android:layout_marginBottom="@dimen/dim_12">
+
+                <ImageView
+                    android:id="@+id/img_expense_category_icon"
+                    android:layout_width="@dimen/dim_53"
+                    android:layout_height="@dimen/dim_53"
+                    android:background="@drawable/round_shape_bg_orange_small"
+                    android:contentDescription="@string/show_btn_str"
+                    android:src="@drawable/icn_shop_vector" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dim_15"
+                    android:layout_toRightOf="@id/img_expense_category_icon"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_expense_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shop"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/dim_25"  />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/txt_category_percent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                             android:layout_marginLeft="@dimen/dim_5"
+                            android:layout_marginTop="@dimen/dim_5"
+                            android:text="50%"
+                            android:visibility="gone"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/dim_21" />
+
+                        <ProgressBar
+                            android:id="@+id/mgc_progress"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dim_8"
+                            android:layout_marginTop="@dimen/dim_11"
+                            android:layout_toLeftOf="@id/txt_category_percent"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:max="100"
+                            android:visibility="gone"
+                            android:progressDrawable="@drawable/progress_background_expense_manager_yellow" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim_7"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total expenses"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/dim_20" />
+
+                        <TextView
+                            android:id="@+id/txt_total_expense"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dim_5"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/dim_20"
+                            android:text="- 10,000"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!--<TextView-->
+            <!--android:id="@+id/txt_amount_label"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_below="@id/rl_expense_label_container"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginTop="@dimen/dim_15"-->
+            <!--android:text="Spent"-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--android:textSize="@dimen/dim_18" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/txt_amount"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_below="@id/txt_amount_label"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginTop="@dimen/dim_13"-->
+            <!--android:text=""-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--android:textSize="@dimen/dim_28" />-->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_expense_details_container_shrinked"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_90"
+            android:background="@drawable/expense_card_background_shop"
+            android:paddingBottom="@dimen/dim_13"
+            android:paddingLeft="@dimen/dim_26"
+            android:paddingRight="@dimen/dim_26"
+            android:paddingTop="@dimen/dim_13"
+            android:visibility="gone">
+
+
+            <RelativeLayout
+                android:id="@+id/fhtf_expense_label_container1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/total_expense_icon_shrinked"
+                    android:layout_width="@dimen/dim_55"
+                    android:layout_height="@dimen/dim_55"
+                    android:contentDescription="@string/show_btn_str"
+                    android:src="@drawable/shopping" />
+
+                <TextView
+                    android:id="@+id/txt_total_expense_label1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dim_15"
+                    android:layout_toRightOf="@id/total_expense_icon_shrinked"
+                    android:text="Total expenses"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/dim_25" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/txt_amount_label1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/dim_5"
+                    android:text="Spent"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/dim_18" />
+
+                <TextView
+                    android:id="@+id/txt_amount1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/txt_amount_label1"
+                    android:layout_marginTop="@dimen/dim_10"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/dim_28" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rl_import_more_expense"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="@dimen/dim_66"-->
+    <!--android:layout_below="@id/rl_expense_details_container_main"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:clickable="true"-->
+    <!--android:visibility="gone">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/txt_import_expense_label"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:text="Import more expenses"-->
+    <!--android:textSize="@dimen/dim_21" />-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="@dimen/dim_20"-->
+    <!--android:layout_height="@dimen/dim_20"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="@dimen/dim_10"-->
+    <!--android:layout_marginStart="@dimen/dim_10"-->
+    <!--android:layout_toEndOf="@id/txt_import_expense_label"-->
+    <!--android:layout_toRightOf="@id/txt_import_expense_label"-->
+    <!--android:contentDescription="@string/show_btn_str"-->
+    <!--android:src="@drawable/add_button" />-->
+    <!--</RelativeLayout>-->
+
+    <View
+        android:id="@+id/view_divider_top"
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:layout_below="@id/rl_expense_details_container_main"
+        android:background="?android:attr/listDivider" />
+
+    <RadioGroup
+        android:id="@+id/rdg_transaction_type_and_summary_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_divider_top"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rdb_transaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:padding="@dimen/dim_15"
+            android:singleLine="true"
+            android:text="Transactions"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dim_24" />
+
+
+    </RadioGroup>
+
+
+    <ImageView
+        android:id="@+id/rdb_filter"
+        android:layout_marginRight="@dimen/dim_10"
+        android:layout_below="@id/view_divider_top"
+        android:layout_alignParentRight="true"
+        android:layout_width="@dimen/dim_40"
+        android:layout_height="@dimen/dim_40"
+        android:contentDescription="back"
+        android:layout_marginTop="@dimen/dim_8"
+        android:padding="@dimen/dim_8"
+        android:src="@drawable/filter"/>
+
+    <!--<TextView-->
+    <!--android:id="@+id/txtTapToSelectLabel"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/rdg_transaction_type_and_summary_container"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:text="Tap to select"-->
+    <!--android:textSize="@dimen/dim_21"-->
+    <!--android:visibility="gone" />-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rl_share_now_container"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_marginBottom="@dimen/dim_30"-->
+    <!--android:layout_marginTop="@dimen/dim_10"-->
+    <!--android:visibility="gone">-->
+
+    <!--<Button-->
+    <!--android:id="@+id/ash_search_hotels_button"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="@dimen/dim_35"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:background="@drawable/button_selector"-->
+    <!--android:paddingBottom="@dimen/dim_4"-->
+    <!--android:paddingLeft="@dimen/dim_40"-->
+    <!--android:paddingRight="@dimen/dim_40"-->
+    <!--android:paddingTop="@dimen/dim_5"-->
+    <!--android:text="Share Now"-->
+    <!--android:textAllCaps="false"-->
+    <!--android:textColor="@color/colorWhite"-->
+    <!--android:textSize="@dimen/dim_21" />-->
+    <!--</RelativeLayout>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rdg_transaction_type_and_summary_container">
+
+        <ListView
+            android:id="@+id/lv_transaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:divider="@null" />
+    </RelativeLayout>
+
+</RelativeLayout>

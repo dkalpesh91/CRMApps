@@ -18,16 +18,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="@dimen/dim_8"
                 android:text="Ride Details"
                 android:textColor="@color/black"
-                android:textSize="21dp"/>
+                android:textSize="@dimen/dim_23"/>
 
             <ImageView
                 android:id="@+id/ride_details_img"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginTop="5dp"/>
+                android:layout_height="@dimen/dim_155"
+                android:layout_marginTop="@dimen/dim_8"/>
 
         </LinearLayout>
 
@@ -39,17 +39,17 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="@dimen/dim_8"
                 android:gravity="center"
                 android:text="Bill Details"
                 android:textColor="@color/black"
-                android:textSize="21dp"/>
+                android:textSize="@dimen/dim_23"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginRight="@dimen/dim_8"
+                android:layout_marginTop="@dimen/dim_8"
                 android:orientation="horizontal">
 
                 <TextView
@@ -57,23 +57,23 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Base Fare(per KM)"
-                    android:textSize="16dp"/>
+                    android:textSize="@dimen/dim_18"/>
 
                 <TextView
                     android:id="@+id/base_fare_value_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="@dimen/dim_8"
                     android:text="$45"
-                    android:textSize="16dp"/>
+                    android:textSize="@dimen/dim_18"/>
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginRight="@dimen/dim_8"
+                android:layout_marginTop="@dimen/dim_8"
                 android:orientation="horizontal">
 
                 <TextView
@@ -81,16 +81,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Total Distance"
-                    android:textSize="16dp"/>
+                    android:textSize="@dimen/dim_18"/>
 
                 <TextView
                     android:id="@+id/total_distance_value_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="@dimen/dim_8"
                     android:text="$45"
-                    android:textSize="16dp"/>
+                    android:textSize="@dimen/dim_18"/>
             </RelativeLayout>
 
             <!--<RelativeLayout-->
@@ -169,8 +169,8 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="5dp">
+                android:layout_marginRight="@dimen/dim_8"
+                android:layout_marginTop="@dimen/dim_8">
 
                 <TextView
                     android:id="@+id/total_bill_tv"
@@ -178,16 +178,16 @@
                     android:layout_height="wrap_content"
                     android:singleLine="true"
                     android:text="Total Bill(rounded off)"
-                    android:textSize="18dp"/>
+                    android:textSize="@dimen/dim_20"/>
 
                 <TextView
                     android:id="@+id/total_bill_value_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="@dimen/dim_8"
                     android:text="$45"
-                    android:textSize="18dp"/>
+                    android:textSize="@dimen/dim_20"/>
             </RelativeLayout>
         </LinearLayout>
 
@@ -203,16 +203,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/dim_8"
             android:text="Payment"
             android:textColor="@color/black"
-            android:textSize="21dp"/>
+            android:textSize="@dimen/dim_23"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/payment_details_tv"
-            android:layout_margin="5dp"
+            android:layout_margin="@dimen/dim_8"
             android:orientation="horizontal">
 
             <TextView
@@ -220,16 +220,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Paid by cash"
-                android:textSize="16dp"/>
+                android:textSize="@dimen/dim_18"/>
 
             <TextView
                 android:id="@+id/paid_by_cash_value_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="@dimen/dim_8"
                 android:text="$45"
-                android:textSize="16dp"/>
+                android:textSize="@dimen/dim_18"/>
         </RelativeLayout>
 
 

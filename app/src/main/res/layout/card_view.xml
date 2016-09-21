@@ -6,8 +6,8 @@
 
     <ImageView
         android:id="@+id/card_lime_wallet_large_category_name"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/dim_230"
+        android:layout_height="@dimen/dim_120"
         android:layout_weight="1"
         android:background="@drawable/dahlia_logo_icon"/>
 
@@ -36,16 +36,16 @@
                 android:layout_height="wrap_content"
                 android:text="Vikas Tripathi"
                 android:textColor="@color/colorWhite"
-                android:textSize="21dp"/>
+                android:textSize="@dimen/dim_23"/>
 
             <TextView
                 android:id="@+id/card_view_phoneno_value_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_12"
                 android:text="98 2271 2147"
                 android:textColor="@color/colorWhite"
-                android:textSize="17dp"/>
+                android:textSize="@dimen/dim_19"/>
 
 
             <TextView
@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:text="vikas.tripathi@dahlia-tech.com"
                 android:textColor="@color/colorWhite"
-                android:textSize="17dp"/>
+                android:textSize="@dimen/dim_19"/>
         </LinearLayout>
     </LinearLayout>
 

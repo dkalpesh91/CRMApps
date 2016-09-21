@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dim_15"
+                android:paddingLeft="@dimen/dim_26"
+                android:paddingRight="@dimen/dim_26"
+                android:paddingTop="@dimen/dim_15">
+    <ImageView
+        android:id="@+id/img_transaction_category"
+        android:layout_width="@dimen/dim_53"
+        android:layout_height="@dimen/dim_53"
+        android:background="@drawable/round_shape_bg_orange_small"
+        android:clickable="true"
+        android:contentDescription="@string/show_btn_str"
+        android:src="@drawable/icn_travel_vector" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dim_22"
+        android:layout_toRightOf="@id/img_transaction_category">
+
+        <TextView
+            android:id="@+id/txt_transaction_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Travel"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dim_20" />
+
+        <ProgressBar
+            android:id="@+id/mgc_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="@dimen/dim_133"
+            android:layout_height="@dimen/dim_12"
+            android:layout_below="@id/txt_transaction_category"
+            android:layout_marginTop="@dimen/dim_12"
+            android:gravity="center_vertical|center_horizontal"
+            android:max="100"
+            android:visibility="gone"
+            android:progressDrawable="@drawable/progress_background_expense_manager_yellow" />
+
+        <TextView
+            android:id="@+id/txt_start_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@id/txt_transaction_category"
+            android:text="17 Sept 2016"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dim_14" />
+
+        <TextView
+            android:id="@+id/txt_category_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/mgc_progress"
+            android:layout_below="@id/txt_transaction_category"
+            android:layout_marginLeft="@dimen/dim_10"
+            android:layout_marginTop="@dimen/dim_10"
+            android:textColor="@color/colorWhite"
+            android:layout_toRightOf="@id/mgc_progress"
+            android:text="50%"
+            android:visibility="gone"
+            android:textSize="@dimen/dim_16" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/mgc_progress"
+            android:layout_below="@id/txt_transaction_category"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dim_10"
+            android:layout_toRightOf="@id/txt_category_percent">
+            <TextView
+                android:id="@+id/txt_transaction_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="- Rs 1,000"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/dim_20"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

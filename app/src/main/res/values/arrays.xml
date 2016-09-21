@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="planets_array">
+        <item>Travel</item>
+        <item>Lodging</item>
+        <item>Boarding</item>
+        <item>Miscellaneous</item>
+
+    </array>
+
+</resources>
