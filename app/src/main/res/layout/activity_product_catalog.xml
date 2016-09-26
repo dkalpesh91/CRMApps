@@ -17,7 +17,7 @@
         android:background="@color/view_line"
         android:layout_width="match_parent"
         android:layout_below="@+id/dsvr_top_bar"
-        android:layout_height="3dp"/>
+        android:layout_height="@dimen/dim_5"/>
 
     <ListView
         android:id="@+id/product_catalog_lv"
@@ -26,24 +26,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
-        android:dividerHeight="10dp"
-        android:layout_margin="10dp">
+        android:dividerHeight="@dimen/dim_12"
+        android:layout_margin="@dimen/dim_12">
 
     </ListView>
 
     <Button
         android:id="@+id/create_quotation_btn"
         android:layout_width="wrap_content"
-        android:layout_height="33dp"
+        android:layout_height="@dimen/dim_38"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="10dp"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
+        android:layout_marginBottom="@dimen/dim_10"
+        android:paddingLeft="@dimen/dim_10"
+        android:paddingRight="@dimen/dim_10"
         android:layout_centerHorizontal="true"
         android:background="@drawable/button_selector"
         android:text="Create Quotation"
         android:textAllCaps="false"
         android:textColor="@color/colorWhite"
-        android:textSize="18dp"/>
+        android:textSize="@dimen/dim_24"/>
 
 </RelativeLayout>

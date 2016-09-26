@@ -3,8 +3,11 @@ package com.sfamobile.dahlia.sfamobile.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.pm.ResolveInfo;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
@@ -52,6 +55,8 @@ public class AllExpenseManagementActivity extends AppCompatActivity implements A
 
     TextView mActivityNameTV = null;
     ImageView mActivityBackIMV = null;
+
+    ImageView mShareExpenseIMV = null;
 
 
 
@@ -195,6 +200,39 @@ public class AllExpenseManagementActivity extends AppCompatActivity implements A
             }
         });
 
+
+        mShareExpenseIMV = (ImageView) findViewById(R.id.rdb_share);
+        mShareExpenseIMV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                List<Intent> targets = new ArrayList<>();
+                Intent template = new Intent(Intent.ACTION_SEND);
+                template.setType("text/plain");
+                List<ResolveInfo> candidates = AllExpenseManagementActivity.this.getPackageManager().
+                        queryIntentActivities(template, 0);
+                // remove facebook which has a broken share intent ;)
+                for (ResolveInfo candidate : candidates) {
+                    String packageName = candidate.activityInfo.packageName;
+                    if (!packageName.equals("com.facebook.katana")) {
+                        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                        sharingIntent.setType("text/plain");
+                        String body= "<p> <b> Hi!<br/><font size=20>How are you </font> <br/>I am fine</b> </p>";
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, Html.fromHtml(body));
+                        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "SFAMobi Expenses");
+                       // "Hi,"+"\n"+"Good Morning, Find your daily expenses below"+
+                        sharingIntent.setPackage(packageName);
+                        targets.add(sharingIntent);
+                    }
+                }
+                Intent chooser = Intent.createChooser(targets.remove(0), "Share Via");
+                chooser.putExtra(Intent.EXTRA_INITIAL_INTENTS, targets.toArray(new Parcelable[targets.size()]));
+                startActivity(chooser);
+
+            }
+        });
+
+
         txtExpenseCategory.setText("Shop");
         mgcProgress.setProgress(70);
         txtCategoryPercent.setText("70" + "%");
@@ -205,6 +243,17 @@ public class AllExpenseManagementActivity extends AppCompatActivity implements A
                 String.valueOf("10000"), true));
 
 
+    }
+
+
+
+    public String convertToHtml(String htmlString) {
+
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("<![CDATA[");
+        stringBuilder.append(htmlString);
+        stringBuilder.append("]]>");
+        return stringBuilder.toString();
     }
 
     private void getData(){

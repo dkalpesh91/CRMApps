@@ -312,11 +312,21 @@
     </RadioGroup>
 
 
-    <ImageView
-        android:id="@+id/rdb_filter"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:layout_marginRight="@dimen/dim_10"
         android:layout_below="@id/view_divider_top"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentRight="true">
+
+
+
+
+    <ImageView
+        android:id="@+id/rdb_filter"
+
+
         android:layout_width="@dimen/dim_40"
         android:layout_height="@dimen/dim_40"
         android:contentDescription="back"
@@ -324,6 +334,21 @@
         android:padding="@dimen/dim_8"
         android:src="@drawable/filter"/>
 
+
+
+
+    <ImageView
+        android:id="@+id/rdb_share"
+        android:layout_marginRight="@dimen/dim_10"
+        android:layout_marginLeft="@dimen/dim_10"
+        android:layout_width="@dimen/dim_40"
+        android:layout_height="@dimen/dim_40"
+        android:contentDescription="back"
+        android:layout_marginTop="@dimen/dim_8"
+        android:padding="@dimen/dim_8"
+        android:src="@drawable/share_icon"/>
+
+    </LinearLayout>
     <!--<TextView-->
     <!--android:id="@+id/txtTapToSelectLabel"-->
     <!--android:layout_width="wrap_content"-->
