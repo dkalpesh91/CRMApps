@@ -16,7 +16,7 @@
         android:background="@color/view_line"
         android:layout_width="match_parent"
         android:layout_below="@+id/dsvr_top_bar"
-        android:layout_height="3dp"/>
+        android:layout_height="@dimen/dim_3"/>
 
     <ScrollView
         android:id="@+id/lead_sv"
@@ -24,9 +24,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/line_view"
         android:layout_above="@+id/clto_save_btn"
-        android:layout_marginBottom="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp">
+        android:layout_marginBottom="@dimen/dim_10"
+        android:layout_marginRight="@dimen/dim_10"
+        android:layout_marginLeft="@dimen/dim_10">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,7 +42,7 @@
                 style="@style/TextLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp">
+                android:layout_marginTop="@dimen/dim_25">
 
                 <AutoCompleteTextView
                     android:id="@+id/clto_client_name_atv"
@@ -63,13 +63,13 @@
                 style="@style/TextLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="@dimen/dim_10">
 
                 <AutoCompleteTextView
                     android:id="@+id/clto_email_id_et"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Email Id"
+                    android:hint="@string/client_email_id"
                     android:textColorHint="@color/colorsilver"
                     android:imeOptions="actionNext"
                     android:inputType="text"
@@ -85,13 +85,13 @@
                 style="@style/TextLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="@dimen/dim_10">
 
                 <AutoCompleteTextView
                     android:id="@+id/clto_phone_no_et"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Phone Number"
+                    android:hint="@string/client_phone_no"
                     android:textColorHint="@color/colorsilver"
                     android:imeOptions="actionNext"
                     android:inputType="text"
@@ -106,13 +106,13 @@
                 style="@style/TextLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="@dimen/dim_10">
 
                 <AutoCompleteTextView
                     android:id="@+id/clto_client_location_et"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Address"
+                    android:hint="@string/client_address"
                     android:imeOptions="actionNext"
                     android:textColorHint="@color/colorsilver"
                     android:inputType="text"
@@ -128,14 +128,14 @@
                 style="@style/TextLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="@dimen/dim_10">
 
                 <AutoCompleteTextView
                     android:id="@+id/clto_person_name_atv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="Contact Name"
+                    android:hint="@string/client_contact_name"
                     android:imeOptions="actionNext"
                     android:textColor="@color/colorWhite"
                     android:textColorHint="@color/colorsilver"
@@ -151,7 +151,7 @@
                 style="@style/TextLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="@dimen/dim_10">
 
                 <EditText
                     android:id="@+id/clto_detailed_requirement_et"
@@ -159,7 +159,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="top|left"
                     android:textColorHint="@color/colorsilver"
-                    android:hint="Detailed Requirement(Max 200 character)"
+                    android:hint="@string/client_details_required"
                     android:imeOptions="actionNext"
                     android:inputType="textMultiLine"
                     android:lines="2"
@@ -182,7 +182,7 @@
                     style="@style/TextLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="@dimen/dim_10">
 
                     <AutoCompleteTextView
                         android:id="@+id/clto_amount_atv"
@@ -202,11 +202,11 @@
                 <Button
                     android:id="@+id/add_product_button"
                     android:layout_width="wrap_content"
-                    android:layout_height="33dp"
+                    android:layout_height="@dimen/dim_33"
                     android:text="Add Product"
                     android:layout_gravity="center"
-                    android:paddingLeft="8dp"
-                    android:paddingRight="8dp"
+                    android:paddingLeft="@dimen/dim_8"
+                    android:paddingRight="@dimen/dim_8"
                     android:textSize="18dp"
                     android:background="@drawable/button_selector"
                     android:textAllCaps="false"
@@ -219,7 +219,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="@dimen/dim_10">
 
                 <TextView
                     android:id="@+id/clto_opportunity_stage_tv"
@@ -248,7 +248,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/clto_seekbar"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_10"
                 android:progress="50"
                 android:max="100"/>
             <!--android:progressDrawable="@drawable/seekbar_progress"-->
@@ -297,7 +297,7 @@
                 android:layout_weight="1"
                 android:orientation="horizontal"
                 android:weightSum="2"
-                android:layout_marginTop="25dp">
+                android:layout_marginTop="@dimen/dim_25">
 
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/clto_select_date_til"
@@ -326,7 +326,7 @@
                 <Button
                     android:id="@+id/clto_select_date_button"
                     android:layout_width="0dp"
-                    android:layout_height="33dp"
+                    android:layout_height="@dimen/dim_33"
                     android:layout_above="@+id/spinner"
                     android:layout_gravity="center"
                     android:layout_weight="0.2"
@@ -341,7 +341,7 @@
                 android:id="@+id/clto_status_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_10"
                 android:text="Status Type"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18dp"
@@ -359,7 +359,7 @@
                 style="@style/TextLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_10"
                 android:visibility="gone">
 
                 <EditText

@@ -7,21 +7,21 @@
     android:id="@+id/linear"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#36474f"
+    android:background="@color/colorPrimary"
     android:orientation="vertical">
 
     <include
         android:id="@+id/dsvr_top_bar"
         layout="@layout/top_bar_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
     <View
         android:id="@+id/line_view"
         android:layout_width="match_parent"
-        android:layout_height="3dp"
+        android:layout_height="@dimen/dim_3"
         android:layout_below="@+id/dsvr_top_bar"
-        android:background="@color/view_line"/>
+        android:background="@color/view_line" />
 
     <ScrollView
         android:id="@+id/scrolling"
@@ -32,10 +32,11 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#36474f"
-            android:padding="10dp"
+            android:background="@color/colorPrimary"
+            android:padding="@dimen/dim_10"
             android:showAsAction="never"
             tools:context=".Activity.AddingContactsActivity">
+
 
             <EditText
                 android:id="@+id/edit_Username2"
@@ -45,11 +46,11 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:ems="10"
-                android:visibility="gone"
                 android:hint="@string/edit_Username2"
                 android:inputType="textPersonName"
-                android:textColor="#ffffff"
-                android:textColorHint="#ffffff"/>
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:visibility="gone" />
 
             <EditText
                 android:id="@+id/edit_Role2"
@@ -59,11 +60,11 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:ems="10"
-                android:visibility="gone"
                 android:hint="@string/edit_Role2"
                 android:inputType="textPersonName"
-                android:textColor="#ffffff"
-                android:textColorHint="#ffffff"/>
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:visibility="gone" />
 
             <EditText
                 android:id="@+id/edit_Email2"
@@ -73,11 +74,11 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:ems="10"
-                android:visibility="gone"
                 android:hint="@string/edit_Email2"
                 android:inputType="textPersonName"
-                android:textColor="#ffffff"
-                android:textColorHint="#ffffff"/>
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:visibility="gone" />
 
             <EditText
                 android:id="@+id/edit_Number2"
@@ -88,23 +89,23 @@
                 android:hint="@string/edit_Number2"
                 android:inputType="number"
                 android:maxLength="10"
-                android:visibility="gone"
-                android:textColor="#ffffff"
-                android:textColorHint="#ffffff"/>
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/button_save"
-                android:layout_width="70dp"
-                android:layout_height="33dp"
+                android:layout_width="@dimen/dim_70"
+                android:layout_height="@dimen/dim_33"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/buttonshape"
                 android:onClick="slideUpDown"
                 android:text="@string/save"
                 android:textAllCaps="false"
-                android:textColor="#ffffff"
+                android:textColor="@color/colorWhite"
                 android:textSize="18dp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <EditText
                 android:id="@+id/code"
@@ -118,16 +119,52 @@
                 android:layout_toStartOf="@+id/edit_Number2"
                 android:hint="@string/code"
                 android:maxLength="2"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:textSize="12dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/layout_add_photo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/button_save"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/code"
+                android:orientation="horizontal"
                 android:visibility="gone"
-                android:textColor="#ffffff"
-                android:textColorHint="#ffffff"
-                android:textSize="12dp"/>
+                android:weightSum="4">
+
+                <EditText
+                    android:id="@+id/edit_photos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3.5"
+                    android:hint="@string/add_photos"
+                    android:paddingEnd="@dimen/dim_2"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"
+                    android:textSize="18dp"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/image_share_photo"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dim_30"
+                    android:layout_gravity="end|center"
+                    android:layout_marginEnd="@dimen/dim_10"
+                    android:layout_weight="0.5"
+                    android:ems="10"
+                    android:src="@drawable/camera" />
+            </LinearLayout>
+
 
             <ListView
                 android:id="@+id/expandablelist"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_above="@+id/edit_Username2"/>
+                android:layout_above="@+id/edit_Username2" />
 
 
         </RelativeLayout>

@@ -2,8 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="@dimen/dim_12"
     android:background="#36474f"
+    android:padding="@dimen/dim_12"
     android:weightSum="1">
 
 
@@ -11,41 +11,40 @@
         android:id="@+id/header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/dim_20"
         android:layout_centerVertical="true"
         android:text="hjhj"
-        android:textColor="#ffffff" />
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/dim_20" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_alignParentRight="true">
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/edit_button"
             android:layout_width="@dimen/dim_50"
             android:layout_height="@dimen/dim_20"
-            android:textSize="@dimen/dim_16"
-            android:textAllCaps="false"
-            android:text="Edit"
             android:background="@drawable/buttonshape"
             android:focusable="false"
-            android:textColor="#ffffff" />
+            android:text="@string/edit_btn_str"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dim_16" />
 
         <Button
             android:id="@+id/delete_button"
             android:layout_width="@dimen/dim_50"
             android:layout_height="@dimen/dim_20"
-            android:textSize="@dimen/dim_16"
-            android:textAllCaps="false"
             android:background="@drawable/buttonshape"
-            android:text="Delete"
             android:focusable="false"
-            android:textColor="#ffffff" />
+            android:text="@string/delete_button"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dim_16" />
 
     </LinearLayout>
-
 
 
 </RelativeLayout>

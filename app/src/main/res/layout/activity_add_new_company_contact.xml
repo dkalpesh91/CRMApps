@@ -37,9 +37,9 @@
                 style="@style/TextLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="25dp">
+                android:layout_marginLeft="@dimen/dim_15"
+                android:layout_marginRight="@dimen/dim_15"
+                android:layout_marginTop="@dimen/dim_25">
 
                 <AutoCompleteTextView
                     android:id="@+id/company_name_atv"
@@ -60,9 +60,9 @@
                 style="@style/TextLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="10dp">
+                android:layout_marginLeft="@dimen/dim_15"
+                android:layout_marginRight="@dimen/dim_15"
+                android:layout_marginTop="@dimen/dim_10">
 
                 <EditText
                     android:id="@+id/company_address_et"
@@ -82,9 +82,9 @@
                 style="@style/TextLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="10dp">
+                android:layout_marginLeft="@dimen/dim_15"
+                android:layout_marginRight="@dimen/dim_15"
+                android:layout_marginTop="@dimen/dim_10">
 
                 <EditText
                     android:id="@+id/company_email_et"
@@ -104,9 +104,9 @@
                 style="@style/TextLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="10dp">
+                android:layout_marginLeft="@dimen/dim_15"
+                android:layout_marginRight="@dimen/dim_15"
+                android:layout_marginTop="@dimen/dim_10">
 
                 <EditText
                     android:id="@+id/company_phoneno_et"
@@ -126,7 +126,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_10"
                 android:text="@string/add_primary_contact_tv_str"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="20dp"
@@ -137,9 +137,9 @@
                 style="@style/TextLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="10dp">
+                android:layout_marginLeft="@dimen/dim_15"
+                android:layout_marginRight="@dimen/dim_15"
+                android:layout_marginTop="@dimen/dim_10">
 
                 <AutoCompleteTextView
                     android:id="@+id/contact_name_atv"
@@ -159,9 +159,9 @@
                 style="@style/TextLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="10dp">
+                android:layout_marginLeft="@dimen/dim_15"
+                android:layout_marginRight="@dimen/dim_15"
+                android:layout_marginTop="@dimen/dim_10">
 
                 <EditText
                     android:id="@+id/contact_number_et"
@@ -181,9 +181,9 @@
                 style="@style/TextLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="10dp">
+                android:layout_marginLeft="@dimen/dim_15"
+                android:layout_marginRight="@dimen/dim_15"
+                android:layout_marginTop="@dimen/dim_10">
 
                 <EditText
                     android:id="@+id/contact_email_et"
@@ -204,9 +204,9 @@
                 style="@style/TextLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="10dp">
+                android:layout_marginLeft="@dimen/dim_15"
+                android:layout_marginRight="@dimen/dim_15"
+                android:layout_marginTop="@dimen/dim_10">
 
                 <EditText
                     android:id="@+id/contact_roll_et"
@@ -227,11 +227,11 @@
     <Button
         android:id="@+id/save_btn"
         android:layout_width="wrap_content"
-        android:layout_height="33dp"
+        android:layout_height="@dimen/dim_33"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="@dimen/dim_10"
+        android:layout_marginBottom="@dimen/dim_10"
         android:textAllCaps="false"
         android:textSize="18dp"
         android:background="@drawable/button_selector"

@@ -16,7 +16,7 @@
         android:background="@color/view_line"
         android:layout_width="match_parent"
         android:layout_below="@+id/dsvr_top_bar"
-        android:layout_height="3dp"/>
+        android:layout_height="@dimen/dim_3"/>
 
     <ScrollView
         android:id="@+id/lead_sv"
@@ -38,9 +38,9 @@
                 android:layout_weight="1"
                 android:orientation="horizontal"
                 android:weightSum="2"
-                android:layout_marginTop="25dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp">
+                android:layout_marginTop="@dimen/dim_25"
+                android:layout_marginLeft="@dimen/dim_15"
+                android:layout_marginRight="@dimen/dim_15">
 
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/dsvrc_select_date_til"
@@ -68,7 +68,7 @@
                 <Button
                     android:id="@+id/dsvrc_select_date_button"
                     android:layout_width="0dp"
-                    android:layout_height="33dp"
+                    android:layout_height="@dimen/dim_33"
                     android:layout_above="@+id/spinner"
                     android:layout_gravity="center"
                     android:layout_weight="0.2"
@@ -84,9 +84,9 @@
                 style="@style/TextLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="10dp">
+                android:layout_marginLeft="@dimen/dim_15"
+                android:layout_marginRight="@dimen/dim_15"
+                android:layout_marginTop="@dimen/dim_10">
 
                 <AutoCompleteTextView
                     android:id="@+id/dsvrc_client_name_atv"
@@ -107,16 +107,16 @@
                 style="@style/TextLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="10dp">
+                android:layout_marginLeft="@dimen/dim_15"
+                android:layout_marginRight="@dimen/dim_15"
+                android:layout_marginTop="@dimen/dim_10">
 
                 <AutoCompleteTextView
                     android:id="@+id/dsvrc_person_name_atv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="Contact Person"
+                    android:hint="@string/client_contact_person"
                     android:imeOptions="actionNext"
                     android:textColor="@color/colorWhite"
                     android:textSize="18dp"
@@ -130,15 +130,15 @@
                 style="@style/TextLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="10dp">
+                android:layout_marginLeft="@dimen/dim_15"
+                android:layout_marginRight="@dimen/dim_15"
+                android:layout_marginTop="@dimen/dim_10">
 
                 <AutoCompleteTextView
                     android:id="@+id/dsvrc_standing_location_et"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Starting Location"
+                    android:hint="@string/sales_starting_location"
                     android:imeOptions="actionNext"
                     android:inputType="text"
                     android:maxLines="1"
@@ -154,15 +154,15 @@
                 style="@style/TextLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="10dp">
+                android:layout_marginLeft="@dimen/dim_15"
+                android:layout_marginRight="@dimen/dim_15"
+                android:layout_marginTop="@dimen/dim_10">
 
                 <AutoCompleteTextView
                     android:id="@+id/dsvrc_client_location_et"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Client Location"
+                    android:hint="@string/client_location"
                     android:imeOptions="actionNext"
                     android:inputType="text"
                     android:maxLines="1"
@@ -177,16 +177,16 @@
                 style="@style/TextLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="10dp">
+                android:layout_marginLeft="@dimen/dim_15"
+                android:layout_marginRight="@dimen/dim_15"
+                android:layout_marginTop="@dimen/dim_10">
 
                 <EditText
                     android:id="@+id/dsvrc_note_descriptipn_et"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="top|left"
-                    android:hint="Summary(Max 200 character)"
+                    android:hint="@string/client_summary"
                     android:imeOptions="actionNext"
                     android:inputType="textMultiLine"
                     android:lines="2"
@@ -203,10 +203,10 @@
                 android:id="@+id/dsvrc_purpose_type_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:text="Activity Type"
+                android:layout_marginTop="@dimen/dim_10"
+                android:layout_marginLeft="@dimen/dim_15"
+                android:layout_marginRight="@dimen/dim_15"
+                android:text="@string/activity_type"
                 android:textColor="@color/colorsilver"
                 android:textSize="18dp"
                 android:textStyle="bold"/>
@@ -215,8 +215,8 @@
                 android:id="@+id/dsvrc_status_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"/>
+                android:layout_marginLeft="@dimen/dim_15"
+                android:layout_marginRight="@dimen/dim_15"/>
 
 
         </LinearLayout>
@@ -225,11 +225,11 @@
     <Button
         android:id="@+id/dsvrc_save_btn"
         android:layout_width="wrap_content"
-        android:layout_height="33dp"
+        android:layout_height="@dimen/dim_33"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="@dimen/dim_10"
+        android:layout_marginBottom="@dimen/dim_10"
         android:background="@drawable/button_selector"
         android:text="@string/save_btn_str"
         android:textColor="@color/colorWhite"

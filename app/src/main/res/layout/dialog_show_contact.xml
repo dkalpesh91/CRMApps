@@ -1,40 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="@color/colorPrimary">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/dim_60"
         android:background="@color/colorPrimaryDark">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorWhite"
             android:layout_centerVertical="true"
-            android:textSize="@dimen/dim_28"
             android:layout_marginLeft="@dimen/dim_12"
-            android:text="View Contact"/>
+            android:text="@string/view_contact"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dim_28" />
 
         <Button
             android:id="@+id/dialog_close_btn"
             android:layout_width="@dimen/dim_45"
             android:layout_height="@dimen/dim_45"
-            android:textColor="@color/colorWhite"
-            android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
             android:background="@drawable/button_selector"
-            android:textSize="@dimen/dim_30"
-            android:text="X"/>
+            android:text="X"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dim_30" />
     </RelativeLayout>
 
     <ListView
-        android:layout_marginTop="@dimen/dim_8"
-        android:layout_marginBottom="@dimen/dim_5"
         android:id="@+id/show_contact_lv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dim_5"
+        android:layout_marginTop="@dimen/dim_8">
 
 
     </ListView>

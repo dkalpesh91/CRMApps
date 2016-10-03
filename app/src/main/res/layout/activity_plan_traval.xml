@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,17 +10,17 @@
         android:id="@+id/dsvr_top_bar"
         layout="@layout/top_bar_without_add"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
     <ScrollView
         android:id="@+id/apt_sv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/dsvr_top_bar"
         android:layout_above="@+id/apt_start_location_btn"
+        android:layout_below="@+id/dsvr_top_bar"
+        android:layout_marginBottom="@dimen/dim_12"
         android:layout_marginLeft="@dimen/dim_12"
-        android:layout_marginRight="@dimen/dim_12"
-        android:layout_marginBottom="@dimen/dim_12">
+        android:layout_marginRight="@dimen/dim_12">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -33,10 +32,10 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_25"
                 android:layout_weight="1"
                 android:orientation="horizontal"
-                android:weightSum="2"
-                android:layout_marginTop="@dimen/dim_25">
+                android:weightSum="2">
 
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/apt_select_start_location_til"
@@ -50,13 +49,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:hint="Start Location"
+                        android:hint="@string/sales_starting_location"
                         android:imeOptions="actionDone"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="@dimen/dim_22"
                         android:inputType="text"
                         android:maxLines="1"
-                        android:singleLine="true"/>
+                        android:singleLine="true"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/dim_22" />
                 </android.support.design.widget.TextInputLayout>
 
 
@@ -67,7 +66,7 @@
                     android:layout_above="@+id/spinner"
                     android:layout_gravity="center"
                     android:layout_weight="0.2"
-                    android:background="@drawable/gps_loc_ioc"/>
+                    android:background="@drawable/gps_loc_ioc" />
 
 
             </LinearLayout>
@@ -76,10 +75,10 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_15"
                 android:layout_weight="1"
                 android:orientation="horizontal"
-                android:weightSum="2"
-                android:layout_marginTop="@dimen/dim_15">
+                android:weightSum="2">
 
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/apt_select_client_location_til"
@@ -93,13 +92,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:hint="Client Location"
+                        android:hint="@string/client_location"
                         android:imeOptions="actionDone"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="@dimen/dim_22"
                         android:inputType="text"
                         android:maxLines="1"
-                        android:singleLine="true"/>
+                        android:singleLine="true"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/dim_22" />
                 </android.support.design.widget.TextInputLayout>
 
 
@@ -110,7 +109,7 @@
                     android:layout_above="@+id/spinner"
                     android:layout_gravity="center"
                     android:layout_weight="0.2"
-                    android:background="@drawable/gps_loc_ioc"/>
+                    android:background="@drawable/gps_loc_ioc" />
 
 
             </LinearLayout>
@@ -126,20 +125,15 @@
                     android:id="@+id/clto_distance_et"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Distance"
+                    android:hint="@string/travel_distance"
                     android:imeOptions="actionNext"
                     android:inputType="text"
                     android:maxLines="1"
                     android:singleLine="true"
                     android:textColor="@color/colorWhite"
                     android:textColorHint="@color/colorsilver"
-                    android:textSize="@dimen/dim_22"/>
+                    android:textSize="@dimen/dim_22" />
             </android.support.design.widget.TextInputLayout>
-
-
-
-
-
 
 
             <!--<FrameLayout-->
@@ -155,36 +149,38 @@
             <!--android:layout_width="match_parent"-->
             <!--android:layout_height="160dp"/>-->
 
-            <fragment  android:id="@+id/fragment1"
-                       android:name="com.sfamobile.dahlia.sfamobile.Fragments.WorkaroundMapFragment"
-                       android:layout_width="match_parent"
-                       android:layout_height="@dimen/dim_300"
-                       android:layout_marginBottom="-42dp"/>
+            <fragment
+                android:id="@+id/fragment1"
+                android:name="com.sfamobile.dahlia.sfamobile.Fragments.WorkaroundMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_300"
+                android:layout_marginBottom="-42dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dim_10"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:layout_width="@dimen/dim_35"
                     android:layout_height="@dimen/dim_35"
-                    android:background="@drawable/distance1"/>
+                    android:background="@drawable/distance1" />
 
                 <TextView
                     android:id="@+id/distance_value_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="00"
                     android:layout_marginLeft="@dimen/dim_10"
-                    android:textColor="@color/colorPink"/>
+                    android:text="00"
+                    android:textColor="@color/colorPink" />
 
                 <ImageView
                     android:layout_width="@dimen/dim_35"
                     android:layout_height="@dimen/dim_35"
                     android:layout_marginLeft="@dimen/dim_15"
-                    android:background="@drawable/time"/>
+                    android:background="@drawable/time" />
 
                 <TextView
                     android:id="@+id/duration_value_tv"
@@ -192,10 +188,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/dim_10"
                     android:text="o min"
-                    android:textColor="@color/colorPink"/>
+                    android:textColor="@color/colorPink" />
 
             </LinearLayout>
-
 
 
             <TextView
@@ -203,19 +198,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:text="How do you plan to travel?"
+                android:layout_marginTop="@dimen/dim_10"
+                android:text="@string/tv_plan_travel"
                 android:textColor="@color/colorsilver"
                 android:textSize="18dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:id="@+id/dtp_radio_button_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginLeft="@dimen/dim_10"
+                android:layout_marginRight="@dimen/dim_10"
+                android:layout_marginTop="@dimen/dim_10"
                 android:orientation="vertical">
 
 
@@ -223,44 +218,44 @@
                     android:id="@+id/dtp_two_wheeler_radiobtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:singleLine="true"
-                    android:text="Two-Wheeler(Self-Owned)"
                     android:buttonTint="@color/colorWhite"
-                    android:textColor="@drawable/radio_button_text_selector_default_white"/>
+                    android:singleLine="true"
+                    android:text="@string/travel_two_wheeler"
+                    android:textColor="@drawable/radio_button_text_selector_default_white" />
 
                 <RadioButton
                     android:id="@+id/dtp_four_wheeler_radiobtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:singleLine="true"
-                    android:text="Four-Wheeler(Self-Owned)"
+                    android:layout_marginTop="@dimen/dim_5"
                     android:buttonTint="@color/colorWhite"
-                    android:textColor="@drawable/radio_button_text_selector_default_white"/>
+                    android:singleLine="true"
+                    android:text="@string/travel_four_wheeler"
+                    android:textColor="@drawable/radio_button_text_selector_default_white" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:weightSum="2"
-                    android:orientation="horizontal">
+                    android:layout_marginTop="@dimen/dim_5"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
 
                     <RadioButton
                         android:id="@+id/dtp_public_travel_radiobtn"
                         android:layout_width="0dp"
-                        android:layout_weight="0.9"
                         android:layout_height="wrap_content"
-                        android:singleLine="true"
-                        android:text="Public Travel"
+                        android:layout_weight="0.9"
                         android:buttonTint="@color/colorWhite"
-                        android:textColor="@drawable/radio_button_text_selector_default_white"/>
+                        android:singleLine="true"
+                        android:text="@string/travel_public_vehicle"
+                        android:textColor="@drawable/radio_button_text_selector_default_white" />
 
                     <Spinner
                         android:id="@+id/dtp_public_travel_radiobtn_spinner"
                         android:layout_width="0dp"
-                        android:layout_weight="0.9"
-                        android:layout_gravity="center"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.9"
                         android:visibility="gone">
 
                     </Spinner>
@@ -268,69 +263,68 @@
                     <Button
                         android:id="@+id/apt_capture_ticket_img_button"
                         android:layout_width="0dp"
-                        android:layout_height="33dp"
+                        android:layout_height="@dimen/dim_33"
                         android:layout_gravity="center"
                         android:layout_weight="0.2"
-                        android:visibility="gone"
-                        android:background="@drawable/camera"/>
+                        android:background="@drawable/camera"
+                        android:visibility="gone" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:weightSum="1"
-                    android:orientation="horizontal">
+                    android:layout_marginTop="@dimen/dim_5"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
 
                     <RadioButton
                         android:id="@+id/dtp_auto_rickshaw_radiobtn"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:singleLine="true"
+                        android:layout_marginTop="@dimen/dim_5"
                         android:layout_weight="0.9"
                         android:buttonTint="@color/colorWhite"
-                        android:text="Auto Rickshaw"
-                        android:textColor="@drawable/radio_button_text_selector_default_white"/>
-
+                        android:singleLine="true"
+                        android:text="@string/travel_auto_rickshaw"
+                        android:textColor="@drawable/radio_button_text_selector_default_white" />
 
 
                     <Button
                         android:id="@+id/apt_auto_capture_ticket_img_button"
                         android:layout_width="0dp"
-                        android:layout_height="33dp"
+                        android:layout_height="@dimen/dim_33"
                         android:layout_gravity="center"
                         android:layout_weight="0.1"
-                        android:visibility="gone"
-                        android:background="@drawable/camera"/>
+                        android:background="@drawable/camera"
+                        android:visibility="gone" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:weightSum="2"
-                    android:orientation="horizontal">
+                    android:layout_marginTop="@dimen/dim_5"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
 
                     <RadioButton
                         android:id="@+id/dtp_radio_cab_radiobtn"
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:singleLine="true"
-                        android:text="Radio Cab"
+                        android:layout_weight="1"
                         android:buttonTint="@color/colorWhite"
-                        android:textColor="@drawable/radio_button_text_selector_default_white"/>
+                        android:singleLine="true"
+                        android:text="@string/travel_radio_cab"
+                        android:textColor="@drawable/radio_button_text_selector_default_white" />
 
                     <Spinner
                         android:id="@+id/dtp_radio_cab_radiobtn_sppiner"
                         android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_gravity="center"
                         android:layout_height="wrap_content"
-                        android:visibility="gone"/>
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:visibility="gone" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -367,7 +361,7 @@
                 style="@style/TextLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="@dimen/dim_10">
 
                 <AutoCompleteTextView
                     android:id="@+id/apt_amount_atv"
@@ -381,7 +375,7 @@
                     android:singleLine="true"
                     android:textColor="@color/colorWhite"
                     android:textColorHint="@color/colorsilver"
-                    android:textSize="18dp"/>
+                    android:textSize="18dp" />
             </android.support.design.widget.TextInputLayout>
 
 
@@ -391,34 +385,34 @@
     <Button
         android:id="@+id/apt_start_location_btn"
         android:layout_width="wrap_content"
-        android:layout_height="33dp"
+        android:layout_height="@dimen/dim_33"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
+        android:layout_marginBottom="@dimen/dim_10"
         android:background="@drawable/button_selector"
-        android:text="Start Journey"
+        android:paddingLeft="@dimen/dim_8"
+        android:paddingRight="@dimen/dim_8"
+        android:text="@string/travel_start_journey"
         android:textAllCaps="false"
         android:textColor="@color/colorWhite"
-        android:textSize="18dp"/>
+        android:textSize="18dp" />
 
     <Button
         android:id="@+id/apt_end_location_btn"
         android:layout_width="wrap_content"
-        android:layout_height="33dp"
-        android:layout_below="@+id/apt_sv"
+        android:layout_height="@dimen/dim_33"
         android:layout_alignParentBottom="true"
+        android:layout_below="@+id/apt_sv"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:paddingLeft="13dp"
-        android:paddingRight="13dp"
+        android:layout_marginBottom="@dimen/dim_10"
         android:background="@drawable/button_selector"
-        android:text="End Journey"
-        android:visibility="gone"
+        android:paddingLeft="@dimen/dim_13"
+        android:paddingRight="@dimen/dim_13"
+        android:text="@string/travel_end_journey"
         android:textAllCaps="false"
         android:textColor="@color/colorWhite"
-        android:textSize="21dp"/>
+        android:textSize="21dp"
+        android:visibility="gone" />
 
 
 </RelativeLayout>

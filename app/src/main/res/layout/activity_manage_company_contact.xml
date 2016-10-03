@@ -15,12 +15,12 @@
         android:background="@color/view_line"
         android:layout_width="match_parent"
         android:layout_below="@+id/dsvr_top_bar"
-        android:layout_height="3dp"/>
+        android:layout_height="@dimen/dim_3"/>
 
     <ListView
         android:id="@+id/company_contact_lv"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="@dimen/dim_10"/>
 
 </LinearLayout>

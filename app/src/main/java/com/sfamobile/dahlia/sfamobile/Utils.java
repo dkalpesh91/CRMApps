@@ -8,12 +8,16 @@ import android.accessibilityservice.AccessibilityServiceInfo;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Build;
+import android.provider.MediaStore;
 import android.provider.Settings;
+import android.support.v7.app.AlertDialog;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.Log;
@@ -50,7 +54,6 @@ import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 
 
-
 public class Utils {
 
     private static String mDateFormatForImageFile = "yyyyMMdd_HHmmss";
@@ -62,7 +65,6 @@ public class Utils {
 
     private static final String LIME_ACCESSIBILITY_ID = "com.app.lime/.service.AxisAutoFillAccessibilityService";
     private static final String LIME_INPUT_METHOD_ID = "com.app.lime/.service.AxisAutoFillInputService";
-
     private static String TAG = "Utils";
 
     public static String getDateWithDaySuffix(Date date) {
@@ -180,8 +182,6 @@ public class Utils {
     }
 
 
-
-
     public static String prefixZeroToANumber(int number) {
         if (number < 10) {
             return new StringBuilder().append(0).append(number).toString();
@@ -190,7 +190,6 @@ public class Utils {
         }
 
     }
-
 
 
     public final static boolean isValidEmail(CharSequence target) {
@@ -216,17 +215,12 @@ public class Utils {
     }
 
 
-
-
-
-
     public static File createImageFile() throws IOException {
         // Create image for writing bitmap
         String timeStamp = new SimpleDateFormat(mDateFormatForImageFile).format(new Date());
         File imageFile = File.createTempFile(timeStamp, mFileExtnForImage);
         return imageFile;
     }
-
 
 
     public static String getNameInitials(String Name) {
@@ -269,17 +263,6 @@ public class Utils {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
     public static boolean isVaildAmount(String amount, String availableBlance) {
         boolean result = false;
         int iAmount, iAvailableBal;
@@ -294,7 +277,6 @@ public class Utils {
         }
         return result;
     }
-
 
 
     public static String getFirstName(String Name) {
@@ -322,7 +304,6 @@ public class Utils {
         }
         return lastName;
     }
-
 
 
     public static String getUserName(String firstName, String secondName) {

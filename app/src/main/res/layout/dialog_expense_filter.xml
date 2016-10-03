@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/dim_20"
-                android:gravity="center_horizontal"
-                android:background="@drawable/rounded_border">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_border"
+    android:gravity="center_horizontal"
+    android:paddingBottom="@dimen/dim_20">
 
     <ImageView
         android:id="@+id/cancle_img"
@@ -12,7 +12,7 @@
         android:layout_height="@dimen/dim_35"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:background="@drawable/cancle_icon"/>
+        android:background="@drawable/cancle_icon" />
 
     <LinearLayout
         android:id="@+id/details_ll"
@@ -24,24 +24,24 @@
         android:orientation="vertical">
 
 
-            <RadioButton
-                android:id="@+id/by_date_rd_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="By Date"
-                android:textSize="@dimen/dim_24"
-                android:textColor="@drawable/radio_button_text_selector_1"
-                android:buttonTint="@color/colorAccent"/>
+        <RadioButton
+            android:id="@+id/by_date_rd_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorAccent"
+            android:text="@string/tv_by_date"
+            android:textColor="@drawable/radio_button_text_selector_1"
+            android:textSize="@dimen/dim_24" />
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dim_18"
+            android:layout_marginRight="@dimen/dim_18"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:weightSum="2"
-            android:layout_marginLeft="@dimen/dim_18"
-            android:layout_marginRight="@dimen/dim_18">
+            android:weightSum="2">
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/dsvrc_select_date_til"
@@ -55,14 +55,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="From"
-                    android:focusableInTouchMode="false"
-                    android:textColor="@color/colorWhite"
                     android:focusable="false"
-                    android:textSize="@dimen/dim_20"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/tv_from"
                     android:inputType="text"
                     android:maxLines="1"
-                    android:singleLine="true"/>
+                    android:singleLine="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/dim_20" />
             </android.support.design.widget.TextInputLayout>
 
 
@@ -73,7 +73,7 @@
                 android:layout_above="@+id/spinner"
                 android:layout_gravity="center"
                 android:layout_weight="0.2"
-                android:background="@drawable/calendar2"/>
+                android:background="@drawable/calendar2" />
 
 
         </LinearLayout>
@@ -82,11 +82,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dim_18"
+            android:layout_marginRight="@dimen/dim_18"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:weightSum="2"
-            android:layout_marginLeft="@dimen/dim_18"
-            android:layout_marginRight="@dimen/dim_18">
+            android:weightSum="2">
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/dsvrc_select_date_to_til"
@@ -100,14 +100,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="To"
-                    android:focusableInTouchMode="false"
-                    android:textColor="@color/colorWhite"
                     android:focusable="false"
-                    android:textSize="@dimen/dim_20"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/tv_to"
                     android:inputType="text"
                     android:maxLines="1"
-                    android:singleLine="true"/>
+                    android:singleLine="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/dim_20" />
             </android.support.design.widget.TextInputLayout>
 
 
@@ -118,27 +118,27 @@
                 android:layout_above="@+id/spinner"
                 android:layout_gravity="center"
                 android:layout_weight="0.2"
-                android:background="@drawable/calendar2"/>
+                android:background="@drawable/calendar2" />
 
 
         </LinearLayout>
 
-            <RadioButton
-                android:id="@+id/by_category_rd_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="By Category"
-                android:textSize="@dimen/dim_24"
-                android:layout_marginTop="@dimen/dim_10"
-                android:textColor="@drawable/radio_button_text_selector_1"
-                android:buttonTint="@color/colorAccent"/>
+        <RadioButton
+            android:id="@+id/by_category_rd_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_10"
+            android:buttonTint="@color/colorAccent"
+            android:text="@string/tv_by_category"
+            android:textColor="@drawable/radio_button_text_selector_1"
+            android:textSize="@dimen/dim_24" />
 
         <Spinner
             android:id="@+id/def_status_spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/lead_sv"
-            android:layout_alignParentStart="true"/>
+            android:layout_alignParentStart="true" />
 
     </LinearLayout>
 
@@ -147,15 +147,15 @@
         android:id="@+id/def_save_btn"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/dim_38"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/dim_12"
-        android:layout_marginBottom="@dimen/dim_12"
-        android:background="@drawable/button_selector"
         android:layout_below="@+id/details_ll"
-        android:text="Submit"
-        android:textColor="@color/colorWhite"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dim_12"
+        android:layout_marginTop="@dimen/dim_12"
+        android:background="@drawable/button_selector"
+        android:text="@string/button_submit"
         android:textAllCaps="false"
-        android:textSize="@dimen/dim_20"/>
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/dim_20" />
 
 
 </RelativeLayout>

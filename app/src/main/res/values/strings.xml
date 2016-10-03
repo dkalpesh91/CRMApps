@@ -49,7 +49,9 @@
     <string name="contact_number_et_hint_str">Phone Number</string>
     <string name="contact_email_et_hint_str">Email ID</string>
     <string name="contact_role_atv_hint_str">Role</string>
-    <string name="contact_address_atv_hint_str">Address </string>
+    <string name="contact_address_atv_hint_str">Address</string>
+    <string name="contact_person_atv_hint_str">Person</string>
+    <string name="button_add">Add</string>
 
 
     <!--*******************************Manage Edit Company Activity**********************************-->
@@ -62,6 +64,19 @@
     <!--*******************************Daily Sales Visit Report Activity**********************************-->
     <string name="daily_visit_report_tv_str">Daily Visit Report</string>
     <string name="client_name_tv_str">Client Name</string>
+    <string name="client_email_id">Email Id</string>
+    <string name="client_location">Client Location</string>
+    <string name="sales_starting_location">Starting Location</string>
+    <string name="client_contact_person">Contact Person</string>
+    <string name="client_phone_no">Phone Number</string>
+    <string name="client_address">Address</string>
+    <string name="client_summary">Summary(Max 200 character)</string>
+    <string name="client_contact_name">Contact Name</string>
+    <string name="client_details_required">Detailed Requirement(Max 200 character)</string>
+
+
+    <string name="activity_type">Activity Type</string>
+
 
     <!--*******************************Add Contacts**********************************-->
     <string name="edit_Username">Name</string>
@@ -101,7 +116,7 @@
     <string name="Contact_saving">       Contact Number</string>
 
     //country code
-    <string name="code">Country code</string>
+    <string name="code">Country Code</string>
 
 
     //edit and delete
@@ -116,6 +131,11 @@
     <string name="header"></string>
 
 
+    <string name="view_contact">View Contact</string>
+    <string name="add_photos">Add Photos</string>
+
+
+
     <!--*******************************Add meetings**********************************-->
 
     //title
@@ -125,16 +145,17 @@
     <string name="enter_meeting">Meeting Title</string>
     <string name="enter_client_name">Client Name</string>
     <string name="enter_meeting_info">Meeting Info</string>
-    <string name="location"></string>
-    <string name="select_Date"></string>
-    <string name="Enter_Time"></string>
+    <string name="location">Location</string>
+    <string name="select_Date">Date</string>
+    <string name="Enter_Time">Time</string>
     <string name="title_activity_main">MainActivity</string>
 
     //image buttons
 
-    <string name="select_date"></string>
-    <string name="select_time"></string>
-    <string name="set_remainder"></string>
+    <!--<string name="select_date"></string>-->
+    <!--<string name="select_time"></string>-->
+    <!--<string name="set_remainder"></string>-->
+    <!---->
 
 
     <!--*******************************login Activity**********************************-->
@@ -149,6 +170,7 @@
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Login</string>
+    <string name="action_create_account">Create an account</string>
     <string name="invalid_email">This email address is invalid</string>
     <string name="invalid_password">Password is too short</string>
     <string name="incorrect_password">Password is incorrect</string>
@@ -156,6 +178,7 @@
     <string name="powered_by_dahlia_technologies"><u>Powered by Dahlia Technologies</u>.</string>
     <string name="uri_dahlia_technologies"><u>WWW.Dahlia-tech.com</u></string>
     <string name="uri_sfamobi"><u>WWW.Sfamobi.com</u></string>
+
 
     <!--*******************************register Activity**********************************-->
 
@@ -174,10 +197,104 @@
 
     <string name="total_cost_with_rupee_symbol">Total Cost(\u20B9)</string>
 
-
     <string name="estimated_amount">Estimated Amount(\u20B9)</string>
     <string name="rupees">\u20B9</string>
     <string name="rupess_symbol_with_amount">\u20B9 %1$s</string>
+
+    <!--*******************************Expense Management**********************************-->
+    <string name="shop">Shop</string>
+    <string name="total_expenses">Total expenses</string>
+    <string name="daily_expenses">Daily Expense</string>
+    <string name="weekly_expenses">Weekly Expense</string>
+    <string name="monthly_expenses">Monthly Expense</string>
+
+    <!--*******************************Quotation**********************************-->
+    <string name="quotation_discount">discount(%)</string>
+    <string name="quotation_send_approval">Send for approval</string>
+    <string name="quotation_create_order">Create Order</string>
+    <string name="quotation_history">Quotation History</string>
+
+    <!--*******************************Lead Details**********************************-->
+    <string name="lead_client_name">Client Name</string>
+    <string name="lead_client_email">Email Id</string>
+    <string name="lead_client_contact">Contact Number</string>
+    <string name="lead_client_address">Address</string>
+    <string name="lead_client_contact_primary">Contact Name(Primary)</string>
+    <string name="lead_client_email_primary">Email Id</string>
+    <string name="lead_client_phone_primary">Contact Number</string>
+    <string name="lead_client_role">Role</string>
+    <string name="lead_client_lead_size">Lead Size</string>
+    <string name="lead_client_description">Description</string>
+    <string name="lead_client_lead_status">Lead Status</string>
+
+
+    <!--*******************************Logged-in Activity**********************************-->
+    <string name="logged_in_welcome">Welcome</string>
+    <string name="logged_in_success">Logged in successfully</string>
+    <string name="log_out">Logout</string>
+
+
+    <!--*******************************Plan Travel Activity**********************************-->
+
+    <string name="travel_distance">Distance</string>
+    <string name="tv_plan_travel">How do you plan to travel?</string>
+    <string name="travel_four_wheeler">Four-Wheeler(Self-Owned)</string>
+    <string name="travel_two_wheeler">Two-Wheeler(Self-Owned)</string>
+    <string name="travel_public_vehicle">Public Travel</string>
+    <string name="travel_auto_rickshaw">Auto Rickshaw</string>
+    <string name="travel_radio_cab">Radio Cab</string>
+    <string name="travel_start_journey">Start Journey</string>
+    <string name="travel_end_journey">End Journey</string>
+
+
+
+    <string name="tv_choose">Choose</string>
+    <string name="action_radio_local">Local</string>
+    <string name="action_radio_outstation">Outstation</string>
+
+
+    <!--*******************************Product Catalog**********************************-->
+    <string name="catalog_product_name">Name</string>
+    <string name="catalog_product_id">Id</string>
+    <string name="catalog_product_desc">Product Description</string>
+    <string name="catalog_product_price">Show Price</string>
+    <string name="catalog_product_avail_quantity">Available Quantity</string>
+
+
+
+    <!--*******************************Recipt Details**********************************-->
+    <string name="recipt_ride_details">Ride Details</string>
+    <string name="recipt_bill_details">Bill Details</string>
+    <string name="recipt_base_fair">Base Fare(per KM)</string>
+    <string name="recipt_total_distance">Total Distance</string>
+    <string name="recipt_total_bill">Total Bill(rounded off)</string>
+    <string name="recipt_payment">Payment</string>
+    <string name="recipt_paid_cash">Paid by cash</string>
+
+
+
+    <!--*******************************Others**********************************-->
+    <string name="catalog_create_quotation">Create Quotation</string>
+    <string name="registered_success">Registered successfully</string>
+    <string name="opportunity">Opportunity</string>
+    <string name="my_leads">My Leads</string>
+    <string name="my_meetings">My Meetings</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="tv_by_date">By Date</string>
+    <string name="tv_from">From</string>
+    <string name="tv_to">To</string>
+    <string name="tv_by_category">By Category</string>
+    <string name="button_submit">Submit</string>
+    <string name="action_delete_contact">Really you want to delete this \n contact?</string>
+    <string name="button_yes">Yes</string>
+    <string name="button_confirm">Confirm</string>
+    <string name="tv_transactions">Transactions</string>
+    <string name="tv_set_reminder">Set Reminder</string>
+    <string name="tv_top_bar">Top Bar</string>
+
+
+
+
 
 
 </resources>

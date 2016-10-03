@@ -7,7 +7,7 @@
         android:id="@+id/text"
         android:layout_width="@dimen/dim_200"
         android:layout_height="@dimen/dim_30"
-        android:text="SetRemainder"
+        android:text="@string/tv_set_reminder"
         android:gravity="left|center_vertical"
         android:textColor="#ffffff"
         android:textSize="@dimen/dim_20" />

@@ -2,73 +2,73 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="@dimen/dim_8"
     android:background="#36474f"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:padding="@dimen/dim_8">
 
     <TextView
         android:id="@+id/listHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/dim_20"
         android:maxLines="3"
         android:text="hskmx gggfgfgfdgdg"
-        android:textColor="#ffffff" />
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/dim_20" />
 
     <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="@dimen/dim_60"
-        android:layout_height="@dimen/dim_30"
-        android:focusable="false"
-        android:text="Edit"
-        android:textAllCaps="false"
-        android:textColor= "#ffffff"
-        android:background="@drawable/buttonshape"
         android:id="@+id/button_edit"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-
-    <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="@dimen/dim_60"
         android:layout_height="@dimen/dim_30"
-        android:focusable="false"
-        android:text="Add"
-        android:textAllCaps="false"
-        android:textColor= "#ffffff"
-        android:background="@drawable/buttonshape"
-        android:id="@+id/add_expense"
-        android:layout_marginTop="@dimen/dim_10"
-        android:layout_below="@+id/button_edit"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/Date"
-        android:textSize="@dimen/dim_20"
-        android:textColor="#ffffff"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
-        android:layout_alignBottom="@+id/listHeader" />
+        android:background="@drawable/buttonshape"
+        android:focusable="false"
+        android:text="@string/edit_btn_str"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite" />
+
+
+    <Button
+        android:id="@+id/add_expense"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="@dimen/dim_60"
+        android:layout_height="@dimen/dim_30"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/button_edit"
+        android:layout_marginTop="@dimen/dim_10"
+        android:background="@drawable/buttonshape"
+        android:focusable="false"
+        android:text="@string/button_add"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite" />
+
 
     <TextView
+        android:id="@+id/Date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/listHeader"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:text="New Text"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/dim_20" />
+
+    <TextView
         android:id="@+id/Time"
-        android:textSize="@dimen/dim_20"
-        android:textColor="#ffffff"
-        android:layout_marginRight="@dimen/dim_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/Date"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/Date"
+        android:layout_marginRight="@dimen/dim_8"
         android:layout_toLeftOf="@+id/button_edit"
-        android:layout_toStartOf="@+id/button_edit" />
+        android:layout_toRightOf="@+id/Date"
+        android:layout_toStartOf="@+id/button_edit"
+        android:text="New Text"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/dim_20" />
 
 </RelativeLayout>

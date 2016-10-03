@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/dim_20"
-                android:gravity="center_horizontal"
-                android:background="@drawable/rounded_border">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_border"
+    android:gravity="center_horizontal"
+    android:paddingBottom="@dimen/dim_20">
 
     <ImageView
         android:id="@+id/cancle_img"
@@ -12,15 +12,15 @@
         android:layout_height="@dimen/dim_35"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:background="@drawable/cancle_icon"/>
+        android:background="@drawable/cancle_icon" />
 
     <LinearLayout
         android:id="@+id/details_ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/cancle_img"
-        android:padding="@dimen/dim_15"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="@dimen/dim_15">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,7 +32,7 @@
                 android:id="@+id/dahlia_comapny_img"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dim_120"
-                android:src="@drawable/dahlia_logo_icon"/>
+                android:src="@drawable/dahlia_logo_icon" />
 
             <Button
                 android:id="@+id/dahlia_uri_btn"
@@ -40,11 +40,11 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="-15dp"
-                android:text="@string/uri_dahlia_technologies"
                 android:background="@color/colorPrimary"
-                android:textColor="@color/colorWhite"
+                android:text="@string/uri_dahlia_technologies"
                 android:textAllCaps="false"
-                android:textSize="@dimen/dim_20"/>
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/dim_20" />
 
         </LinearLayout>
 
@@ -52,21 +52,21 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="@dimen/dim_20"
-            android:background="@android:color/darker_gray"/>
+            android:background="@android:color/darker_gray" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dim_10"
-            android:padding="@dimen/dim_15"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="@dimen/dim_15">
 
 
             <ImageView
                 android:id="@+id/sfa_mobi_img"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dim_120"
-                android:src="@drawable/sfa_mobi_white_logo"/>
+                android:src="@drawable/sfa_mobi_white_logo" />
 
             <Button
                 android:id="@+id/sfamobi_uri_btn"
@@ -74,11 +74,11 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="-10dp"
-                android:text="@string/uri_sfamobi"
                 android:background="@color/colorPrimary"
-                android:textColor="@color/colorWhite"
+                android:text="@string/uri_sfamobi"
                 android:textAllCaps="false"
-                android:textSize="@dimen/dim_20"/>
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/dim_20" />
 
         </LinearLayout>
 

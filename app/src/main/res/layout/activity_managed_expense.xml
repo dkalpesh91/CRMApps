@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
     tools:context="com.sfamobile.dahlia.sfamobile.Activity.ManagedExpenseActivity">
 
-    <include android:id="@+id/dsvr_top_bar"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             layout="@layout/top_bar_layout"/>
+    <include
+        android:id="@+id/dsvr_top_bar"
+        layout="@layout/top_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 
     <RelativeLayout
         android:id="@+id/daily_expense_rl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
         android:layout_below="@+id/dsvr_top_bar"
+        android:layout_margin="@dimen/dim_10"
         android:background="@drawable/expense_gradient">
 
         <TextView
             android:id="@+id/daily_expense_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Daily Expense"
-            android:layout_marginTop="@dimen/dim_10"
             android:layout_marginLeft="@dimen/dim_10"
+            android:layout_marginTop="@dimen/dim_10"
+            android:text="@string/daily_expenses"
             android:textColor="@color/colorWhite"
-            android:textSize="@dimen/dim_24"/>
+            android:textSize="@dimen/dim_24" />
 
 
         <TextView
@@ -37,24 +37,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/daily_expense_tv"
-            android:text="16 Sept 2016"
+            android:layout_marginBottom="@dimen/dim_10"
             android:layout_marginLeft="@dimen/dim_10"
             android:layout_marginTop="@dimen/dim_10"
-            android:layout_marginBottom="@dimen/dim_10"
+            android:text="16 Sept 2016"
             android:textColor="@color/colorWhite"
-            android:textSize="@dimen/dim_21"/>
+            android:textSize="@dimen/dim_21" />
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="$20"
-            android:layout_marginTop="@dimen/dim_10"
-            android:textColor="@color/colorWhite"
-            android:layout_marginRight="@dimen/dim_6"
-            android:layout_below="@+id/daily_expense_tv"
             android:layout_alignParentRight="true"
-            android:textSize="@dimen/dim_21"/>
+            android:layout_below="@+id/daily_expense_tv"
+            android:layout_marginRight="@dimen/dim_6"
+            android:layout_marginTop="@dimen/dim_10"
+            android:text="$20"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dim_21" />
 
 
     </RelativeLayout>
@@ -64,19 +64,19 @@
         android:id="@+id/weekly_expense_rl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
         android:layout_below="@+id/daily_expense_rl"
+        android:layout_margin="@dimen/dim_10"
         android:background="@drawable/expense_gradient">
 
         <TextView
             android:id="@+id/weekly_expense_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Weekly Expense"
-            android:layout_marginTop="@dimen/dim_10"
             android:layout_marginLeft="@dimen/dim_10"
+            android:layout_marginTop="@dimen/dim_10"
+            android:text="@string/weekly_expenses"
             android:textColor="@color/colorWhite"
-            android:textSize="@dimen/dim_24"/>
+            android:textSize="@dimen/dim_24" />
 
 
         <TextView
@@ -84,24 +84,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/weekly_expense_tv"
-            android:text="12 Sept 2016 to 18 Sept 2016"
+            android:layout_marginBottom="@dimen/dim_10"
             android:layout_marginLeft="@dimen/dim_10"
             android:layout_marginTop="@dimen/dim_10"
-            android:layout_marginBottom="@dimen/dim_10"
+            android:text="12 Sept 2016 to 18 Sept 2016"
             android:textColor="@color/colorWhite"
-            android:textSize="@dimen/dim_21"/>
+            android:textSize="@dimen/dim_21" />
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="$20"
-            android:layout_marginTop="@dimen/dim_10"
-            android:textColor="@color/colorWhite"
-            android:layout_marginRight="@dimen/dim_6"
-            android:layout_below="@+id/weekly_expense_tv"
             android:layout_alignParentRight="true"
-            android:textSize="@dimen/dim_21"/>
+            android:layout_below="@+id/weekly_expense_tv"
+            android:layout_marginRight="@dimen/dim_6"
+            android:layout_marginTop="@dimen/dim_10"
+            android:text="$20"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dim_21" />
 
 
     </RelativeLayout>
@@ -111,19 +111,19 @@
         android:id="@+id/monthly_expense_rl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
         android:layout_below="@+id/weekly_expense_rl"
+        android:layout_margin="@dimen/dim_10"
         android:background="@drawable/expense_gradient">
 
         <TextView
             android:id="@+id/monthly_expense_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Monthly Expense"
-            android:layout_marginTop="@dimen/dim_10"
             android:layout_marginLeft="@dimen/dim_10"
+            android:layout_marginTop="@dimen/dim_10"
+            android:text="@string/monthly_expenses"
             android:textColor="@color/colorWhite"
-            android:textSize="@dimen/dim_24"/>
+            android:textSize="@dimen/dim_24" />
 
 
         <TextView
@@ -131,78 +131,74 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/monthly_expense_tv"
-            android:text="September 2016"
+            android:layout_marginBottom="@dimen/dim_10"
             android:layout_marginLeft="@dimen/dim_10"
             android:layout_marginTop="@dimen/dim_10"
-            android:layout_marginBottom="@dimen/dim_10"
+            android:text="September 2016"
             android:textColor="@color/colorWhite"
-            android:textSize="@dimen/dim_21"/>
+            android:textSize="@dimen/dim_21" />
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="$20"
-            android:layout_marginTop="@dimen/dim_10"
-            android:textColor="@color/colorWhite"
-            android:layout_marginRight="@dimen/dim_6"
-            android:layout_below="@+id/monthly_expense_tv"
             android:layout_alignParentRight="true"
-            android:textSize="@dimen/dim_21"/>
+            android:layout_below="@+id/monthly_expense_tv"
+            android:layout_marginRight="@dimen/dim_6"
+            android:layout_marginTop="@dimen/dim_10"
+            android:text="$20"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dim_21" />
 
 
     </RelativeLayout>
 
 
     <!--<RelativeLayout-->
-        <!--android:id="@+id/yearly_expense_rl"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_margin="10dp"-->
-        <!--android:layout_below="@+id/monthly_expense_rl"-->
-        <!--android:background="@drawable/expense_gradient">-->
+    <!--android:id="@+id/yearly_expense_rl"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:layout_below="@+id/monthly_expense_rl"-->
+    <!--android:background="@drawable/expense_gradient">-->
 
-        <!--<TextView-->
-            <!--android:id="@+id/yearly_expense_tv"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="Yearly Expense"-->
-            <!--android:layout_marginTop="@dimen/dim_10"-->
-            <!--android:layout_marginLeft="@dimen/dim_10"-->
-            <!--android:textColor="@color/colorWhite"-->
-            <!--android:textSize="@dimen/dim_30"/>-->
-
-
-        <!--<TextView-->
-            <!--android:id="@+id/yearly_expense_date_tv"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_below="@+id/yearly_expense_tv"-->
-            <!--android:text="2016"-->
-            <!--android:layout_marginLeft="@dimen/dim_10"-->
-            <!--android:layout_marginTop="@dimen/dim_10"-->
-            <!--android:layout_marginBottom="@dimen/dim_10"-->
-            <!--android:textColor="@color/colorWhite"-->
-            <!--android:textSize="@dimen/dim_22"/>-->
+    <!--<TextView-->
+    <!--android:id="@+id/yearly_expense_tv"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Yearly Expense"-->
+    <!--android:layout_marginTop="@dimen/dim_10"-->
+    <!--android:layout_marginLeft="@dimen/dim_10"-->
+    <!--android:textColor="@color/colorWhite"-->
+    <!--android:textSize="@dimen/dim_30"/>-->
 
 
-        <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="$20"-->
-            <!--android:layout_marginTop="@dimen/dim_10"-->
-            <!--android:textColor="@color/colorWhite"-->
-            <!--android:layout_marginRight="@dimen/dim_6"-->
-            <!--android:layout_below="@+id/yearly_expense_tv"-->
-            <!--android:layout_alignParentRight="true"-->
-            <!--android:textSize="@dimen/dim_22"/>-->
+    <!--<TextView-->
+    <!--android:id="@+id/yearly_expense_date_tv"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/yearly_expense_tv"-->
+    <!--android:text="2016"-->
+    <!--android:layout_marginLeft="@dimen/dim_10"-->
+    <!--android:layout_marginTop="@dimen/dim_10"-->
+    <!--android:layout_marginBottom="@dimen/dim_10"-->
+    <!--android:textColor="@color/colorWhite"-->
+    <!--android:textSize="@dimen/dim_22"/>-->
+
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="$20"-->
+    <!--android:layout_marginTop="@dimen/dim_10"-->
+    <!--android:textColor="@color/colorWhite"-->
+    <!--android:layout_marginRight="@dimen/dim_6"-->
+    <!--android:layout_below="@+id/yearly_expense_tv"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:textSize="@dimen/dim_22"/>-->
 
 
     <!--</RelativeLayout>-->
-
-
-
-
 
 
 </RelativeLayout>

@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
 
-    <include android:id="@+id/alds_top_bar"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             layout="@layout/top_bar_with_edit"/>
+    <include
+        android:id="@+id/alds_top_bar"
+        layout="@layout/top_bar_with_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <View
         android:id="@+id/line_view"
-        android:background="@color/view_line"
         android:layout_width="match_parent"
+        android:layout_height="3dp"
         android:layout_below="@+id/alds_top_bar"
-        android:layout_height="3dp"/>
+        android:background="@color/view_line" />
 
 
     <ScrollView
         android:id="@+id/lead_sv"
-        android:paddingLeft="20dp"
-        android:paddingRight="10dp"
-        android:layout_below="@+id/line_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_view"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,230 +37,228 @@
                 android:id="@+id/alds_client_name_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Client Name"
+                android:layout_marginTop="@dimen/dim_25"
+                android:text="@string/lead_client_name"
                 android:textColor="@color/colorWhite"
                 android:textSize="18dp"
-                android:layout_marginTop="25dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/alds_client_name_value_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_10"
                 android:text="Dahlia Tech"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
 
             <TextView
                 android:id="@+id/alds_client_email_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Email Id"
+                android:layout_marginTop="@dimen/dim_10"
+                android:text="@string/lead_client_email"
                 android:textColor="@color/colorWhite"
                 android:textSize="18dp"
-                android:layout_marginTop="10dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/alds_client_email_value_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_10"
                 android:text="sales@dahlia_tech.com"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/alds_phoneno_email_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Contact Number"
+                android:layout_marginTop="@dimen/dim_10"
+                android:text="@string/lead_client_contact"
                 android:textColor="@color/colorWhite"
                 android:textSize="18dp"
-                android:layout_marginTop="10dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/alds_client_phoneno_value_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_10"
                 android:text="9503636108"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18dp"
-                android:textStyle="bold"/>
-
+                android:textStyle="bold" />
 
 
             <TextView
                 android:id="@+id/alds_client_address_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Address"
+                android:layout_marginTop="@dimen/dim_10"
+                android:text="@string/lead_client_address"
                 android:textColor="@color/colorWhite"
                 android:textSize="18dp"
-                android:layout_marginTop="10dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/alds_client_address_value_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_10"
                 android:text="516-B, Amenora Chember,Pune"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18dp"
-                android:textStyle="bold"/>
-
+                android:textStyle="bold" />
 
 
             <TextView
                 android:id="@+id/alds_contact_name_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Contact Name(Primary)"
+                android:layout_marginTop="@dimen/dim_10"
+                android:text="@string/lead_client_contact_primary"
                 android:textColor="@color/colorWhite"
                 android:textSize="18dp"
-                android:layout_marginTop="10dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/alds_contact_name_value_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_10"
                 android:text="Ravi V"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
 
             <TextView
                 android:id="@+id/alds_person_email_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Email Id"
+                android:layout_marginTop="@dimen/dim_10"
+                android:text="@string/lead_client_email_primary"
                 android:textColor="@color/colorWhite"
                 android:textSize="18dp"
-                android:layout_marginTop="10dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/alds_person_email_value_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_10"
                 android:text="ravi@gmail.com"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/alds_person_phoneno_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Phone Number"
+                android:layout_marginTop="@dimen/dim_10"
+                android:text="@string/lead_client_contact_primary"
                 android:textColor="@color/colorWhite"
                 android:textSize="18dp"
-                android:layout_marginTop="10dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/alds_person_phoneno_value_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_10"
                 android:text="9881828282"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/alds_person_roll_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Role"
+                android:layout_marginTop="@dimen/dim_10"
+                android:text="@string/lead_client_role"
                 android:textColor="@color/colorWhite"
                 android:textSize="18dp"
-                android:layout_marginTop="10dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/alds_person_roll_value_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_10"
                 android:text="Sales Manager"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/alds_lead_size_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lead Size"
+                android:layout_marginTop="@dimen/dim_10"
+                android:text="@string/lead_client_lead_size"
                 android:textColor="@color/colorWhite"
                 android:textSize="18dp"
-                android:layout_marginTop="10dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/alds_lead_size_value_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_10"
                 android:text="1,00,000 LPA"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/alds_description_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Description"
+                android:layout_marginTop="@dimen/dim_10"
+                android:text="@string/lead_client_description"
                 android:textColor="@color/colorWhite"
                 android:textSize="18dp"
-                android:layout_marginTop="10dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/alds_description_value_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Sales leads are generated on the basis of demographic criteria such as FICO score, income, age, HHI, psychographic, etc. These leads are resold to multiple advertisers. Sales leads are typically followed up through phone calls by the sales force. Sales leads are commonly found in the mortgage, insurance and finance leads."
+                android:layout_marginTop="@dimen/dim_10"
+                android:lines="4"
                 android:maxLines="5"
                 android:minLines="3"
-                android:lines="4"
+                android:text="Sales leads are generated on the basis of demographic criteria such as FICO score, income, age, HHI, psychographic, etc. These leads are resold to multiple advertisers. Sales leads are typically followed up through phone calls by the sales force. Sales leads are commonly found in the mortgage, insurance and finance leads."
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/alds_lead_status_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lead Status"
+                android:layout_marginTop="@dimen/dim_10"
+                android:text="@string/lead_client_lead_status"
                 android:textColor="@color/colorWhite"
                 android:textSize="18dp"
-                android:layout_marginTop="10dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/alds_lead_status_value_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_10"
                 android:text="Cold"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
         </LinearLayout>
     </ScrollView>

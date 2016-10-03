@@ -16,14 +16,14 @@
         android:background="@color/view_line"
         android:layout_width="match_parent"
         android:layout_below="@+id/dsvr_top_bar"
-        android:layout_height="3dp"/>
+        android:layout_height="@dimen/dim_3"/>
 
     <ScrollView
         android:id="@+id/lead_sv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="20dp"
-        android:paddingRight="10dp"
+        android:paddingLeft="@dimen/dim_20"
+        android:paddingRight="@dimen/dim_10"
         android:layout_below="@+id/line_view"
         android:layout_above="@+id/save_btn">
 
@@ -35,7 +35,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp">
+                android:layout_marginTop="@dimen/dim_15">
 
                 <LinearLayout
                     android:id="@+id/company_name_ll"
@@ -57,7 +57,7 @@
                         android:id="@+id/company_name_value_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="@dimen/dim_10"
                         android:text="Dahlia Tech"
                         android:textColor="@color/colorsilver"
                         android:textSize="17dp"
@@ -74,11 +74,11 @@
                     <Button
                         android:id="@+id/show_btn"
                         android:layout_width="wrap_content"
-                        android:layout_height="33dp"
+                        android:layout_height="@dimen/dim_33"
                         android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="@dimen/dim_10"
+                        android:layout_marginRight="@dimen/dim_10"
                         android:background="@drawable/button_selector"
                         android:text="@string/show_btn_str"
                         android:textAllCaps="false"
@@ -91,7 +91,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_10"
                 android:orientation="vertical">
 
                 <TextView
@@ -107,7 +107,7 @@
                     android:id="@+id/company_address__value_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="@dimen/dim_10"
                     android:text="Amenora chember,Pune"
                     android:textColor="@color/colorsilver"
                     android:textSize="17dp"
@@ -117,7 +117,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_10"
                 android:orientation="vertical">
 
                 <TextView
@@ -160,7 +160,7 @@
                     android:id="@+id/company_phoneno_value_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="@dimen/dim_10"
                     android:text="9880808080"
                     android:textColor="@color/colorsilver"
                     android:textSize="17dp"
@@ -172,7 +172,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_10"
                 android:orientation="vertical">
 
                 <TextView
@@ -188,7 +188,7 @@
                     android:id="@+id/contact_person_name_value_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="@dimen/dim_10"
                     android:text="Ravi V"
                     android:textColor="@color/colorsilver"
                     android:textSize="17dp"
@@ -199,7 +199,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_10"
                 android:orientation="vertical">
 
                 <TextView
@@ -215,7 +215,7 @@
                     android:id="@+id/contact_person_phone_number_value_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="@dimen/dim_10"
                     android:text="9880808080"
                     android:textColor="@color/colorsilver"
                     android:textSize="17dp"
@@ -226,7 +226,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_10"
                 android:orientation="vertical">
 
                 <TextView
@@ -242,7 +242,7 @@
                     android:id="@+id/contact_person_phone_email_id_value_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="@dimen/dim_10"
                     android:text="ravi@gmail.com"
                     android:textColor="@color/colorsilver"
                     android:textSize="17dp"
@@ -253,7 +253,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_10"
                 android:orientation="vertical">
 
                 <TextView
@@ -269,7 +269,7 @@
                     android:id="@+id/contact_person_phone_roll_value_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="@dimen/dim_10"
                     android:text="Web Developer"
                     android:textColor="@color/colorsilver"
                     android:textSize="17dp"

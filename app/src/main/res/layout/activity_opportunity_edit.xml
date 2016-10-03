@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,14 +10,14 @@
         android:id="@+id/dsvr_top_bar"
         layout="@layout/top_bar_with_edit"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
     <View
         android:id="@+id/line_view"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dim_3"
         android:layout_below="@+id/dsvr_top_bar"
-        android:background="@color/view_line"/>
+        android:background="@color/view_line" />
 
     <ScrollView
         android:id="@+id/lead_sv"
@@ -53,7 +52,7 @@
                         android:text="@string/company_name_atv_hint_str"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/dim_24"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/moli_company_name_value_tv"
@@ -63,7 +62,7 @@
                         android:text="Dahlia Tech"
                         android:textColor="@color/colorsilver"
                         android:textSize="@dimen/dim_20"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                 </LinearLayout>
                 <!--<LinearLayout-->
@@ -104,7 +103,7 @@
                     android:text="@string/company_email_et_hint_str"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="@dimen/dim_24"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/moli_company_email_value_tv"
@@ -114,7 +113,7 @@
                     android:text="sales@dahlia-tech.com"
                     android:textColor="@color/colorsilver"
                     android:textSize="@dimen/dim_20"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -131,7 +130,7 @@
                     android:text="@string/company_phoneno_et_hint_str"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="@dimen/dim_24"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/moli_company_phoneno_value_tv"
@@ -141,7 +140,7 @@
                     android:text="9880808080"
                     android:textColor="@color/colorsilver"
                     android:textSize="@dimen/dim_20"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -158,7 +157,7 @@
                     android:text="@string/company_address_et_hint_str"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="@dimen/dim_24"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/moli_company_address__value_tv"
@@ -168,7 +167,7 @@
                     android:text="Amenora chember,Pune"
                     android:textColor="@color/colorsilver"
                     android:textSize="@dimen/dim_20"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -186,7 +185,7 @@
                     android:text="@string/primary_contact_person_str"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="@dimen/dim_24"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/moli_contact_person_name_value_tv"
@@ -196,7 +195,7 @@
                     android:text="Ravi V"
                     android:textColor="@color/colorsilver"
                     android:textSize="@dimen/dim_20"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -213,7 +212,7 @@
                     android:text="Detailed Requirement"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="@dimen/dim_24"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/moli_detailed_requirement_value_tv"
@@ -226,7 +225,7 @@
                     android:text="This opportunity related to lead"
                     android:textColor="@color/colorsilver"
                     android:textSize="@dimen/dim_20"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -244,7 +243,7 @@
                     android:text="Amount"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="@dimen/dim_24"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/moli_amount_value_tv"
@@ -255,7 +254,7 @@
                     android:text="10000"
                     android:textColor="@color/colorsilver"
                     android:textSize="@dimen/dim_20"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/moli_show_quotation_btn"
@@ -269,7 +268,7 @@
                     android:text="Show Quote"
                     android:textAllCaps="false"
                     android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/dim_21"/>
+                    android:textSize="@dimen/dim_21" />
 
             </RelativeLayout>
 
@@ -286,7 +285,7 @@
                     android:text="Opportunity Stage"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="@dimen/dim_24"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/moli_opportunity_stage_value_tv"
@@ -296,7 +295,7 @@
                     android:text="Lost 30%"
                     android:textColor="@color/colorsilver"
                     android:textSize="@dimen/dim_20"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -313,7 +312,7 @@
                     android:text="Closure Date"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="@dimen/dim_24"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/moli_closure_date_value_tv"
@@ -323,7 +322,7 @@
                     android:text="4/8/2016"
                     android:textColor="@color/colorsilver"
                     android:textSize="@dimen/dim_20"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -340,7 +339,7 @@
                     android:text="Status Type"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="@dimen/dim_24"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/moli_status_type_value_tv"
@@ -350,7 +349,7 @@
                     android:text="Lost"
                     android:textColor="@color/colorsilver"
                     android:textSize="@dimen/dim_20"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -368,7 +367,7 @@
                     android:text="Reason"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="@dimen/dim_24"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/moli_reason_value_tv"
@@ -381,7 +380,7 @@
                     android:text="This opportunity is Lost"
                     android:textColor="@color/colorsilver"
                     android:textSize="@dimen/dim_20"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
             </LinearLayout>
 

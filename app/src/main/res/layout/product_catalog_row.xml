@@ -1,8 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dim_265"
-                android:background="@drawable/rounded_corner_white_background"
-                android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dim_265"
+    android:background="@drawable/rounded_corner_white_background"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:id="@+id/top_item_rl"
@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:contentDescription="Product Description"
-            android:src="@drawable/bag"/>
+            android:src="@drawable/bag" />
 
         <CheckBox
             android:id="@+id/select_item_checkBox"
@@ -23,7 +23,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="@dimen/dim_10"
             android:layout_marginTop="@dimen/dim_10"
-            android:visibility="gone"/>
+            android:visibility="gone" />
 
         <ImageView
             android:id="@+id/img_merchant_logo"
@@ -34,14 +34,13 @@
             android:layout_marginEnd="@dimen/dim_12"
             android:layout_marginRight="@dimen/dim_12"
             android:contentDescription="Product Description"
-            android:src="@drawable/snapdeal_logo"/>
+            android:src="@drawable/snapdeal_logo" />
 
         <RelativeLayout
             android:id="@+id/product_name_ll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            >
+            android:layout_alignParentBottom="true">
 
             <TextView
                 android:id="@+id/product_name_tv"
@@ -51,10 +50,10 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="@dimen/dim_12"
                 android:layout_marginStart="@dimen/dim_12"
-                android:text="Name"
+                android:text="@string/catalog_product_name"
                 android:textAllCaps="false"
                 android:textColor="@color/colorWhite"
-                android:textSize="@dimen/dim_18"/>
+                android:textSize="@dimen/dim_18" />
 
             <TextView
                 android:id="@+id/product_name_value_tv"
@@ -69,7 +68,7 @@
                 android:text="Fashion Women's Handbag"
                 android:textAllCaps="false"
                 android:textColor="@color/colorsilver"
-                android:textSize="@dimen/dim_18"/>
+                android:textSize="@dimen/dim_18" />
         </RelativeLayout>
 
     </RelativeLayout>
@@ -89,10 +88,10 @@
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/dim_12"
             android:layout_marginStart="@dimen/dim_12"
-            android:text="ID"
+            android:text="@string/catalog_product_id"
             android:textAllCaps="false"
             android:textColor="@color/colorWhite"
-            android:textSize="@dimen/dim_18"/>
+            android:textSize="@dimen/dim_18" />
 
         <TextView
             android:id="@+id/product_id_value_tv"
@@ -107,7 +106,7 @@
             android:text="A3041"
             android:textAllCaps="false"
             android:textColor="@color/colorsilver"
-            android:textSize="@dimen/dim_18"/>
+            android:textSize="@dimen/dim_18" />
 
         <LinearLayout
             android:id="@+id/layout_btn_show_price"
@@ -126,10 +125,10 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="@dimen/dim_6"
                 android:layout_marginStart="@dimen/dim_6"
-                android:text="Show Price"
+                android:text="@string/catalog_product_price"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
-                android:textSize="@dimen/dim_18"/>
+                android:textSize="@dimen/dim_18" />
 
             <ImageView
                 android:layout_width="@dimen/dim_10"
@@ -138,7 +137,7 @@
                 android:layout_marginLeft="@dimen/dim_2"
                 android:layout_marginStart="@dimen/dim_2"
                 android:contentDescription="content_description"
-                android:src="@drawable/ic_menu_send"/>
+                android:src="@drawable/ic_menu_send" />
         </LinearLayout>
 
     </RelativeLayout>
@@ -161,10 +160,10 @@
             android:layout_marginStart="@dimen/dim_12"
             android:layout_toLeftOf="@+id/layout_balance"
             android:layout_toStartOf="@+id/layout_balance"
-            android:text="Product Description"
+            android:text="@string/catalog_product_desc"
             android:textAllCaps="false"
             android:textColor="@color/colorWhite"
-            android:textSize="@dimen/dim_18"/>
+            android:textSize="@dimen/dim_18" />
 
         <TextView
             android:id="@+id/product_desc_value_tv"
@@ -180,10 +179,10 @@
             android:layout_toStartOf="@+id/layout_balance"
             android:ellipsize="end"
             android:lines="2"
-            android:text="Product Description"
+            android:text="@string/catalog_product_desc"
             android:textColor="@color/colorsilver"
             android:textSize="@dimen/dim_18"
-            android:textStyle="normal"/>
+            android:textStyle="normal" />
 
         <LinearLayout
             android:id="@+id/layout_balance"
@@ -204,10 +203,11 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="@dimen/dim_6"
                 android:layout_marginStart="@dimen/dim_6"
-                android:text="Available Quanity "
+                android:layout_marginEnd="@dimen/dim_3"
+                android:text="@string/catalog_product_avail_quantity"
                 android:textAllCaps="false"
                 android:textColor="@color/colorWhite"
-                android:textSize="@dimen/dim_18"/>
+                android:textSize="@dimen/dim_18" />
 
             <EditText
                 android:id="@+id/available_quantitiy_value_et"
@@ -219,7 +219,7 @@
                 android:inputType="number"
                 android:text="50"
                 android:textColor="@color/colorsilver"
-                android:textSize="@dimen/dim_18"/>
+                android:textSize="@dimen/dim_18" />
 
 
         </LinearLayout>

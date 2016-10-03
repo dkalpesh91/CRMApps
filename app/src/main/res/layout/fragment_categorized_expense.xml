@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:animateLayoutChanges="true"
-                android:background="@color/colorPrimary"
-                android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
 
 
-    <include android:id="@+id/dsvr_top_bar"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             layout="@layout/top_bar_layout"/>
+    <include
+        android:id="@+id/dsvr_top_bar"
+        layout="@layout/top_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <FrameLayout
         android:id="@+id/rl_expense_details_container_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/dsvr_top_bar"
-        android:layout_alignParentTop="true">
+        android:layout_alignParentTop="true"
+        android:layout_below="@+id/dsvr_top_bar">
 
         <RelativeLayout
             android:id="@+id/rl_expense_details_container"
@@ -53,7 +54,7 @@
                     android:gravity="center"
                     android:text=" - "
                     android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/dim_15"  />
+                    android:textSize="@dimen/dim_15" />
 
                 <TextView
                     android:id="@+id/txt_end_date"
@@ -63,7 +64,7 @@
                     android:paddingRight="@dimen/dim_5"
                     android:text=""
                     android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/dim_15"  />
+                    android:textSize="@dimen/dim_15" />
 
                 <ImageView
                     android:id="@+id/img_calendar_icon"
@@ -78,8 +79,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/ll_calendar_container"
-                android:layout_marginTop="@dimen/dim_12"
-                android:layout_marginBottom="@dimen/dim_12">
+                android:layout_marginBottom="@dimen/dim_12"
+                android:layout_marginTop="@dimen/dim_12">
 
                 <ImageView
                     android:id="@+id/img_expense_category_icon"
@@ -100,9 +101,9 @@
                         android:id="@+id/txt_expense_category"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Shop"
+                        android:text="@string/shop"
                         android:textColor="@color/colorWhite"
-                        android:textSize="@dimen/dim_25"  />
+                        android:textSize="@dimen/dim_25" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -143,7 +144,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Total expenses"
+                            android:text="@string/total_expenses"
                             android:textColor="@color/colorWhite"
                             android:textSize="@dimen/dim_20" />
 
@@ -160,30 +161,30 @@
             </RelativeLayout>
 
             <!--<TextView-->
-                <!--android:id="@+id/txt_amount_label"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_alignParentEnd="true"-->
-                <!--android:layout_alignParentRight="true"-->
-                <!--android:layout_below="@id/rl_expense_label_container"-->
-                <!--android:layout_centerVertical="true"-->
-                <!--android:layout_marginTop="@dimen/dim_15"-->
-                <!--android:text="Spent"-->
-                <!--android:textColor="@color/colorWhite"-->
-                <!--android:textSize="@dimen/dim_18" />-->
+            <!--android:id="@+id/txt_amount_label"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_below="@id/rl_expense_label_container"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginTop="@dimen/dim_15"-->
+            <!--android:text="Spent"-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--android:textSize="@dimen/dim_18" />-->
 
             <!--<TextView-->
-                <!--android:id="@+id/txt_amount"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_alignParentEnd="true"-->
-                <!--android:layout_alignParentRight="true"-->
-                <!--android:layout_below="@id/txt_amount_label"-->
-                <!--android:layout_centerVertical="true"-->
-                <!--android:layout_marginTop="@dimen/dim_13"-->
-                <!--android:text=""-->
-                <!--android:textColor="@color/colorWhite"-->
-                <!--android:textSize="@dimen/dim_28" />-->
+            <!--android:id="@+id/txt_amount"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_below="@id/txt_amount_label"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginTop="@dimen/dim_13"-->
+            <!--android:text=""-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--android:textSize="@dimen/dim_28" />-->
         </RelativeLayout>
 
         <RelativeLayout
@@ -255,32 +256,32 @@
     </FrameLayout>
 
     <!--<RelativeLayout-->
-        <!--android:id="@+id/rl_import_more_expense"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="@dimen/dim_66"-->
-        <!--android:layout_below="@id/rl_expense_details_container_main"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:clickable="true"-->
-        <!--android:visibility="gone">-->
+    <!--android:id="@+id/rl_import_more_expense"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="@dimen/dim_66"-->
+    <!--android:layout_below="@id/rl_expense_details_container_main"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:clickable="true"-->
+    <!--android:visibility="gone">-->
 
-        <!--<TextView-->
-            <!--android:id="@+id/txt_import_expense_label"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_centerVertical="true"-->
-            <!--android:text="Import more expenses"-->
-            <!--android:textSize="@dimen/dim_21" />-->
+    <!--<TextView-->
+    <!--android:id="@+id/txt_import_expense_label"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:text="Import more expenses"-->
+    <!--android:textSize="@dimen/dim_21" />-->
 
-        <!--<ImageView-->
-            <!--android:layout_width="@dimen/dim_20"-->
-            <!--android:layout_height="@dimen/dim_20"-->
-            <!--android:layout_centerVertical="true"-->
-            <!--android:layout_marginLeft="@dimen/dim_10"-->
-            <!--android:layout_marginStart="@dimen/dim_10"-->
-            <!--android:layout_toEndOf="@id/txt_import_expense_label"-->
-            <!--android:layout_toRightOf="@id/txt_import_expense_label"-->
-            <!--android:contentDescription="@string/show_btn_str"-->
-            <!--android:src="@drawable/add_button" />-->
+    <!--<ImageView-->
+    <!--android:layout_width="@dimen/dim_20"-->
+    <!--android:layout_height="@dimen/dim_20"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="@dimen/dim_10"-->
+    <!--android:layout_marginStart="@dimen/dim_10"-->
+    <!--android:layout_toEndOf="@id/txt_import_expense_label"-->
+    <!--android:layout_toRightOf="@id/txt_import_expense_label"-->
+    <!--android:contentDescription="@string/show_btn_str"-->
+    <!--android:src="@drawable/add_button" />-->
     <!--</RelativeLayout>-->
 
     <View
@@ -305,44 +306,44 @@
             android:button="@null"
             android:padding="@dimen/dim_15"
             android:singleLine="true"
-            android:text="Transactions"
+            android:text="@string/tv_transactions"
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/dim_24" />
     </RadioGroup>
 
     <!--<TextView-->
-        <!--android:id="@+id/txtTapToSelectLabel"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_below="@id/rdg_transaction_type_and_summary_container"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:text="Tap to select"-->
-        <!--android:textSize="@dimen/dim_21"-->
-        <!--android:visibility="gone" />-->
+    <!--android:id="@+id/txtTapToSelectLabel"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/rdg_transaction_type_and_summary_container"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:text="Tap to select"-->
+    <!--android:textSize="@dimen/dim_21"-->
+    <!--android:visibility="gone" />-->
 
     <!--<RelativeLayout-->
-        <!--android:id="@+id/rl_share_now_container"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignParentBottom="true"-->
-        <!--android:layout_marginBottom="@dimen/dim_30"-->
-        <!--android:layout_marginTop="@dimen/dim_10"-->
-        <!--android:visibility="gone">-->
+    <!--android:id="@+id/rl_share_now_container"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_marginBottom="@dimen/dim_30"-->
+    <!--android:layout_marginTop="@dimen/dim_10"-->
+    <!--android:visibility="gone">-->
 
-        <!--<Button-->
-            <!--android:id="@+id/ash_search_hotels_button"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="@dimen/dim_35"-->
-            <!--android:layout_centerHorizontal="true"-->
-            <!--android:background="@drawable/button_selector"-->
-            <!--android:paddingBottom="@dimen/dim_4"-->
-            <!--android:paddingLeft="@dimen/dim_40"-->
-            <!--android:paddingRight="@dimen/dim_40"-->
-            <!--android:paddingTop="@dimen/dim_5"-->
-            <!--android:text="Share Now"-->
-            <!--android:textAllCaps="false"-->
-            <!--android:textColor="@color/colorWhite"-->
-            <!--android:textSize="@dimen/dim_21" />-->
+    <!--<Button-->
+    <!--android:id="@+id/ash_search_hotels_button"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="@dimen/dim_35"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:background="@drawable/button_selector"-->
+    <!--android:paddingBottom="@dimen/dim_4"-->
+    <!--android:paddingLeft="@dimen/dim_40"-->
+    <!--android:paddingRight="@dimen/dim_40"-->
+    <!--android:paddingTop="@dimen/dim_5"-->
+    <!--android:text="Share Now"-->
+    <!--android:textAllCaps="false"-->
+    <!--android:textColor="@color/colorWhite"-->
+    <!--android:textSize="@dimen/dim_21" />-->
     <!--</RelativeLayout>-->
 
     <RelativeLayout

@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#36474f"
-                android:paddingBottom="@dimen/dim_16"
-                android:paddingLeft="@dimen/dim_16"
-                android:paddingRight="@dimen/dim_16"
-                android:paddingTop="@dimen/dim_16"
-    >
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:paddingBottom="@dimen/dim_16"
+    android:paddingLeft="@dimen/dim_16"
+    android:paddingRight="@dimen/dim_16"
+    android:paddingTop="@dimen/dim_16">
 
     <TextView
         android:id="@+id/textView4"
@@ -17,21 +16,21 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="80dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="52dp"
-        android:text="Registered sucessfully"
-        android:textColor="#ffffff"/>
+        android:layout_marginLeft="@dimen/dim_80"
+        android:layout_marginStart="@dimen/dim_80"
+        android:layout_marginTop="@dimen/dim_52"
+        android:text="@string/registered_success"
+        android:textColor="@color/colorWhite" />
 
     <Button
         android:id="@+id/buttonL"
-        android:layout_width="50dp"
-        android:layout_height="25dp"
+        android:layout_width="@dimen/dim_70"
+        android:layout_height="@dimen/dim_35"
         android:layout_alignEnd="@+id/textView4"
         android:layout_alignParentTop="true"
         android:layout_alignRight="@+id/textView4"
         android:background="@drawable/buttonshape"
-        android:text="logout"
-        android:textColor="#ffffff"
-        android:textSize="10dp"/>
+        android:text="@string/log_out"
+        android:textColor="@color/colorWhite"
+        android:textSize="10dp" />
 </RelativeLayout>

@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
 
-    <include android:id="@+id/anl_top_bar"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             layout="@layout/top_bar_without_add"/>
+    <include
+        android:id="@+id/anl_top_bar"
+        layout="@layout/top_bar_without_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <View
         android:id="@+id/line_view"
-        android:background="@color/view_line"
         android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_5"
         android:layout_below="@+id/anl_top_bar"
-        android:layout_height="@dimen/dim_5"/>
+        android:background="@color/view_line" />
 
     <ScrollView
         android:id="@+id/lead_sv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/save_ll"
         android:layout_below="@+id/line_view"
         android:layout_marginLeft="@dimen/dim_12"
-        android:layout_marginRight="@dimen/dim_12"
-        android:layout_above="@+id/save_ll">
+        android:layout_marginRight="@dimen/dim_12">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,16 +37,16 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="@dimen/dim_25">
+                android:layout_marginTop="@dimen/dim_25"
+                android:orientation="horizontal">
 
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/company_name_til"
                     style="@style/TextLabel"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_toLeftOf="@+id/add_new_contact_btn"
-                    android:layout_marginLeft="@dimen/dim_15">
+                    android:layout_marginLeft="@dimen/dim_15"
+                    android:layout_toLeftOf="@+id/add_new_contact_btn">
 
                     <AutoCompleteTextView
                         android:id="@+id/company_name_atv"
@@ -57,60 +57,58 @@
                         android:imeOptions="actionNext"
                         android:inputType="text"
                         android:maxLines="1"
+                        android:singleLine="true"
                         android:textColor="@color/colorWhite"
-                        android:textSize="@dimen/dim_21"
-                        android:singleLine="true"/>
+                        android:textSize="@dimen/dim_21" />
                 </android.support.design.widget.TextInputLayout>
 
                 <Button
                     android:id="@+id/add_new_contact_btn"
                     android:layout_width="@dimen/dim_75"
                     android:layout_height="@dimen/dim_38"
-                    android:layout_marginRight="@dimen/dim_10"
-                    android:layout_marginLeft="@dimen/dim_5"
-                    android:background="@drawable/button_selector"
-                    android:text="Add"
                     android:layout_alignParentRight="true"
                     android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/dim_5"
+                    android:layout_marginRight="@dimen/dim_10"
+                    android:background="@drawable/button_selector"
+                    android:text="@string/button_add"
                     android:textAllCaps="false"
                     android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/dim_20"/>
+                    android:textSize="@dimen/dim_20" />
 
             </RelativeLayout>
 
 
-
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/lead_size_of_company_til"
+                style="@style/TextLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/dim_15"
                 android:layout_marginRight="@dimen/dim_15"
-                android:layout_marginTop="@dimen/dim_10"
-                style="@style/TextLabel">
+                android:layout_marginTop="@dimen/dim_10">
 
                 <EditText
                     android:id="@+id/lead_size_of_company_et"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/lead_size_et_hint_str"
-                    android:inputType="text"
                     android:imeOptions="actionNext"
+                    android:inputType="text"
                     android:maxLines="1"
+                    android:singleLine="true"
                     android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/dim_21"
-                    android:singleLine="true"/>
+                    android:textSize="@dimen/dim_21" />
             </android.support.design.widget.TextInputLayout>
-
 
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginLeft="@dimen/dim_15"
                 android:layout_marginRight="@dimen/dim_15"
-                android:layout_marginTop="@dimen/dim_10">
+                android:layout_marginTop="@dimen/dim_10"
+                android:orientation="horizontal">
 
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/contact_name_til"
@@ -128,23 +126,23 @@
                         android:imeOptions="actionNext"
                         android:inputType="text"
                         android:maxLines="1"
+                        android:singleLine="true"
                         android:textColor="@color/colorWhite"
-                        android:textSize="@dimen/dim_21"
-                        android:singleLine="true"/>
+                        android:textSize="@dimen/dim_21" />
                 </android.support.design.widget.TextInputLayout>
 
                 <Button
                     android:id="@+id/add_new_person_contact_btn"
                     android:layout_width="@dimen/dim_75"
                     android:layout_height="@dimen/dim_38"
-                    android:layout_marginLeft="@dimen/dim_5"
-                    android:background="@drawable/button_selector"
-                    android:text="Add"
                     android:layout_alignParentRight="true"
                     android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/dim_5"
+                    android:background="@drawable/button_selector"
+                    android:text="@string/button_add"
                     android:textAllCaps="false"
                     android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/dim_20"/>
+                    android:textSize="@dimen/dim_20" />
 
             </RelativeLayout>
 
@@ -166,13 +164,13 @@
                     android:imeOptions="actionNext"
                     android:inputType="textMultiLine"
                     android:lines="9"
+                    android:maxLength="300"
                     android:maxLines="10"
                     android:minLines="7"
                     android:scrollbars="vertical"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/dim_21"
                     android:singleLine="true"
-                    android:maxLength="300"/>
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/dim_21" />
             </android.support.design.widget.TextInputLayout>
 
             <TextView
@@ -183,7 +181,7 @@
                 android:gravity="center"
                 android:text="@string/lead_status_tv_str"
                 android:textColor="@color/colorWhite"
-                android:textSize="@dimen/dim_21"/>
+                android:textSize="@dimen/dim_21" />
 
             <LinearLayout
                 android:id="@+id/lead_status_ckbox"
@@ -197,7 +195,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/hot_chkbox_str"
                     android:textColor="@color/colorWhite"
-                    android:theme="@style/MyCheckBox"/>
+                    android:theme="@style/MyCheckBox" />
 
                 <CheckBox
                     android:id="@+id/warm_chkBox"
@@ -206,7 +204,7 @@
                     android:layout_marginLeft="@dimen/dim_10"
                     android:text="@string/warm_chkbox_str"
                     android:textColor="@color/colorWhite"
-                    android:theme="@style/MyCheckBox"/>
+                    android:theme="@style/MyCheckBox" />
 
                 <CheckBox
                     android:id="@+id/cold_chkBox"
@@ -215,7 +213,7 @@
                     android:layout_marginLeft="@dimen/dim_10"
                     android:text="@string/Coold_chkbox_str"
                     android:textColor="@color/colorWhite"
-                    android:theme="@style/MyCheckBox"/>
+                    android:theme="@style/MyCheckBox" />
 
             </LinearLayout>
 
@@ -236,13 +234,13 @@
             android:id="@+id/save_btn"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/dim_38"
-            android:layout_marginTop="@dimen/dim_10"
             android:layout_marginBottom="@dimen/dim_10"
+            android:layout_marginTop="@dimen/dim_10"
             android:background="@drawable/button_selector"
             android:text="@string/save_btn_str"
             android:textAllCaps="false"
             android:textColor="@color/colorWhite"
-            android:textSize="@dimen/dim_21"/>
+            android:textSize="@dimen/dim_21" />
 
         <Button
             android:id="@+id/convert_to_oppertunity_btn"
@@ -250,16 +248,16 @@
             android:layout_height="@dimen/dim_38"
             android:layout_below="@+id/save_btn"
             android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dim_10"
             android:layout_marginTop="@dimen/dim_10"
             android:background="@drawable/button_selector"
             android:paddingLeft="@dimen/dim_10"
             android:paddingRight="@dimen/dim_10"
-            android:layout_marginBottom="@dimen/dim_10"
             android:text="@string/convert_to_opportunity_btn_str"
             android:textAllCaps="false"
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/dim_21"
-            android:visibility="gone"/>
+            android:visibility="gone" />
 
     </LinearLayout>
 

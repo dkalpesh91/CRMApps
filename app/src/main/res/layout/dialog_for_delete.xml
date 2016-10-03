@@ -8,47 +8,46 @@
 
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dim_5"
-        android:layout_marginRight="@dimen/dim_5"
-        android:textColor="#ffffff"
-        android:gravity="center"
-        android:layout_marginLeft="@dimen/dim_12"
-        android:text="Really you want to delete this \n contact?"
-        android:id="@+id/textView"
-        android:textSize="@dimen/dim_17"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/dim_12"
+        android:layout_marginRight="@dimen/dim_5"
+        android:layout_marginTop="@dimen/dim_5"
+        android:gravity="center"
+        android:text="Really you want to delete this \n contact?"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/dim_17" />
 
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout"
-        android:orientation="horizontal"
         android:layout_gravity="center"
-        android:layout_marginTop="@dimen/dim_12">
-
+        android:layout_marginTop="@dimen/dim_12"
+        android:orientation="horizontal">
 
 
         <Button
+            android:id="@+id/save_button_delete_dialog"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/dim_40"
-            android:id="@+id/save_button_delete_dialog"
-            android:text="yes"
-            android:textSize="@dimen/dim_12"
+            android:layout_alignParentLeft="true"
             android:background="@drawable/buttonshape"
-            android:layout_alignParentLeft="true" />
+            android:text="@string/button_yes"
+            android:textSize="@dimen/dim_12" />
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
             android:id="@+id/cancel_button_delete_dialog"
-            android:text="cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dim_40"
             android:layout_marginLeft="@dimen/dim_10"
             android:background="@drawable/buttonshape"
-            android:textSize="@dimen/dim_12"/>
+            android:text="@string/button_cancel"
+            android:textSize="@dimen/dim_12" />
 
     </LinearLayout>
 

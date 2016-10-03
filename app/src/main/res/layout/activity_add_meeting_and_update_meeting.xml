@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="@color/colorPrimary">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -19,75 +18,75 @@
                 android:id="@+id/dsvr_top_bar"
                 layout="@layout/top_bar_without_add"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
 
             <View
                 android:id="@+id/line_view"
                 android:layout_width="match_parent"
-                android:layout_height="3dp"
+                android:layout_height="@dimen/dim_3"
                 android:layout_below="@+id/dsvr_top_bar"
-                android:background="@color/view_line"/>
+                android:background="@color/view_line" />
 
             <EditText
                 android:id="@+id/enter_meeting"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="25dp"
-                android:hint="Meeting Title"
+                android:layout_marginLeft="@dimen/dim_15"
+                android:layout_marginRight="@dimen/dim_15"
+                android:layout_marginTop="@dimen/dim_25"
+                android:hint="@string/enter_meeting"
                 android:imeOptions="actionDone"
                 android:singleLine="true"
-                android:textColor="#ffffff"
-                android:textColorHint="#ffffff"
-                android:textSize="18dp"/>
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:textSize="18dp" />
 
             <EditText
                 android:id="@+id/enter_client_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/enter_meeting_info"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="10dp"
-                android:hint="Client Name"
+                android:layout_marginLeft="@dimen/dim_15"
+                android:layout_marginRight="@dimen/dim_15"
+                android:layout_marginTop="@dimen/dim_10"
+                android:hint="@string/enter_client_name"
                 android:imeOptions="actionDone"
                 android:singleLine="true"
-                android:textColor="#ffffff"
-                android:textColorHint="#ffffff"
-                android:textSize="18dp"/>
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:textSize="18dp" />
 
             <EditText
                 android:id="@+id/enter_meeting_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/location"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="10dp"
-                android:hint="Meeting Info"
+                android:layout_marginLeft="@dimen/dim_15"
+                android:layout_marginRight="@dimen/dim_15"
+                android:layout_marginTop="@dimen/dim_10"
+                android:hint="@string/enter_meeting_info"
                 android:imeOptions="actionDone"
                 android:maxLength="200"
                 android:maxLines="2"
                 android:singleLine="true"
-                android:textColor="#ffffff"
-                android:textColorHint="#ffffff"
-                android:textSize="18dp"/>
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:textSize="18dp" />
 
             <EditText
                 android:id="@+id/location"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="18dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="10dp"
-                android:hint="Location"
+                android:layout_marginLeft="@dimen/dim_15"
+                android:layout_marginRight="@dimen/dim_15"
+                android:layout_marginTop="@dimen/dim_10"
+                android:hint="@string/location"
                 android:imeOptions="actionDone"
                 android:singleLine="true"
-                android:textColor="#ffffff"
-                android:textColorHint="#ffffff"
-                android:textSize="18dp"/>
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:textSize="18dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -98,8 +97,8 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="@dimen/dim_15"
+                    android:layout_marginRight="@dimen/dim_5"
                     android:layout_weight="1"
                     android:orientation="horizontal"
                     android:weightSum="2">
@@ -111,13 +110,13 @@
                         android:layout_below="@+id/location"
                         android:layout_weight="1.6"
                         android:editable="false"
-                        android:hint="Date"
+                        android:hint="@string/select_Date"
                         android:imeOptions="actionDone"
                         android:inputType="none"
                         android:singleLine="true"
-                        android:textColor="#ffffff"
-                        android:textColorHint="#ffffff"
-                        android:textSize="18dp"/>
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite"
+                        android:textSize="18dp" />
 
                     <Button
                         android:id="@+id/select_date"
@@ -127,7 +126,7 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="-3dp"
                         android:layout_weight="0.4"
-                        android:background="@drawable/calendar2"/>
+                        android:background="@drawable/calendar2" />
 
 
                 </LinearLayout>
@@ -135,8 +134,8 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="@dimen/dim_5"
+                    android:layout_marginRight="@dimen/dim_15"
                     android:layout_weight="1"
                     android:orientation="horizontal"
                     android:weightSum="2">
@@ -147,23 +146,22 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1.6"
                         android:editable="false"
-                        android:hint="Time"
+                        android:hint="@string/Enter_Time"
                         android:imeOptions="actionDone"
                         android:inputType="none"
                         android:singleLine="true"
-                        android:textColor="#ffffff"
-                        android:textColorHint="#ffffff"
-                        android:textSize="18dp"/>
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite"
+                        android:textSize="18dp" />
 
                     <Button
                         android:id="@+id/select_time"
                         android:layout_width="0dp"
-                        android:layout_height="30dp"
+                        android:layout_height="@dimen/dim_30"
                         android:layout_gravity="center"
                         android:layout_marginTop="-3dp"
                         android:layout_weight="0.4"
-                        android:background="@drawable/time_clock_icon"/>
-
+                        android:background="@drawable/time_clock_icon" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -173,7 +171,7 @@
                 android:id="@+id/timeDisplay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""/>
+                android:text="" />
 
             <Spinner
                 android:id="@+id/spinner"
@@ -182,21 +180,21 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/Enter_time"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"/>
+                android:layout_marginLeft="@dimen/dim_15"
+                android:layout_marginRight="@dimen/dim_15" />
 
 
             <Button
                 android:id="@+id/button_accept"
                 android:layout_width="wrap_content"
-                android:layout_height="33dp"
+                android:layout_height="@dimen/dim_33"
                 android:layout_gravity="center"
-                android:textAllCaps="false"
-                android:textSize="18dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_10"
                 android:background="@drawable/button_selector"
-                android:text="Save"
-                android:textColor="@color/colorWhite"/>
+                android:text="@string/save_btn_str"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="18dp" />
 
         </LinearLayout>
     </ScrollView>

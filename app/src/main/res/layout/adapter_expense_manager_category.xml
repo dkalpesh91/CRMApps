@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/dim_15"
-                android:paddingLeft="@dimen/dim_26"
-                android:paddingRight="@dimen/dim_26"
-                android:paddingTop="@dimen/dim_15">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dim_15"
+    android:paddingLeft="@dimen/dim_26"
+    android:paddingRight="@dimen/dim_26"
+    android:paddingTop="@dimen/dim_15">
+
     <ImageView
         android:id="@+id/img_transaction_category"
         android:layout_width="@dimen/dim_53"
@@ -39,15 +40,15 @@
             android:layout_marginTop="@dimen/dim_12"
             android:gravity="center_vertical|center_horizontal"
             android:max="100"
-            android:visibility="gone"
-            android:progressDrawable="@drawable/progress_background_expense_manager_yellow" />
+            android:progressDrawable="@drawable/progress_background_expense_manager_yellow"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/txt_start_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_below="@id/txt_transaction_category"
+            android:gravity="center"
             android:text="17 Sept 2016"
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/dim_14" />
@@ -60,11 +61,12 @@
             android:layout_below="@id/txt_transaction_category"
             android:layout_marginLeft="@dimen/dim_10"
             android:layout_marginTop="@dimen/dim_10"
-            android:textColor="@color/colorWhite"
             android:layout_toRightOf="@id/mgc_progress"
             android:text="50%"
-            android:visibility="gone"
-            android:textSize="@dimen/dim_16" />
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dim_16"
+            android:visibility="gone" />
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -73,6 +75,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/dim_10"
             android:layout_toRightOf="@id/txt_category_percent">
+
             <TextView
                 android:id="@+id/txt_transaction_amount"
                 android:layout_width="match_parent"

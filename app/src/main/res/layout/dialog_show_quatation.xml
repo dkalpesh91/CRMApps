@@ -7,7 +7,7 @@
         android:id="@+id/history_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Quotation History"
+        android:text="@string/quotation_history"
         android:textSize="@dimen/dim_28"
         android:gravity="center"
         android:textColor="@color/black"/>

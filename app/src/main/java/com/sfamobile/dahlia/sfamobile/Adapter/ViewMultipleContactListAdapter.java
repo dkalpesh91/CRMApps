@@ -134,7 +134,7 @@ public class ViewMultipleContactListAdapter extends BaseAdapter implements View.
 
         @Override
         public void onClick(View arg0) {
-            ((Activity)activity).finish();
+            //((Activity)activity).finish();
 
         }
     }

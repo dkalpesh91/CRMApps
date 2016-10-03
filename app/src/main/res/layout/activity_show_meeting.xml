@@ -3,25 +3,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.ShowMeetingActivity"
-    android:background="@color/colorPrimary">
+    android:background="@color/colorPrimary"
+    tools:context=".Activity.ShowMeetingActivity">
 
-    <include android:id="@+id/dsvr_top_bar"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             layout="@layout/top_bar_layout"/>
+    <include
+        android:id="@+id/dsvr_top_bar"
+        layout="@layout/top_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <View
         android:id="@+id/line_view"
-        android:background="@color/view_line"
         android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_5"
         android:layout_below="@+id/dsvr_top_bar"
-        android:layout_height="@dimen/dim_5"/>
+        android:background="@color/view_line" />
 
 
     <ExpandableListView
+        android:id="@+id/expandableListView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/expandableListView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/line_view" />

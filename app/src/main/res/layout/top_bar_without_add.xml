@@ -1,10 +1,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/navigation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/dim_10"
-                android:background="@color/colorPrimary"
-                android:padding="@dimen/dim_10">
+    android:id="@+id/navigation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dim_10"
+    android:background="@color/colorPrimary"
+    android:padding="@dimen/dim_10">
 
     <ImageView
         android:id="@+id/back_arrow_img"
@@ -12,17 +12,17 @@
         android:layout_height="@dimen/dim_40"
         android:contentDescription="back"
         android:padding="@dimen/dim_8"
-        android:src="@drawable/arrow_left_back"/>
+        android:src="@drawable/arrow_left_back" />
 
     <TextView
         android:id="@+id/screen_label_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="Top Bar"
+        android:text="@string/tv_top_bar"
         android:textColor="@color/colorWhite"
-        android:textSize="@dimen/dim_20"
-        android:textStyle="bold"/>
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
 
 </RelativeLayout>

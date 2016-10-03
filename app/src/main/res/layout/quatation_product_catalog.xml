@@ -51,7 +51,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="@dimen/dim_12"
                 android:layout_marginStart="@dimen/dim_12"
-                android:text="Name"
+                android:text="@string/catalog_product_name"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
                 android:textSize="@dimen/dim_18"/>
@@ -89,7 +89,7 @@
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/dim_12"
             android:layout_marginStart="@dimen/dim_12"
-            android:text="ID"
+            android:text="@string/catalog_product_id"
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="@dimen/dim_18"/>
@@ -126,7 +126,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="@dimen/dim_6"
                 android:layout_marginStart="@dimen/dim_6"
-                android:text="Show Price"
+                android:text="@string/catalog_product_price"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
                 android:textSize="@dimen/dim_18"/>
@@ -161,7 +161,7 @@
             android:layout_marginStart="@dimen/dim_12"
             android:layout_toLeftOf="@+id/layout_balance"
             android:layout_toStartOf="@+id/layout_balance"
-            android:text="Product Description"
+            android:text="@string/catalog_product_desc"
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="@dimen/dim_18"/>
@@ -180,7 +180,7 @@
             android:layout_toStartOf="@+id/layout_balance"
             android:ellipsize="end"
             android:lines="2"
-            android:text="Product Description"
+            android:text="@string/catalog_product_desc"
             android:textColor="@color/grey"
             android:textSize="@dimen/dim_18"
             android:textStyle="normal"/>

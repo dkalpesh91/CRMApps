@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,9 +10,9 @@
     tools:context="com.sfamobile.dahlia.sfamobile.Activity.ScanCardsActivity">
 
     <ImageView
+        android:id="@+id/m_imageview"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dim_230"
-        android:id="@+id/m_imageview"/>
+        android:layout_height="@dimen/dim_230" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -21,8 +20,7 @@
         android:layout_below="@+id/m_imageview"
         android:text="Here is "
         android:textColor="@color/black"
-        android:textSize="@dimen/dim_23"/>
-
+        android:textSize="@dimen/dim_23" />
 
 
 </RelativeLayout>

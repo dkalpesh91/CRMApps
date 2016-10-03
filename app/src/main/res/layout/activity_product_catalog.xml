@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
     android:orientation="vertical">
 
-    <include android:id="@+id/dsvr_top_bar"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             layout="@layout/top_bar_without_add"/>
+    <include
+        android:id="@+id/dsvr_top_bar"
+        layout="@layout/top_bar_without_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <View
         android:id="@+id/line_view"
-        android:background="@color/view_line"
         android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_5"
         android:layout_below="@+id/dsvr_top_bar"
-        android:layout_height="@dimen/dim_5"/>
+        android:background="@color/view_line" />
 
     <ListView
         android:id="@+id/product_catalog_lv"
-        android:layout_below="@+id/dsvr_top_bar"
-        android:layout_above="@+id/create_quotation_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/create_quotation_btn"
+        android:layout_below="@+id/dsvr_top_bar"
+        android:layout_margin="@dimen/dim_12"
         android:background="@color/colorPrimary"
-        android:dividerHeight="@dimen/dim_12"
-        android:layout_margin="@dimen/dim_12">
+        android:dividerHeight="@dimen/dim_12">
 
     </ListView>
 
@@ -36,14 +36,14 @@
         android:layout_width="wrap_content"
         android:layout_height="@dimen/dim_38"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/dim_10"
+        android:background="@drawable/button_selector"
         android:paddingLeft="@dimen/dim_10"
         android:paddingRight="@dimen/dim_10"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/button_selector"
-        android:text="Create Quotation"
+        android:text="@string/catalog_create_quotation"
         android:textAllCaps="false"
         android:textColor="@color/colorWhite"
-        android:textSize="@dimen/dim_24"/>
+        android:textSize="@dimen/dim_24" />
 
 </RelativeLayout>
