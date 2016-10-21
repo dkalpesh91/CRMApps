@@ -44,14 +44,14 @@
             android:weightSum="2">
 
             <android.support.design.widget.TextInputLayout
-                android:id="@+id/dsvrc_select_date_til"
+                android:id="@+id/def_select_date_til"
                 style="@style/TextLabel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.8">
 
                 <AutoCompleteTextView
-                    android:id="@+id/dsvrc_select_date_atv"
+                    android:id="@+id/def_select_date_atv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -67,7 +67,7 @@
 
 
             <Button
-                android:id="@+id/dsvrc_select_date_button"
+                android:id="@+id/def_select_date_button"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/dim_40"
                 android:layout_above="@+id/spinner"
@@ -89,14 +89,14 @@
             android:weightSum="2">
 
             <android.support.design.widget.TextInputLayout
-                android:id="@+id/dsvrc_select_date_to_til"
+                android:id="@+id/def_select_date_to_til"
                 style="@style/TextLabel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.8">
 
                 <AutoCompleteTextView
-                    android:id="@+id/dsvrc_select_date_to_atv"
+                    android:id="@+id/def_select_date_to_atv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -112,7 +112,7 @@
 
 
             <Button
-                android:id="@+id/dsvrc_select_date_to_button"
+                android:id="@+id/def_select_date_to_button"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/dim_40"
                 android:layout_above="@+id/spinner"

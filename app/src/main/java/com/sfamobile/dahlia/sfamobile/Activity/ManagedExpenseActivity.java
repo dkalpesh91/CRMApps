@@ -20,6 +20,7 @@ public class ManagedExpenseActivity extends AppCompatActivity {
     TextView mActivityNameTV = null;
     ImageView mActivityBackIMV = null;
     ImageView mActivityAddIMV = null;
+    private RelativeLayout mTravelExpenseLayout = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +57,17 @@ public class ManagedExpenseActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        mTravelExpenseLayout = (RelativeLayout) findViewById(R.id.travel_expense_rl);
+        mTravelExpenseLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ManagedExpenseActivity.this,TravelExpensesListActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
 
         mWeeklyExpenseLayout = (RelativeLayout) findViewById(R.id.weekly_expense_rl);
         mWeeklyExpenseLayout.setOnClickListener(new View.OnClickListener() {

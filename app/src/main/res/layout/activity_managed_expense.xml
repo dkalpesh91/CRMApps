@@ -154,6 +154,52 @@
     </RelativeLayout>
 
 
+    <RelativeLayout
+        android:id="@+id/travel_expense_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/monthly_expense_rl"
+        android:layout_margin="@dimen/dim_10"
+        android:background="@drawable/expense_gradient">
+
+        <TextView
+            android:id="@+id/travel_expense_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dim_10"
+            android:layout_marginTop="@dimen/dim_10"
+            android:text="Travel Expenses"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dim_24" />
+
+
+        <TextView
+            android:id="@+id/travel_expense_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/travel_expense_tv"
+            android:layout_marginBottom="@dimen/dim_10"
+            android:layout_marginLeft="@dimen/dim_10"
+            android:layout_marginTop="@dimen/dim_10"
+            android:text="From September 2016"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dim_21" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/travel_expense_tv"
+            android:layout_marginRight="@dimen/dim_6"
+            android:layout_marginTop="@dimen/dim_10"
+            android:text="$20"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dim_21" />
+
+
+    </RelativeLayout>
+
     <!--<RelativeLayout-->
     <!--android:id="@+id/yearly_expense_rl"-->
     <!--android:layout_width="match_parent"-->

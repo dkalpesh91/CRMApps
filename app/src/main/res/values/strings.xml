@@ -135,7 +135,6 @@
     <string name="add_photos">Add Photos</string>
 
 
-
     <!--*******************************Add meetings**********************************-->
 
     //title
@@ -199,7 +198,40 @@
 
     <string name="estimated_amount">Estimated Amount(\u20B9)</string>
     <string name="rupees">\u20B9</string>
+    <string name="spend_rupees">Spend(\u20B9)</string>
+
     <string name="rupess_symbol_with_amount">\u20B9 %1$s</string>
+    <string name="my_text">
+  <![CDATA[
+    <b> Hi,</b><br/>
+    <b>Your daily expenses are : </b>\u20B9 10,000<br/>
+    <b>Travel:</b> \u20B9 3,000<br/>
+    <b>Lodging:</b> \u20B9 4,000<br/>
+    <b>Boarding:</b> \u20B9 2,000<br/>
+    <b>Other:</b> \u20B9 1,000<br/>
+    <b></b> <br/>
+    <b>Best Regards,</b><br/>
+    <b>SFAMobi Team</b><br/>
+    <i>Copyright © 2016 Dahlia Technologies </i>
+  ]]>
+</string>
+
+      <string name="travel_expense_text">
+  <![CDATA[
+    <b> Hi,</b><br/>
+    <b>Your daily Travel expenses are : </b>\u20B9 70<br/>
+    <b>Start Location:</b> Amenora park town<br/>
+    <b>Client Location:</b> Bramha Suncity, Wadgaon Sheri, Pune<br/>
+    <b>Distance:</b> 8 KM <br/>
+    <b>Amount:</b> \u20B9 175<br/>
+    <b></b> <br/>
+    <b>Best Regards,</b><br/>
+    <b>SFAMobi Team</b><br/>
+    <i>Copyright © 2016 Dahlia Technologies </i>
+  ]]>
+</string>
+
+
 
     <!--*******************************Expense Management**********************************-->
     <string name="shop">Shop</string>
@@ -247,7 +279,6 @@
     <string name="travel_end_journey">End Journey</string>
 
 
-
     <string name="tv_choose">Choose</string>
     <string name="action_radio_local">Local</string>
     <string name="action_radio_outstation">Outstation</string>
@@ -261,7 +292,6 @@
     <string name="catalog_product_avail_quantity">Available Quantity</string>
 
 
-
     <!--*******************************Recipt Details**********************************-->
     <string name="recipt_ride_details">Ride Details</string>
     <string name="recipt_bill_details">Bill Details</string>
@@ -270,7 +300,6 @@
     <string name="recipt_total_bill">Total Bill(rounded off)</string>
     <string name="recipt_payment">Payment</string>
     <string name="recipt_paid_cash">Paid by cash</string>
-
 
 
     <!--*******************************Others**********************************-->
@@ -292,9 +321,8 @@
     <string name="tv_set_reminder">Set Reminder</string>
     <string name="tv_top_bar">Top Bar</string>
 
-
-
-
-
+    <string name="amount_175">\u20B9 175</string>
+    <string name="amount_45">\u20B9 45</string>
+    <string name="amount_70">\u20B9 70</string>
 
 </resources>

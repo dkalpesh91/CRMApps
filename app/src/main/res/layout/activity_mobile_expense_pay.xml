@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dim_20"
+        android:layout_marginRight="@dimen/dim_20"
+        android:layout_marginTop="@dimen/dim_16">
+
+        <TextView
+            android:id="@+id/bpmr_number_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Number"
+            android:textSize="18dp"/>
+
+        <FrameLayout
+            android:id="@+id/bpmr_contact_number_frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bpmr_number_tv">
+
+            <EditText
+                android:id="@+id/bpmr_phone_number_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:textSize="24dp"/>
+
+            <ImageView
+                android:id="@+id/bpmr_phonebook_imv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:clickable="true"
+                android:contentDescription="gg"
+                android:paddingRight="@dimen/dim_20"
+                android:src="@drawable/add_button"/>
+        </FrameLayout>
+
+
+
+        <TextView
+            android:id="@+id/bpmr_amount_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_35"
+            android:layout_below="@+id/bpmr_contact_number_frame_layout"
+            android:text="Amount"
+            android:textSize="18dp"/>
+
+        <EditText
+            android:id="@+id/bpmr_amount_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bpmr_amount_tv"
+            android:layout_marginTop="@dimen/dim_10"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="5"
+            android:singleLine="true"
+            android:textSize="24dp"/>
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bpmr_proceed_btn"
+        android:layout_width="@dimen/dim_228"
+        android:layout_height="@dimen/dim_47"
+        android:layout_below="@+id/_rl"
+        android:layout_marginBottom="@dimen/dim_30"
+        android:layout_marginTop="@dimen/dim_30"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_corner_button_selected_background"
+        android:text="Procced"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="22dp"/>
+
+
+</RelativeLayout>

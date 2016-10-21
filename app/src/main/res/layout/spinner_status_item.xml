@@ -15,7 +15,7 @@
         android:layout_marginLeft="@dimen/dim_15"
         android:text="dmjkflgkl"
         android:textColor="@color/colorWhite"
-        android:textSize="@dimen/dim_22" />
+        android:textSize="18dp" />
 
     <!--<ImageView-->
     <!--android:id="@+id/drop_down_img"-->

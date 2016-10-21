@@ -1,11 +1,17 @@
 package com.sfamobile.dahlia.sfamobile.Activity;
 
+import android.Manifest;
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
+import android.os.Build;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -18,6 +24,7 @@ import com.sfamobile.dahlia.sfamobile.R;
 
 public class LoginActivity extends AppCompatActivity {
 
+    private static final String TAG = "LoginActivity" ;
     Button mLoginButton = null;
     Button mPowerdByButton = null;
     Button mRegisterButton = null;
@@ -129,10 +136,45 @@ public class LoginActivity extends AppCompatActivity {
         });
 
 
+        isStoragePermissionGranted();
+
 
 
     }
 
 
+    public  boolean isStoragePermissionGranted() {
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                    == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(LoginActivity.this,"Permission is granted",Toast.LENGTH_SHORT).show();
+                return true;
+            } else {
 
+
+                Toast.makeText(LoginActivity.this,"Permission is revoked",Toast.LENGTH_SHORT).show();
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+                return false;
+            }
+        }
+        else { //permission is automatically granted on sdk<23 upon installation
+            Log.v(TAG,"Permission is granted");
+            Toast.makeText(LoginActivity.this,"Permission is granted Else",Toast.LENGTH_SHORT).show();
+            return true;
+        }
+
+
+    }
+
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if(grantResults[0]== PackageManager.PERMISSION_GRANTED){
+            Log.v(TAG,"Permission: "+permissions[0]+ "was "+grantResults[0]);
+            //resume tasks needing this permission
+            Toast.makeText(LoginActivity.this,"Permission: "+permissions[0]+ "was "+grantResults[0],Toast.LENGTH_SHORT).show();
+
+        }
+    }
 }

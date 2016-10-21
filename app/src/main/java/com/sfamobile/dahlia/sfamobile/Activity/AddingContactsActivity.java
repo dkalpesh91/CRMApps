@@ -57,7 +57,7 @@ public class AddingContactsActivity extends AppCompatActivity {
     ExpandableListAdapter listAdapter;
     Catalog product = null;
     Catalog product1 = null;
-
+//
     Uri mUri;
 
     EditText mEditName2 = null;

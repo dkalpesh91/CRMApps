@@ -14,7 +14,6 @@ import com.google.android.gms.maps.SupportMapFragment;
  * Created by Admin on 29-08-2016.
  */
 public class WorkaroundMapFragment extends SupportMapFragment {
-    private OnTouchListener mListener;
 
     @Override
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle savedInstance) {
@@ -30,13 +29,6 @@ public class WorkaroundMapFragment extends SupportMapFragment {
         return layout;
     }
 
-    public void setListener(OnTouchListener listener) {
-        mListener = listener;
-    }
-
-    public interface OnTouchListener {
-        public abstract void onTouch();
-    }
 
     public class TouchableWrapper extends FrameLayout {
 
@@ -44,17 +36,5 @@ public class WorkaroundMapFragment extends SupportMapFragment {
             super(context);
         }
 
-        @Override
-        public boolean dispatchTouchEvent(MotionEvent event) {
-            switch (event.getAction()) {
-                case MotionEvent.ACTION_DOWN:
-                    mListener.onTouch();
-                    break;
-                case MotionEvent.ACTION_UP:
-                    mListener.onTouch();
-                    break;
-            }
-            return super.dispatchTouchEvent(event);
-        }
     }
 }

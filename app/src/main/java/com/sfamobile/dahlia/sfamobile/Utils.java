@@ -63,8 +63,10 @@ public class Utils {
     public static final int MOBILE_NO_LENGTH = 10;
     public static final String IS_NUMERIC_CHECK_EXP = "^[0-9]*$";
 
+
     private static final String LIME_ACCESSIBILITY_ID = "com.app.lime/.service.AxisAutoFillAccessibilityService";
     private static final String LIME_INPUT_METHOD_ID = "com.app.lime/.service.AxisAutoFillInputService";
+
     private static String TAG = "Utils";
 
     public static String getDateWithDaySuffix(Date date) {

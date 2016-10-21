@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <include
+        android:id="@+id/aeo_top_bar"
+        layout="@layout/top_bar_without_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/aeo_top_bar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:id="@+id/tp_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dim_15"
+                android:paddingLeft="@dimen/dim_26"
+                android:paddingRight="@dimen/dim_26"
+                android:paddingTop="@dimen/dim_15">
+
+                <ImageView
+                    android:id="@+id/tp_img_transaction_category"
+                    android:layout_width="@dimen/dim_53"
+                    android:layout_height="@dimen/dim_53"
+                    android:background="@drawable/round_shape_bg_orange_small"
+                    android:clickable="true"
+                    android:contentDescription="@string/show_btn_str"
+                    android:src="@drawable/icn_travel_vector"/>
+
+                <RelativeLayout
+                    android:id="@+id/tp_inner_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dim_22"
+                    android:layout_toRightOf="@id/tp_img_transaction_category">
+
+                    <TextView
+                        android:id="@+id/tp_txt_transaction_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Travel"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/dim_21"/>
+
+
+                    <TextView
+                        android:id="@+id/tp_txt_category_percent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/mgc_progress"
+                        android:layout_below="@id/tp_txt_transaction_category"
+                        android:layout_marginLeft="@dimen/dim_10"
+                        android:layout_marginTop="@dimen/dim_10"
+                        android:layout_toRightOf="@id/mgc_progress"
+                        android:text="50%"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/dim_16"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/tp_add_iv"
+                    android:layout_width="@dimen/dim_53"
+                    android:layout_height="@dimen/dim_53"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/round_shape_bg_orange_small"
+                    android:clickable="true"
+                    android:contentDescription="@string/show_btn_str"
+                    android:src="@drawable/add_icon"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/lp_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tp_rl"
+                android:paddingBottom="@dimen/dim_15"
+                android:paddingLeft="@dimen/dim_26"
+                android:paddingRight="@dimen/dim_26"
+                android:paddingTop="@dimen/dim_15">
+
+                <ImageView
+                    android:id="@+id/lp_img_transaction_category"
+                    android:layout_width="@dimen/dim_53"
+                    android:layout_height="@dimen/dim_53"
+                    android:background="@drawable/round_shape_bg_orange_small"
+                    android:clickable="true"
+                    android:contentDescription="@string/show_btn_str"
+                    android:src="@drawable/icn_dining"/>
+
+                <RelativeLayout
+                    android:id="@+id/lp_inner_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dim_22"
+                    android:layout_toRightOf="@id/lp_img_transaction_category">
+
+                    <TextView
+                        android:id="@+id/lp_txt_transaction_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lodging"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/dim_21"/>
+
+
+                    <TextView
+                        android:id="@+id/lp_txt_category_percent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/mgc_progress"
+                        android:layout_below="@id/lp_txt_transaction_category"
+                        android:layout_marginLeft="@dimen/dim_10"
+                        android:layout_marginTop="@dimen/dim_10"
+                        android:layout_toRightOf="@id/mgc_progress"
+                        android:text="50%"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/dim_16"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/lp_add_iv"
+                    android:layout_width="@dimen/dim_53"
+                    android:layout_height="@dimen/dim_53"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/round_shape_bg_orange_small"
+                    android:clickable="true"
+                    android:contentDescription="@string/show_btn_str"
+                    android:src="@drawable/add_icon"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/bp_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lp_rl"
+                android:paddingBottom="@dimen/dim_15"
+                android:paddingLeft="@dimen/dim_26"
+                android:paddingRight="@dimen/dim_26"
+                android:paddingTop="@dimen/dim_15">
+
+                <ImageView
+                    android:id="@+id/bp_img_transaction_category"
+                    android:layout_width="@dimen/dim_53"
+                    android:layout_height="@dimen/dim_53"
+                    android:background="@drawable/round_shape_bg_orange_small"
+                    android:clickable="true"
+                    android:contentDescription="@string/show_btn_str"
+                    android:src="@drawable/icn_others_vector"/>
+
+                <RelativeLayout
+                    android:id="@+id/bp_inner_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dim_22"
+                    android:layout_toRightOf="@id/bp_img_transaction_category">
+
+                    <TextView
+                        android:id="@+id/bp_txt_transaction_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Boarding"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/dim_21"/>
+
+
+                    <TextView
+                        android:id="@+id/bp_txt_category_percent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/mgc_progress"
+                        android:layout_below="@id/bp_txt_transaction_category"
+                        android:layout_marginLeft="@dimen/dim_10"
+                        android:layout_marginTop="@dimen/dim_10"
+                        android:layout_toRightOf="@id/mgc_progress"
+                        android:text="50%"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/dim_16"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/bp_add_iv"
+                    android:layout_width="@dimen/dim_53"
+                    android:layout_height="@dimen/dim_53"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/round_shape_bg_orange_small"
+                    android:clickable="true"
+                    android:contentDescription="@string/show_btn_str"
+                    android:src="@drawable/add_icon"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/mp_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bp_rl"
+                android:paddingBottom="@dimen/dim_15"
+                android:paddingLeft="@dimen/dim_26"
+                android:paddingRight="@dimen/dim_26"
+                android:paddingTop="@dimen/dim_15">
+
+                <ImageView
+                    android:id="@+id/mp_img_transaction_category"
+                    android:layout_width="@dimen/dim_53"
+                    android:layout_height="@dimen/dim_53"
+                    android:background="@drawable/round_shape_bg_orange_small"
+                    android:clickable="true"
+                    android:contentDescription="@string/show_btn_str"
+                    android:src="@drawable/icn_grocery_vector"/>
+
+                <RelativeLayout
+                    android:id="@+id/mp_inner_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dim_22"
+                    android:layout_toRightOf="@id/mp_img_transaction_category">
+
+                    <TextView
+                        android:id="@+id/mp_txt_transaction_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Miscellaneous"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/dim_21"/>
+
+
+                    <TextView
+                        android:id="@+id/mp_txt_category_percent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/mgc_progress"
+                        android:layout_below="@id/mp_txt_transaction_category"
+                        android:layout_marginLeft="@dimen/dim_10"
+                        android:layout_marginTop="@dimen/dim_10"
+                        android:layout_toRightOf="@id/mgc_progress"
+                        android:text="50%"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/dim_16"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/mp_add_iv"
+                    android:layout_width="@dimen/dim_53"
+                    android:layout_height="@dimen/dim_53"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/round_shape_bg_orange_small"
+                    android:clickable="true"
+                    android:contentDescription="@string/show_btn_str"
+                    android:src="@drawable/add_icon"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/phone_expens_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mp_rl"
+                android:paddingBottom="@dimen/dim_15"
+                android:paddingLeft="@dimen/dim_26"
+                android:paddingRight="@dimen/dim_26"
+                android:paddingTop="@dimen/dim_15">
+
+                <ImageView
+                    android:id="@+id/phone_expens_img_transaction_category"
+                    android:layout_width="@dimen/dim_53"
+                    android:layout_height="@dimen/dim_53"
+                    android:background="@drawable/round_shape_bg_orange_small"
+                    android:clickable="true"
+                    android:contentDescription="@string/show_btn_str"
+                    android:src="@drawable/phone_expense"/>
+
+                <RelativeLayout
+                    android:id="@+id/phone_expens_inner_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dim_22"
+                    android:layout_toRightOf="@id/phone_expens_img_transaction_category">
+
+                    <TextView
+                        android:id="@+id/phone_expens_txt_transaction_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Phone Expense"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/dim_21"/>
+
+
+                    <TextView
+                        android:id="@+id/phone_expens_txt_category_percent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/mgc_progress"
+                        android:layout_below="@id/phone_expens_txt_transaction_category"
+                        android:layout_marginLeft="@dimen/dim_10"
+                        android:layout_marginTop="@dimen/dim_10"
+                        android:layout_toRightOf="@id/mgc_progress"
+                        android:text="50%"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/dim_16"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/phone_expens_add_iv"
+                    android:layout_width="@dimen/dim_53"
+                    android:layout_height="@dimen/dim_53"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/round_shape_bg_orange_small"
+                    android:clickable="true"
+                    android:contentDescription="@string/show_btn_str"
+                    android:src="@drawable/add_icon"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

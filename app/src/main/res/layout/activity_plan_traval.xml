@@ -44,7 +44,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1.8">
 
-                    <EditText
+                    <AutoCompleteTextView
                         android:id="@+id/apt_select_start_location_et"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -55,7 +55,9 @@
                         android:maxLines="1"
                         android:singleLine="true"
                         android:textColor="@color/colorWhite"
-                        android:textSize="@dimen/dim_22" />
+                        android:textSize="@dimen/dim_22">
+                    <requestFocus/>
+                    </AutoCompleteTextView>
                 </android.support.design.widget.TextInputLayout>
 
 
@@ -72,22 +74,16 @@
             </LinearLayout>
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dim_15"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:weightSum="2">
+
 
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/apt_select_client_location_til"
                     style="@style/TextLabel"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.8">
 
-                    <EditText
+                    <AutoCompleteTextView
                         android:id="@+id/apt_select_client_location_et"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -102,17 +98,7 @@
                 </android.support.design.widget.TextInputLayout>
 
 
-                <Button
-                    android:id="@+id/apt_select_client_location_button"
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/dim_40"
-                    android:layout_above="@+id/spinner"
-                    android:layout_gravity="center"
-                    android:layout_weight="0.2"
-                    android:background="@drawable/gps_loc_ioc" />
 
-
-            </LinearLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/clto_phone_no_til"
@@ -149,48 +135,8 @@
             <!--android:layout_width="match_parent"-->
             <!--android:layout_height="160dp"/>-->
 
-            <fragment
-                android:id="@+id/fragment1"
-                android:name="com.sfamobile.dahlia.sfamobile.Fragments.WorkaroundMapFragment"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dim_300"
-                android:layout_marginBottom="-42dp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dim_10"
-                android:gravity="center"
-                android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="@dimen/dim_35"
-                    android:layout_height="@dimen/dim_35"
-                    android:background="@drawable/distance1" />
-
-                <TextView
-                    android:id="@+id/distance_value_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/dim_10"
-                    android:text="00"
-                    android:textColor="@color/colorPink" />
-
-                <ImageView
-                    android:layout_width="@dimen/dim_35"
-                    android:layout_height="@dimen/dim_35"
-                    android:layout_marginLeft="@dimen/dim_15"
-                    android:background="@drawable/time" />
-
-                <TextView
-                    android:id="@+id/duration_value_tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/dim_10"
-                    android:text="o min"
-                    android:textColor="@color/colorPink" />
-
-            </LinearLayout>
 
 
             <TextView
